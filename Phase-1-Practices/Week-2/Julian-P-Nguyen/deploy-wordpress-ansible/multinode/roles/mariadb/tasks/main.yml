@@ -1,0 +1,24 @@
+---
+- name: Create MariaDB volume
+  docker_volume:
+    name: "{{ volume_mariadb }}"
+
+- name: Start MariaDB container
+  register: run_mariadb
+  docker_container:
+    name: mariadb
+    image: "{{ mariadb_img }}"
+    state: started
+    pull: yes
+    volumes:
+    - "{{ volume_mariadb }}:/bitnami/mariadb"
+    network_mode: host
+    env:
+        ALLOW_EMPTY_PASSWORD: "yes"
+        MARIADB_USER: "{{ db_user | quote }}"
+        MARIADB_DATABASE: "{{ db_name | quote }}"
+        MARIADB_PASSWORD: "{{ db_password | quote }}"
+
+- name: View MariaDB status
+  debug: 
+    var: run_mariadb

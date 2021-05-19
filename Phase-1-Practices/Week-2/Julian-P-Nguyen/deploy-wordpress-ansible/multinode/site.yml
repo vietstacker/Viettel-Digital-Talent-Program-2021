@@ -1,0 +1,28 @@
+---
+- name: Set up basic environment on 2 nodes
+  hosts: all
+  gather_facts: no
+  remote_user: pnguyen
+  become: yes
+
+  roles:
+    - common
+
+- name: Installations & Deployments Mariadb on database node
+  hosts: mariadb-node
+  gather_facts: no
+  remote_user: pnguyen
+  become: yes
+
+  roles:
+    - mariadb
+
+- name: Installations & Deployments WordPress on wordpress node
+  hosts: wordpress-node
+  gather_facts: no
+  remote_user: pnguyen
+  become: yes
+
+  roles:
+    - wordpress
+

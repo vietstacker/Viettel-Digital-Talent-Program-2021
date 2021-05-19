@@ -1,0 +1,57 @@
+---
+- name: Create "{{ network_docker }}" network
+  docker_network:
+    name: "{{ network_docker }}"
+
+- name: Create MariaDB volume
+  docker_volume:
+    name: "{{ volume_mariadb }}"
+
+- name: Create WordPress volume
+  docker_volume:
+    name: "{{ volume_wordpress }}"
+
+- name: Start MariaDB container
+  register: run_mariadb
+  docker_container:
+    name: mariadb
+    image: "{{ mariadb_img }}"
+    state: started
+    pull: yes
+    volumes:
+    - "{{ volume_mariadb }}:/bitnami/mariadb"
+    networks:
+      - name: "{{ network_docker }}"
+    env:
+        ALLOW_EMPTY_PASSWORD: "yes"
+        MARIADB_USER: "{{ db_user | quote }}"
+        MARIADB_DATABASE: "{{ db_name | quote }}"
+        MARIADB_PASSWORD: "{{ db_password | quote }}"
+
+- name: View MariaDB status
+  debug: 
+    var: run_mariadb
+
+- name: Start WordPress container
+  register: run_wordpress
+  docker_container:
+    name: wordpress
+    image: "{{ wordpress_img }}"
+    state: started
+    pull: yes
+    volumes:
+      - "{{ volume_wordpress }}:/bitnami/wordpress"
+    networks:
+      - name: "{{ network_docker }}"
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    env:
+        ALLOW_EMPTY_PASSWORD: "yes"
+        WORDPRESS_DATABASE_USER: "{{ db_user | quote }}"
+        WORDPRESS_DATABASE_NAME: "{{ db_name | quote }}"
+        WORDPRESS_DATABASE_PASSWORD: "{{ db_password | quote }}" 
+
+- name: View WordPress status
+  debug: 
+    var: run_wordpress

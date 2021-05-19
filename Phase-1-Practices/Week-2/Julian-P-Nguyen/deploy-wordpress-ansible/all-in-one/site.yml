@@ -1,0 +1,10 @@
+---
+- name: Install WordPress with MariaDB on a Single VM
+  hosts: deploy-node
+  gather_facts: no
+  remote_user: pnguyen
+  become: yes
+
+  roles:
+    - common
+    - docker
