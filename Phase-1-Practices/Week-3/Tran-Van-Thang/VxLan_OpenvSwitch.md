@@ -6,6 +6,8 @@
 ## 2. Cấu hình
 > Địa chỉ VM1: 192.168.0.110
 > Địa chỉ VM2: 192.168.0.111
+![image](https://user-images.githubusercontent.com/43313369/118998614-c9271b80-b9b3-11eb-9dde-e68b42f29dc8.png)
+
  - Sau khi cài qemu-kvm và libvirt-bin ta gán quyền:
  ``` 
  sudo adduser `id -un` libvirtd
@@ -73,4 +75,18 @@ ovs-vsctl add-port br-vxl vxl0 -- set interface vxl0 type=vxlan options:remote_i
    
    
    ## 4. Cài đặt máy ảo bên trong VM1 và VM2 để kiểm tra(Đang phát triển ...)
+   ## 5. Ưu và nhược điểm khi triển khai VxLan trong DataCenter
+   - Ưu điểm:
+      - Hỗ trợ vMotions giúp chuyển máy ảo sang một server vật lý khác không có downtime
+      - Cấu hình các thiết bị mạng tập trung, không mất nhiều công sức 
+      - Không gian địa chi VxLan là 24 bit so với 12 bit của VLAN  
+      - Giảm độ trễ khi truyền tải gói tin
+   - Nhược điểm:
+      -  Header phải thêm 50 byte dữ liệu làm tăng kích thước gói tin -> tốn băng thông
+  ## 6. Tài liệu tham khảo 
+  -  Giải thích Linux Network Namespaces: https://www.youtube.com/watch?v=_WgUwUf1d34&t=1s
+  -  Giải thích về Overlay Network:  https://www.youtube.com/watch?v=Jqm_4TMmQz8
+  -  Bài lab của ``` hocchudong ```: https://github.com/hocchudong/ghichep-openvswitch/edit/master/3-ovs-gre-vxlan-lab.md
+  -  Trang giải thích quá trình kết nối 2 Vm qua VxLAN: https://www.arista.com/en/solutions/vxlan-cloud-scale-datacenter#:~:text=VXLAN%20is%20a%20powerful%20tool,residing%20on%20foreign%20IP%20subnets.
+  
 
