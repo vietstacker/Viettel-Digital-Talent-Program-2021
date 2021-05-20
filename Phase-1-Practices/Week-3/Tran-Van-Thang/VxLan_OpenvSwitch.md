@@ -56,9 +56,11 @@ ovs-vsctl add-port br-vxl vxl0 -- set interface vxl0 type=vxlan options:remote_i
   ```
   - Chạy lệnh sau trên cả 2 Vms để tạo network cho bridge:
   ```
-   virsh net-define ovsnet.xml
-   virsh net-start br0
-   virsh net-autostart br0
+  
+   virsh net-define ovs-vxlan.xml
+   virsh net-start ovs-vxl
+   virsh net-autostart ovs-vxl
+
 
   ```
   - Chạy lệnh ``` virsh net-list --all ``` để xem bridge có tên là ovs-vxl định nghĩa trong file  ovs-vxlan.xml đã lên thành công chưa
