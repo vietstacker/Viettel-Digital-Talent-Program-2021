@@ -12,7 +12,7 @@
 
 ## OpenvSwitch
 
-OpenvSwitch (OVS) là một dự án về chuyển mạch ảo đa lớp (multilayer). Mục đích chính của OpenvSwitch là cung cấp lớp chuyển mạch cho môi trường ảo hóa phần cứng, trong khi hỗ trợ nhiều giao thức và tiêu chuẩn được sử dụng trong hệ thống chuyển mạch thông thường. OpenvSwitch hỗ trợ nhiều công nghệ ảo hóa dựa trên nền tảng Linux như Xen/XenServer, KVM, và VirtualBox.
+OpenvSwitch (OVS) là một mã nguồn mở về chuyển mạch ảo đa lớp (multilayer). Mục đích chính của OpenvSwitch là cung cấp lớp chuyển mạch cho môi trường ảo hóa phần cứng, trong khi hỗ trợ nhiều giao thức và tiêu chuẩn được sử dụng trong hệ thống chuyển mạch thông thường. OpenvSwitch hỗ trợ nhiều công nghệ ảo hóa dựa trên nền tảng Linux như Xen/XenServer, KVM, và VirtualBox.
 
 ![OpenvSwitch](./img/OpenvSwitch.png)
 
@@ -99,7 +99,7 @@ Switch config
 
 ![ovsshow](./img/ovsshow.png)
 
-Dump-flow
+Dump-flows
 
 ![dump-flows](./img/dumpflow.png)
 
