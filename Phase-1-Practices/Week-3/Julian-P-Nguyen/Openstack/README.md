@@ -137,6 +137,8 @@ OpenStack clouds.
 
 # **III. STEP-BY-STEP**:
 
+### **Openstack Release:** `Victoria`
+
 ## **A. SET UP ENIVRONMENT**:
 
 ### 1. Update `apt` & install essentails dependencies:
@@ -255,13 +257,13 @@ $ ./generate_passwords.py
 $ vi /etc/kolla/globals.yml
 ```
 
+**Note**: *without specifying `openstack_release`, default value would be `victoria`*
+
 **Example**: Sample `globals.yml` file
 
 ```
 kolla_base_distro: "ubuntu"
 kolla_install_type: "source"
-
-openstack_release: "train"
 
 network_interface: ens33
 neutron_external_interface: ens38
