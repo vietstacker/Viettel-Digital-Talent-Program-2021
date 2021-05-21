@@ -47,7 +47,7 @@ VXLAN đạt được điều này bằng cách tạo các Frames Layer 2 bên t
 - Ta cài 2 máy ảo Linux như các bài tập trước VM1 và VM2 kết nối qua Bridged Adapter ( *192.168.56.11* và *192.168.56.12*)
 - Cài OpenvSwitch trên máy vật lý và 2 máy ảo VM1, VM2
 - Sử dụng OpenvSwitch tạo 1 switch ảo SW0 tại host. Qua đó truyền thông giữa 2 máy ảo với nhau.
-- Trên các máy ảo tạo thêm các switch: VM1 (SW1,SW2) VM2 (SW2, SW1)
+- Trên các máy ảo tạo thêm các switch: VM1 (br1,br2) VM2 (br2, br1)
 
 ---
 
@@ -81,7 +81,7 @@ Tạo flow-tables truyền thông các interface ảo cho SW0
 
 ```bash
 sudo ovs-ofctl add-flow sw0 ip,nw_src=192.168.56.11,nw_dst=192.168.56.12,actions=output:p2
-sudo ovs-ofctl add-flow sw0 ip,nw_src=10.0.0.20,nw_dst=10.0.0.10,actions=output:p1
+sudo ovs-ofctl add-flow sw0 ip,nw_src=192.168.56.12,nw_dst=192.168.56.11,actions=output:p1
 ```
 
 Kiểm tra kết quả bằng lệnh
@@ -90,7 +90,7 @@ Kiểm tra kết quả bằng lệnh
 
 sudo ifconfig
 sudo ovs-vsctl show
-sudo ovs-ofctl dump-flows s1
+sudo ovs-ofctl dump-flows sw0
 ```
 
 ![ifconfig](./img/ifconfighost.png)
@@ -110,31 +110,31 @@ Dump-flows
 - Tạo switch
 
 ```bash
-sudo ovs-vsctl add-br sw1
-sudo ovs-vsctl add-br sw2
+sudo ovs-vsctl add-br br1
+sudo ovs-vsctl add-br br2
 
-sudo interface sw1 10.0.0.10/24
-sudo interface sw2 192.168.56.11/24
+sudo interface br1 10.0.0.10/24
+sudo interface br2 192.168.56.11/24
 
-sudo ip link set sw1 up
-sudo ip link set sw2 up
+sudo ip link set br1 up
+sudo ip link set br2 up
 
-sudo ovs-vsctl add-port sw2 enp0s3 \\kết nối sw2 với interface của máy ảo
+sudo ovs-vsctl add-port br2 enp0s3 \\kết nối br2 với interface của máy ảo
 ```
 
 **VM2:**
 
 ```bash
-sudo ovs-vsctl add-br sw1
-sudo ovs-vsctl add-br sw2
+sudo ovs-vsctl add-br br1
+sudo ovs-vsctl add-br br2
 
-sudo interface sw2 10.0.0.20/24
-sudo interface sw1 192.168.56.12/24
+sudo interface br2 10.0.0.20/24
+sudo interface br1 192.168.56.12/24
 
-sudo ip link set sw1 up
-sudo ip link set sw2 up
+sudo ip link set br1 up
+sudo ip link set br2 up
 
-sudo ovs-vsctl add-port sw1 enp0s3 \\kết nối sw2 với interface của máy ảo
+sudo ovs-vsctl add-port br1 enp0s3 \\kết nối br2 với interface của máy ảo
 ```
 
 **Tạo Tunnels Vxlan**
@@ -142,11 +142,11 @@ sudo ovs-vsctl add-port sw1 enp0s3 \\kết nối sw2 với interface của máy 
 ```bash
 VM1
 ----
-ovs-vsctl add-port sw1 tun0 -- set interface tun0 type=vxlan options:remote_ip=192.168.56.12 options:key=123
+ovs-vsctl add-port br1 tun0 -- set interface tun0 type=vxlan options:remote_ip=192.168.56.12 options:key=123
 
 VM2
 ----
-ovs-vsctl add-port sw2 tun0 -- set interface tun0 type=vxlan options:remote_ip=192.168.56.12 options:key=123
+ovs-vsctl add-port br2 tun0 -- set interface tun0 type=vxlan options:remote_ip=192.168.56.12 options:key=123
 ```
 
 **Kết quả:**
