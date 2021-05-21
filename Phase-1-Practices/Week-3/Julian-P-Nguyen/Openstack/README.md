@@ -96,6 +96,8 @@ OpenStack clouds.
 
 ## **B. Infrastructure Requirements:** 
 
+### **Openstack Release:** `Victoria`
+
 #### **a. General:**
 - **Operating System:** *Either options works*
 
