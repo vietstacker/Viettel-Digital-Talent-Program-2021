@@ -1,0 +1,24 @@
+---
+- name: Update repositories cache
+  apt:
+    update_cache: yes
+
+- name: Install pip3
+  apt:
+    name: python3-pip
+    state: present
+
+- name: Install docker api for python3
+  pip:
+    name: docker
+    state: present
+
+- name: Install docker.io
+  apt:
+    name: docker.io
+    state: present
+
+- name: Ensure docker service is running
+  service:
+    name: docker
+    state: started

@@ -1,0 +1,13 @@
+- name: Open port 80 for wordpress
+  ufw:
+    rule: allow
+    port: '80'
+
+- name: Open port for ssh
+  ufw:
+    rule: allow
+    port: '22'
+
+- name: Enable UFW
+  ufw:
+    state: enabled
