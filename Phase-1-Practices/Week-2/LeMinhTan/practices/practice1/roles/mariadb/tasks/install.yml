@@ -1,0 +1,19 @@
+- name: Create a volume mariadb
+  docker_volume:
+    name: "{{ volume_maria_name }}"
+    state: present 
+
+- name: Create and start container mariadb
+  docker_container:
+    name: mariadb
+    image: bitnami/mariadb:latest
+    state: started
+    volumes:
+      - "{{ volume_maria_name }}:/bitnami/mariadb"
+    ports:
+     - "3306:3306"
+    env:
+      ALLOW_EMPTY_PASSWORD: "{{ mariadb_allow_empty_password }}"
+      MARIADB_USER: "{{ mariadb_user }}"
+      MARIADB_PASSWORD: "{{ mariadb_password }}"
+      MARIADB_DATABASE: "{{ mariadb_database }}"

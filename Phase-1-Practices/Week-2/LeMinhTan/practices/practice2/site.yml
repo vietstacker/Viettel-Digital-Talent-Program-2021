@@ -1,0 +1,20 @@
+---
+- name: Install docker
+  hosts: common
+  gather_facts: false
+  # vars_files:
+  #   - ./vars/main.yml
+  roles:
+    - docker
+
+- name: Install mariadb
+  hosts: mariadb
+  gather_facts: false
+  roles:
+    - mariadb
+
+- name: Install wp
+  hosts: wordpress
+  gather_facts: false
+  roles:
+    - wordpress
