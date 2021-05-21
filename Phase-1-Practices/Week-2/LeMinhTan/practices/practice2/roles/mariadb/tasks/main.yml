@@ -1,0 +1,6 @@
+---
+- name: Install mariadb inside docker
+  import_tasks: install.yml
+
+- name: Allow port for mariadb
+  import_tasks: ufw.yml

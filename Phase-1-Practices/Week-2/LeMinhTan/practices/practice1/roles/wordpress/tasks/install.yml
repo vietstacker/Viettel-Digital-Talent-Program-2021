@@ -1,0 +1,21 @@
+- name: Create a volume wordpress
+  docker_volume:
+    name: "{{ volume_wp_name }}"
+    state: present 
+
+- name: Create and start container wordpress
+  docker_container:
+    name: wordpress
+    image: bitnami/wordpress:latest
+    state: started
+    volumes:
+      - "{{ volume_wp_name }}:/bitnami/wordpress"
+    ports:
+     - "80:8080"
+     - "8443:8443"
+    env:
+      WORDPRESS_DATABASE_HOST: "{{ wp_database_host }}"
+      ALLOW_EMPTY_PASSWORD: "{{ wp_allow_empty_password }}"
+      WORDPRESS_DATABASE_USER: "{{ mariadb_user }}"
+      WORDPRESS_DATABASE_PASSWORD: "{{ mariadb_password }}"
+      WORDPRESS_DATABASE_NAME: "{{ mariadb_database }}"

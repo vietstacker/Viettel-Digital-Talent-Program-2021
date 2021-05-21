@@ -1,0 +1,13 @@
+- name: Open port for mariadb
+  ufw:
+    rule: allow
+    port: '3306'
+
+- name: Open port for ssh
+  ufw:
+    rule: allow
+    port: '22'
+
+- name: Enable UFW
+  ufw:
+    state: enabled
