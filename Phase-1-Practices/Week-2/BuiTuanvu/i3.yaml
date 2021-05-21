@@ -1,0 +1,42 @@
+---
+- name: Install MariaDb
+  hosts: db 
+  gather_facts: false
+  become: yes
+  tasks:
+  - name: create volume for db
+    become: yes
+    command: docker volume create --name mariadb_data
+    register: debugCreateVolume
+  - name: print log run mariadb
+    debug:
+     var: debugCreateVolume
+  - name: allow port
+    ufw:
+      rule: allow
+      port: 3306
+
+- name: Install WordPress
+  hosts: wp
+  gather_facts: false
+  become: yes
+  tasks:
+  - name: create volume for web
+    become: yes
+    command: docker volume create --name wordpress_data
+    register: debugCreateVolume
+  - name: print log create volume web
+    debug:
+     var: debugCreateVolume
+  - name: allow ufw 
+    ufw: rule={{ item.rule }} port={{ item.port }}
+    with_items:
+      - {rule: 'allow' ,port: '8080'}
+      - {rule: 'allow' ,port: '8443'}
+  - name:  run image wordpress
+    become: yes
+    command:   docker run -d --name wordpress   --env WORDPRESS_DATABASE_HOST=192.168.31.150  --env ALLOW_EMPTY_PASSWORD=yes   --env WORDPRESS_DATABASE_USER=bn_wordpress   --env WORDPRESS_DATABASE_PASSWORD=bitnami   --env WORDPRESS_DATABASE_NAME=bitnami_wordpress   --network host   --volume wordpress_data:/bitnami/wordpress   bitnami/wordpress:latest   
+    register: debugRunWp
+  - name: print log run web
+    debug:
+     var: debugRunWp

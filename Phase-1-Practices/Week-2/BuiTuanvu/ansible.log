@@ -1,0 +1,1559 @@
+2021-05-13 22:21:07,789 p=10508 u=vu n=ansible | 192.168.31.150 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:21:30,781 p=10527 u=vu n=ansible | 192.168.31.150 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:21:43,155 p=10539 u=vu n=ansible | 192.168.31.150 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:22:21,393 p=10554 u=vu n=ansible | 192.168.31.150 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:22:43,786 p=10568 u=vu n=ansible | 192.168.31.150 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:22:53,681 p=10583 u=vu n=ansible | 192.168.31.150 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:24:51,516 p=10670 u=vu n=ansible | 192.168.31.150 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:24:52,245 p=10670 u=vu n=ansible | 192.168.31.169 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:25:30,634 p=10693 u=vu n=ansible | 192.168.31.169 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:25:31,826 p=10693 u=vu n=ansible | 192.168.31.150 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:25:52,315 p=10716 u=vu n=ansible | 192.168.31.169 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:25:53,505 p=10716 u=vu n=ansible | 192.168.31.150 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:26:12,049 p=10738 u=vu n=ansible | 192.168.31.150 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:26:23,171 p=10749 u=vu n=ansible | 192.168.31.150 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2021-05-13 22:33:13,722 p=10928 u=vu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 2 (char 1)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/vu/ansible/i.yaml': line 2, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+ name: set up docker
+  hosts: all
+       ^ here
+
+2021-05-13 22:33:37,520 p=10934 u=vu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/vu/ansible/i.yaml': line 2, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+name: set up docker
+  hosts: all
+       ^ here
+
+2021-05-13 22:34:00,604 p=10940 u=vu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/vu/ansible/i.yaml': line 2, column 15, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+name: set up docker
+  gather_facts: false
+              ^ here
+
+2021-05-13 22:34:10,472 p=10945 u=vu n=ansible | ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead
+
+The error appears to be in '/home/vu/ansible/i.yaml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  name: set up docker
+  ^ here
+
+2021-05-13 22:34:15,410 p=10950 u=vu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 2 (char 1)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/vu/ansible/i.yaml': line 2, column 15, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+ name: set up docker
+  gather_facts: false
+              ^ here
+
+2021-05-13 22:34:26,423 p=10954 u=vu n=ansible | ERROR! the field 'hosts' is required but was not set
+2021-05-13 22:34:40,115 p=10958 u=vu n=ansible | PLAY [set up docker] *******************************************************************************************
+2021-05-13 22:34:40,121 p=10958 u=vu n=ansible | TASK [Ping] ****************************************************************************************************
+2021-05-13 22:34:42,814 p=10958 u=vu n=ansible | fatal: [192.168.31.169]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-05-13 22:34:42,817 p=10958 u=vu n=ansible | PLAY RECAP *****************************************************************************************************
+2021-05-13 22:34:42,817 p=10958 u=vu n=ansible | 192.168.31.169             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:35:12,877 p=10978 u=vu n=ansible | PLAY [set up docker] *******************************************************************************************
+2021-05-13 22:35:12,884 p=10978 u=vu n=ansible | TASK [Ping] ****************************************************************************************************
+2021-05-13 22:35:15,569 p=10978 u=vu n=ansible | fatal: [192.168.31.169]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-05-13 22:35:15,570 p=10978 u=vu n=ansible | PLAY RECAP *****************************************************************************************************
+2021-05-13 22:35:15,570 p=10978 u=vu n=ansible | 192.168.31.169             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:35:44,719 p=11002 u=vu n=ansible | PLAY [set up docker] *******************************************************************************************
+2021-05-13 22:35:44,726 p=11002 u=vu n=ansible | TASK [Ping] ****************************************************************************************************
+2021-05-13 22:35:47,417 p=11002 u=vu n=ansible | fatal: [192.168.31.169]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-05-13 22:35:47,420 p=11002 u=vu n=ansible | PLAY RECAP *****************************************************************************************************
+2021-05-13 22:35:47,421 p=11002 u=vu n=ansible | 192.168.31.169             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:35:59,966 p=11019 u=vu n=ansible | PLAY [set up docker] *******************************************************************************************
+2021-05-13 22:35:59,973 p=11019 u=vu n=ansible | TASK [Ping] ****************************************************************************************************
+2021-05-13 22:36:01,334 p=11019 u=vu n=ansible | fatal: [192.168.31.169]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-05-13 22:36:01,934 p=11019 u=vu n=ansible | fatal: [192.168.31.150]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-05-13 22:36:01,935 p=11019 u=vu n=ansible | PLAY RECAP *****************************************************************************************************
+2021-05-13 22:36:01,935 p=11019 u=vu n=ansible | 192.168.31.150             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:36:01,936 p=11019 u=vu n=ansible | 192.168.31.169             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:37:11,504 p=11068 u=vu n=ansible | PLAY [set up docker] *******************************************************************************************
+2021-05-13 22:37:11,511 p=11068 u=vu n=ansible | TASK [Ping] ****************************************************************************************************
+2021-05-13 22:37:12,024 p=11068 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-13 22:37:13,774 p=11068 u=vu n=ansible | fatal: [192.168.31.150]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2021-05-13 22:37:13,793 p=11068 u=vu n=ansible | PLAY RECAP *****************************************************************************************************
+2021-05-13 22:37:13,794 p=11068 u=vu n=ansible | 192.168.31.150             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:37:13,794 p=11068 u=vu n=ansible | 192.168.31.169             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:37:36,785 p=11103 u=vu n=ansible | PLAY [set up docker] *******************************************************************************************
+2021-05-13 22:37:36,792 p=11103 u=vu n=ansible | TASK [Ping] ****************************************************************************************************
+2021-05-13 22:37:37,077 p=11103 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-13 22:37:37,613 p=11103 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-13 22:37:37,617 p=11103 u=vu n=ansible | PLAY RECAP *****************************************************************************************************
+2021-05-13 22:37:37,617 p=11103 u=vu n=ansible | 192.168.31.150             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:37:37,617 p=11103 u=vu n=ansible | 192.168.31.169             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:38:13,657 p=11158 u=vu n=ansible | PLAY [set up docker] *******************************************************************************************
+2021-05-13 22:38:13,664 p=11158 u=vu n=ansible | TASK [Ping] ****************************************************************************************************
+2021-05-13 22:38:13,934 p=11158 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-13 22:38:13,935 p=11158 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-13 22:38:13,939 p=11158 u=vu n=ansible | PLAY RECAP *****************************************************************************************************
+2021-05-13 22:38:13,939 p=11158 u=vu n=ansible | 192.168.31.150             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:38:13,939 p=11158 u=vu n=ansible | 192.168.31.169             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:43:12,967 p=11331 u=vu n=ansible | PLAY [set up docker] *******************************************************************************************
+2021-05-13 22:43:12,974 p=11331 u=vu n=ansible | TASK [Ping] ****************************************************************************************************
+2021-05-13 22:43:13,511 p=11331 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-13 22:43:13,512 p=11331 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-13 22:43:13,516 p=11331 u=vu n=ansible | PLAY RECAP *****************************************************************************************************
+2021-05-13 22:43:13,516 p=11331 u=vu n=ansible | 192.168.31.150             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:43:13,516 p=11331 u=vu n=ansible | 192.168.31.169             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:43:28,723 p=11384 u=vu n=ansible | PLAY [set up docker] *******************************************************************************************
+2021-05-13 22:43:28,731 p=11384 u=vu n=ansible | TASK [Ping] ****************************************************************************************************
+2021-05-13 22:43:28,986 p=11384 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-13 22:43:28,990 p=11384 u=vu n=ansible | PLAY RECAP *****************************************************************************************************
+2021-05-13 22:43:28,990 p=11384 u=vu n=ansible | 192.168.31.169             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:43:36,901 p=11409 u=vu n=ansible | PLAY [set up docker] *******************************************************************************************
+2021-05-13 22:43:36,908 p=11409 u=vu n=ansible | TASK [Ping] ****************************************************************************************************
+2021-05-13 22:43:37,181 p=11409 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-13 22:43:37,183 p=11409 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-13 22:43:37,187 p=11409 u=vu n=ansible | PLAY RECAP *****************************************************************************************************
+2021-05-13 22:43:37,187 p=11409 u=vu n=ansible | 192.168.31.150             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:43:37,187 p=11409 u=vu n=ansible | 192.168.31.169             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:46:54,772 p=11522 u=vu n=ansible | PLAY [set up docker] *******************************************************************************************
+2021-05-13 22:46:54,779 p=11522 u=vu n=ansible | TASK [Ping] ****************************************************************************************************
+2021-05-13 22:46:55,324 p=11522 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-13 22:46:55,324 p=11522 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-13 22:46:55,328 p=11522 u=vu n=ansible | PLAY RECAP *****************************************************************************************************
+2021-05-13 22:46:55,328 p=11522 u=vu n=ansible | 192.168.31.150             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 22:46:55,328 p=11522 u=vu n=ansible | 192.168.31.169             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 23:39:21,089 p=12356 u=vu n=ansible | PLAY [set up docker] *******************************************************************************************
+2021-05-13 23:39:21,095 p=12356 u=vu n=ansible | TASK [Ping] ****************************************************************************************************
+2021-05-13 23:39:21,637 p=12356 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-13 23:39:21,638 p=12356 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-13 23:39:21,642 p=12356 u=vu n=ansible | PLAY RECAP *****************************************************************************************************
+2021-05-13 23:39:21,642 p=12356 u=vu n=ansible | 192.168.31.150             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-13 23:39:21,642 p=12356 u=vu n=ansible | 192.168.31.169             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:03:22,859 p=13146 u=vu n=ansible | PLAY [set up docker] ********************************************************************************
+2021-05-14 00:03:22,866 p=13146 u=vu n=ansible | TASK [Ping] *****************************************************************************************
+2021-05-14 00:03:23,425 p=13146 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:03:23,471 p=13146 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:03:23,473 p=13146 u=vu n=ansible | TASK [Install docker.io] ****************************************************************************
+2021-05-14 00:04:06,691 p=13146 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 00:04:08,079 p=13146 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 00:04:08,083 p=13146 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 00:04:08,083 p=13146 u=vu n=ansible | 192.168.31.150             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:04:08,083 p=13146 u=vu n=ansible | 192.168.31.169             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:06:12,458 p=13354 u=vu n=ansible | PLAY [set up docker] ********************************************************************************
+2021-05-14 00:06:12,464 p=13354 u=vu n=ansible | TASK [Ping] *****************************************************************************************
+2021-05-14 00:06:13,088 p=13354 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:06:13,093 p=13354 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:06:13,096 p=13354 u=vu n=ansible | TASK [Install docker.io] ****************************************************************************
+2021-05-14 00:06:13,912 p=13354 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:06:13,913 p=13354 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:06:13,916 p=13354 u=vu n=ansible | TASK [Ensure docker service is running] *************************************************************
+2021-05-14 00:06:14,866 p=13354 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:06:14,871 p=13354 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:06:14,876 p=13354 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 00:06:14,876 p=13354 u=vu n=ansible | 192.168.31.150             : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:06:14,876 p=13354 u=vu n=ansible | 192.168.31.169             : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:14:19,832 p=13785 u=vu n=ansible | PLAY [set up docker] ********************************************************************************
+2021-05-14 00:14:19,838 p=13785 u=vu n=ansible | TASK [Ping] *****************************************************************************************
+2021-05-14 00:14:20,366 p=13785 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:14:20,367 p=13785 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:14:20,369 p=13785 u=vu n=ansible | TASK [Install docker.io] ****************************************************************************
+2021-05-14 00:14:21,166 p=13785 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:14:21,181 p=13785 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:14:21,183 p=13785 u=vu n=ansible | TASK [Ensure docker service is running] *************************************************************
+2021-05-14 00:14:22,078 p=13785 u=vu n=ansible | fatal: [192.168.31.169]: FAILED! => {"changed": false, "msg": "Could not find the requested service docker-compose: host"}
+2021-05-14 00:14:22,079 p=13785 u=vu n=ansible | fatal: [192.168.31.150]: FAILED! => {"changed": false, "msg": "Could not find the requested service docker-compose: host"}
+2021-05-14 00:14:22,080 p=13785 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 00:14:22,080 p=13785 u=vu n=ansible | 192.168.31.150             : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:14:22,081 p=13785 u=vu n=ansible | 192.168.31.169             : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:18:02,796 p=13994 u=vu n=ansible | PLAY [set up docker] ********************************************************************************
+2021-05-14 00:18:02,802 p=13994 u=vu n=ansible | TASK [Ping] *****************************************************************************************
+2021-05-14 00:18:03,341 p=13994 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:18:03,341 p=13994 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:18:03,343 p=13994 u=vu n=ansible | TASK [Install docker.io] ****************************************************************************
+2021-05-14 00:18:04,154 p=13994 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:18:04,179 p=13994 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:18:04,181 p=13994 u=vu n=ansible | TASK [Install docker-compose] ***********************************************************************
+2021-05-14 00:18:17,429 p=13994 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 00:18:19,410 p=13994 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 00:18:19,412 p=13994 u=vu n=ansible | TASK [Ensure docker service is running] *************************************************************
+2021-05-14 00:18:20,344 p=13994 u=vu n=ansible | fatal: [192.168.31.150]: FAILED! => {"changed": false, "msg": "Could not find the requested service docker-compose: host"}
+2021-05-14 00:18:20,351 p=13994 u=vu n=ansible | fatal: [192.168.31.169]: FAILED! => {"changed": false, "msg": "Could not find the requested service docker-compose: host"}
+2021-05-14 00:18:20,352 p=13994 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 00:18:20,352 p=13994 u=vu n=ansible | 192.168.31.150             : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:18:20,352 p=13994 u=vu n=ansible | 192.168.31.169             : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:18:44,492 p=14170 u=vu n=ansible | PLAY [set up docker] ********************************************************************************
+2021-05-14 00:18:44,499 p=14170 u=vu n=ansible | TASK [Ping] *****************************************************************************************
+2021-05-14 00:18:44,815 p=14170 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:18:44,816 p=14170 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:18:44,818 p=14170 u=vu n=ansible | TASK [Install docker.io] ****************************************************************************
+2021-05-14 00:18:45,674 p=14170 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:18:45,694 p=14170 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:18:45,696 p=14170 u=vu n=ansible | TASK [Install docker-compose] ***********************************************************************
+2021-05-14 00:18:46,468 p=14170 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:18:46,510 p=14170 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:18:46,513 p=14170 u=vu n=ansible | TASK [Ensure docker service is running] *************************************************************
+2021-05-14 00:18:47,455 p=14170 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:18:47,457 p=14170 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:18:47,461 p=14170 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 00:18:47,461 p=14170 u=vu n=ansible | 192.168.31.150             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:18:47,461 p=14170 u=vu n=ansible | 192.168.31.169             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:19:03,850 p=14326 u=vu n=ansible | PLAY [set up docker] ********************************************************************************
+2021-05-14 00:19:03,857 p=14326 u=vu n=ansible | TASK [Ping] *****************************************************************************************
+2021-05-14 00:19:04,134 p=14326 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:19:04,135 p=14326 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:19:04,137 p=14326 u=vu n=ansible | TASK [Install docker.io] ****************************************************************************
+2021-05-14 00:19:04,947 p=14326 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:19:04,965 p=14326 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:19:04,967 p=14326 u=vu n=ansible | TASK [Install docker-compose] ***********************************************************************
+2021-05-14 00:19:05,701 p=14326 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:19:05,708 p=14326 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:19:05,711 p=14326 u=vu n=ansible | TASK [Ensure docker service is running] *************************************************************
+2021-05-14 00:19:06,650 p=14326 u=vu n=ansible | fatal: [192.168.31.150]: FAILED! => {"changed": false, "msg": "Could not find the requested service docker-compose: host"}
+2021-05-14 00:19:06,651 p=14326 u=vu n=ansible | fatal: [192.168.31.169]: FAILED! => {"changed": false, "msg": "Could not find the requested service docker-compose: host"}
+2021-05-14 00:19:06,651 p=14326 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 00:19:06,652 p=14326 u=vu n=ansible | 192.168.31.150             : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:19:06,652 p=14326 u=vu n=ansible | 192.168.31.169             : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:19:23,472 p=14490 u=vu n=ansible | PLAY [set up docker] ********************************************************************************
+2021-05-14 00:19:23,479 p=14490 u=vu n=ansible | TASK [Ping] *****************************************************************************************
+2021-05-14 00:19:23,760 p=14490 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:19:23,764 p=14490 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:19:23,766 p=14490 u=vu n=ansible | TASK [Install docker.io] ****************************************************************************
+2021-05-14 00:19:24,560 p=14490 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:19:24,587 p=14490 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:19:24,589 p=14490 u=vu n=ansible | TASK [Install docker-compose] ***********************************************************************
+2021-05-14 00:19:25,307 p=14490 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:19:25,311 p=14490 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:19:25,313 p=14490 u=vu n=ansible | TASK [Ensure docker service is running] *************************************************************
+2021-05-14 00:19:26,265 p=14490 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:19:26,272 p=14490 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:19:26,277 p=14490 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 00:19:26,277 p=14490 u=vu n=ansible | 192.168.31.150             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:19:26,277 p=14490 u=vu n=ansible | 192.168.31.169             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:33:07,620 p=14877 u=vu n=ansible | PLAY [set up docker] ********************************************************************************
+2021-05-14 00:33:07,626 p=14877 u=vu n=ansible | TASK [Ping] *****************************************************************************************
+2021-05-14 00:33:08,267 p=14877 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:33:08,267 p=14877 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:33:08,269 p=14877 u=vu n=ansible | TASK [Install docker.io] ****************************************************************************
+2021-05-14 00:33:09,087 p=14877 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:33:09,088 p=14877 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:33:09,090 p=14877 u=vu n=ansible | TASK [Install docker-compose] ***********************************************************************
+2021-05-14 00:33:09,815 p=14877 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:33:09,826 p=14877 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:33:09,828 p=14877 u=vu n=ansible | TASK [Ensure docker service is running] *************************************************************
+2021-05-14 00:33:10,756 p=14877 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:33:10,771 p=14877 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:33:10,774 p=14877 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 00:33:10,775 p=14877 u=vu n=ansible | 192.168.31.150             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:33:10,775 p=14877 u=vu n=ansible | 192.168.31.169             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:33:43,692 p=15047 u=vu n=ansible | PLAY [set up docker] ********************************************************************************
+2021-05-14 00:33:43,699 p=15047 u=vu n=ansible | TASK [Ping] *****************************************************************************************
+2021-05-14 00:33:43,997 p=15047 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:33:44,004 p=15047 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:33:44,007 p=15047 u=vu n=ansible | TASK [Install docker.io] ****************************************************************************
+2021-05-14 00:33:44,917 p=15047 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:33:44,947 p=15047 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:33:44,950 p=15047 u=vu n=ansible | TASK [Install docker-compose] ***********************************************************************
+2021-05-14 00:33:45,719 p=15047 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:33:45,740 p=15047 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:33:45,743 p=15047 u=vu n=ansible | TASK [Ensure docker service is running] *************************************************************
+2021-05-14 00:33:46,757 p=15047 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 00:33:46,757 p=15047 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-14 00:33:46,761 p=15047 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 00:33:46,761 p=15047 u=vu n=ansible | 192.168.31.150             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 00:33:46,761 p=15047 u=vu n=ansible | 192.168.31.169             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 01:32:42,493 p=19150 u=vu n=ansible | ERROR! the playbook: installwpdb.yaml could not be found
+2021-05-14 01:33:18,986 p=19161 u=vu n=ansible | ERROR! the playbook: installwpdb could not be found
+2021-05-14 01:33:39,151 p=19167 u=vu n=ansible | PLAY [Install MariaDb] ******************************************************************************
+2021-05-14 01:33:39,161 p=19167 u=vu n=ansible | TASK [create volume for db] *************************************************************************
+2021-05-14 01:33:39,757 p=19167 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 01:33:39,759 p=19167 u=vu n=ansible | TASK [run image mariadb] ****************************************************************************
+2021-05-14 01:34:01,096 p=19167 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 01:34:01,101 p=19167 u=vu n=ansible | PLAY [Install WordPress] ****************************************************************************
+2021-05-14 01:34:01,105 p=19167 u=vu n=ansible | TASK [create volume for wp] *************************************************************************
+2021-05-14 01:34:01,683 p=19167 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 01:34:01,685 p=19167 u=vu n=ansible | TASK [run image wordpress] **************************************************************************
+2021-05-14 01:34:39,838 p=19167 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 01:34:39,843 p=19167 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 01:34:39,843 p=19167 u=vu n=ansible | 192.168.31.150             : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 01:34:39,843 p=19167 u=vu n=ansible | 192.168.31.169             : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 01:38:46,601 p=19354 u=vu n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: web
+
+2021-05-14 01:38:46,602 p=19354 u=vu n=ansible | PLAY [test playbook] ********************************************************************************
+2021-05-14 01:38:46,612 p=19354 u=vu n=ansible | TASK [ping] *****************************************************************************************
+2021-05-14 01:38:47,184 p=19354 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 01:38:47,186 p=19354 u=vu n=ansible | TASK [print docker ps  data] ************************************************************************
+2021-05-14 01:38:47,209 p=19354 u=vu n=ansible | ok: [192.168.31.150] => {
+    "result": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "ps"
+        ],
+        "delta": "0:00:00.029676",
+        "end": "2021-05-14 01:38:40.374514",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:38:40.344838",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS     NAMES\n6a053af624fd   bitnami/mariadb:latest   \"/opt/bitnami/script…\"   4 minutes ago   Up 4 minutes             mariadb",
+        "stdout_lines": [
+            "CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS     NAMES",
+            "6a053af624fd   bitnami/mariadb:latest   \"/opt/bitnami/script…\"   4 minutes ago   Up 4 minutes             mariadb"
+        ]
+    }
+}
+2021-05-14 01:38:47,213 p=19354 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 01:38:47,213 p=19354 u=vu n=ansible | 192.168.31.150             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 01:39:16,070 p=19391 u=vu n=ansible | PLAY [test playbook] ********************************************************************************
+2021-05-14 01:39:16,079 p=19391 u=vu n=ansible | TASK [ping] *****************************************************************************************
+2021-05-14 01:39:16,429 p=19391 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 01:39:16,666 p=19391 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 01:39:16,668 p=19391 u=vu n=ansible | TASK [print docker ps  data] ************************************************************************
+2021-05-14 01:39:16,686 p=19391 u=vu n=ansible | ok: [192.168.31.169] => {
+    "result": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "ps"
+        ],
+        "delta": "0:00:00.032621",
+        "end": "2021-05-14 01:39:16.626886",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:39:16.594265",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES",
+        "stdout_lines": [
+            "CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES"
+        ]
+    }
+}
+2021-05-14 01:39:16,690 p=19391 u=vu n=ansible | ok: [192.168.31.150] => {
+    "result": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "ps"
+        ],
+        "delta": "0:00:00.031989",
+        "end": "2021-05-14 01:39:09.618560",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:39:09.586571",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS     NAMES\n6a053af624fd   bitnami/mariadb:latest   \"/opt/bitnami/script…\"   5 minutes ago   Up 5 minutes             mariadb",
+        "stdout_lines": [
+            "CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS     NAMES",
+            "6a053af624fd   bitnami/mariadb:latest   \"/opt/bitnami/script…\"   5 minutes ago   Up 5 minutes             mariadb"
+        ]
+    }
+}
+2021-05-14 01:39:16,694 p=19391 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 01:39:16,694 p=19391 u=vu n=ansible | 192.168.31.150             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 01:39:16,694 p=19391 u=vu n=ansible | 192.168.31.169             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 01:40:13,564 p=19466 u=vu n=ansible | PLAY [Install MariaDb] ******************************************************************************
+2021-05-14 01:40:13,571 p=19466 u=vu n=ansible | TASK [create volume for db] *************************************************************************
+2021-05-14 01:40:13,869 p=19466 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 01:40:13,871 p=19466 u=vu n=ansible | TASK [run image mariadb] ****************************************************************************
+2021-05-14 01:40:14,077 p=19466 u=vu n=ansible | fatal: [192.168.31.150]: FAILED! => {"changed": true, "cmd": ["docker", "run", "-d", "--name", "mariadb", "--env", "ALLOW_EMPTY_PASSWORD=yes", "--env", "MARIADB_USER=bn_wordpress", "--env", "MARIADB_PASSWORD=bitnami", "--env", "MARIADB_DATABASE=bitnami_wordpress", "--network", "host", "--volume", "mariadb_data:/bitnami/mariadb", "bitnami/mariadb:latest"], "delta": "0:00:00.026849", "end": "2021-05-14 01:40:07.273382", "msg": "non-zero return code", "rc": 125, "start": "2021-05-14 01:40:07.246533", "stderr": "docker: Error response from daemon: Conflict. The container name \"/mariadb\" is already in use by container \"6a053af624fd7d90b41e3d377a1a0c3b525d2fc40a2ffcc22f85c02cc46a1494\". You have to remove (or rename) that container to be able to reuse that name.\nSee 'docker run --help'.", "stderr_lines": ["docker: Error response from daemon: Conflict. The container name \"/mariadb\" is already in use by container \"6a053af624fd7d90b41e3d377a1a0c3b525d2fc40a2ffcc22f85c02cc46a1494\". You have to remove (or rename) that container to be able to reuse that name.", "See 'docker run --help'."], "stdout": "", "stdout_lines": []}
+2021-05-14 01:40:14,077 p=19466 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 01:40:14,078 p=19466 u=vu n=ansible | 192.168.31.150             : ok=1    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 01:40:24,766 p=19507 u=vu n=ansible | PLAY [test playbook] ********************************************************************************
+2021-05-14 01:40:24,772 p=19507 u=vu n=ansible | TASK [ping] *****************************************************************************************
+2021-05-14 01:40:25,101 p=19507 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 01:40:25,295 p=19507 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 01:40:25,297 p=19507 u=vu n=ansible | TASK [print docker ps  data] ************************************************************************
+2021-05-14 01:40:25,315 p=19507 u=vu n=ansible | ok: [192.168.31.169] => {
+    "result": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "ps"
+        ],
+        "delta": "0:00:00.027178",
+        "end": "2021-05-14 01:40:25.255491",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:40:25.228313",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES",
+        "stdout_lines": [
+            "CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES"
+        ]
+    }
+}
+2021-05-14 01:40:25,320 p=19507 u=vu n=ansible | ok: [192.168.31.150] => {
+    "result": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "ps"
+        ],
+        "delta": "0:00:00.029996",
+        "end": "2021-05-14 01:40:18.292521",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:40:18.262525",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS     NAMES\n6a053af624fd   bitnami/mariadb:latest   \"/opt/bitnami/script…\"   6 minutes ago   Up 6 minutes             mariadb",
+        "stdout_lines": [
+            "CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS     NAMES",
+            "6a053af624fd   bitnami/mariadb:latest   \"/opt/bitnami/script…\"   6 minutes ago   Up 6 minutes             mariadb"
+        ]
+    }
+}
+2021-05-14 01:40:25,325 p=19507 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 01:40:25,326 p=19507 u=vu n=ansible | 192.168.31.150             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 01:40:25,326 p=19507 u=vu n=ansible | 192.168.31.169             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 01:45:05,562 p=19788 u=vu n=ansible | PLAY [test playbook] ********************************************************************************
+2021-05-14 01:45:05,569 p=19788 u=vu n=ansible | TASK [ping] *****************************************************************************************
+2021-05-14 01:45:06,135 p=19788 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 01:45:06,140 p=19788 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 01:45:06,143 p=19788 u=vu n=ansible | TASK [print docker ps  data] ************************************************************************
+2021-05-14 01:45:06,160 p=19788 u=vu n=ansible | ok: [192.168.31.169] => {
+    "result": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "ps"
+        ],
+        "delta": "0:00:00.037256",
+        "end": "2021-05-14 01:45:06.101285",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:45:06.064029",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS     NAMES\n3f78ccc61364   bitnami/wordpress:latest   \"/opt/bitnami/script…\"   10 minutes ago   Up 37 seconds             wordpress",
+        "stdout_lines": [
+            "CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS     NAMES",
+            "3f78ccc61364   bitnami/wordpress:latest   \"/opt/bitnami/script…\"   10 minutes ago   Up 37 seconds             wordpress"
+        ]
+    }
+}
+2021-05-14 01:45:06,163 p=19788 u=vu n=ansible | ok: [192.168.31.150] => {
+    "result": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "ps"
+        ],
+        "delta": "0:00:00.028743",
+        "end": "2021-05-14 01:44:59.329629",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:44:59.300886",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS          PORTS     NAMES\n6a053af624fd   bitnami/mariadb:latest   \"/opt/bitnami/script…\"   11 minutes ago   Up 11 minutes             mariadb",
+        "stdout_lines": [
+            "CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS          PORTS     NAMES",
+            "6a053af624fd   bitnami/mariadb:latest   \"/opt/bitnami/script…\"   11 minutes ago   Up 11 minutes             mariadb"
+        ]
+    }
+}
+2021-05-14 01:45:06,167 p=19788 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 01:45:06,167 p=19788 u=vu n=ansible | 192.168.31.150             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 01:45:06,167 p=19788 u=vu n=ansible | 192.168.31.169             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 01:54:48,322 p=19984 u=vu n=ansible | PLAY [Install MariaDb] ******************************************************************************
+2021-05-14 01:54:48,329 p=19984 u=vu n=ansible | TASK [create network] *******************************************************************************
+2021-05-14 01:54:48,986 p=19984 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 01:54:48,989 p=19984 u=vu n=ansible | TASK [create volume for db] *************************************************************************
+2021-05-14 01:54:49,196 p=19984 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 01:54:49,198 p=19984 u=vu n=ansible | TASK [run image mariadb] ****************************************************************************
+2021-05-14 01:55:07,483 p=19984 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 01:55:07,485 p=19984 u=vu n=ansible | TASK [create volume for web] ************************************************************************
+2021-05-14 01:55:07,751 p=19984 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 01:55:07,753 p=19984 u=vu n=ansible | TASK [run image wordpress] **************************************************************************
+2021-05-14 01:55:07,979 p=19984 u=vu n=ansible | fatal: [192.168.31.169]: FAILED! => {"changed": true, "cmd": ["docker", "run", "-d", "--name", "wordpress", "-p", "80:8080", "-p", "443:8443", "--env", "ALLOW_EMPTY_PASSWORD=yes", "--env", "WORDPRESS_DATABASE_USER=bn_wordpress", "--env", "WORDPRESS_DATABASE_PASSWORD=bitnami", "--env", "WORDPRESS_DATABASE_NAME=bitnami_wordpress", "--network", "wordpress-network", "--volume", "wordpress_data:/bitnami/wordpress", "bitnami/wordpress:latest"], "delta": "0:00:00.031396", "end": "2021-05-14 01:55:07.949671", "msg": "non-zero return code", "rc": 125, "start": "2021-05-14 01:55:07.918275", "stderr": "docker: Error response from daemon: Conflict. The container name \"/wordpress\" is already in use by container \"3f78ccc613649344ee4583dadeb2071439f9451423edac9075b918423248f643\". You have to remove (or rename) that container to be able to reuse that name.\nSee 'docker run --help'.", "stderr_lines": ["docker: Error response from daemon: Conflict. The container name \"/wordpress\" is already in use by container \"3f78ccc613649344ee4583dadeb2071439f9451423edac9075b918423248f643\". You have to remove (or rename) that container to be able to reuse that name.", "See 'docker run --help'."], "stdout": "", "stdout_lines": []}
+2021-05-14 01:55:07,980 p=19984 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 01:55:07,980 p=19984 u=vu n=ansible | 192.168.31.169             : ok=4    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:02:53,169 p=20257 u=vu n=ansible | PLAY [Install MariaDb] ******************************************************************************
+2021-05-14 02:02:53,178 p=20257 u=vu n=ansible | TASK [create network] *******************************************************************************
+2021-05-14 02:02:54,456 p=20257 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:02:54,459 p=20257 u=vu n=ansible | TASK [create volume for db] *************************************************************************
+2021-05-14 02:02:54,682 p=20257 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:02:54,684 p=20257 u=vu n=ansible | TASK [run image mariadb] ****************************************************************************
+2021-05-14 02:03:18,829 p=20257 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:03:18,831 p=20257 u=vu n=ansible | TASK [create volume for web] ************************************************************************
+2021-05-14 02:03:19,094 p=20257 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:03:19,096 p=20257 u=vu n=ansible | TASK [run image wordpress] **************************************************************************
+2021-05-14 02:03:53,216 p=20257 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:03:53,220 p=20257 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 02:03:53,221 p=20257 u=vu n=ansible | 192.168.31.169             : ok=5    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:09:07,737 p=20648 u=vu n=ansible | PLAY [Install MariaDb] ******************************************************************************
+2021-05-14 02:09:07,746 p=20648 u=vu n=ansible | TASK [create network] *******************************************************************************
+2021-05-14 02:09:08,445 p=20648 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 02:09:08,447 p=20648 u=vu n=ansible | TASK [create volume for db] *************************************************************************
+2021-05-14 02:09:08,654 p=20648 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 02:09:08,656 p=20648 u=vu n=ansible | TASK [run image mariadb] ****************************************************************************
+2021-05-14 02:09:33,712 p=20648 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 02:09:33,717 p=20648 u=vu n=ansible | PLAY [Install WordPress] ****************************************************************************
+2021-05-14 02:09:33,723 p=20648 u=vu n=ansible | TASK [create network] *******************************************************************************
+2021-05-14 02:09:42,793 p=20648 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:09:42,795 p=20648 u=vu n=ansible | TASK [create volume for wp] *************************************************************************
+2021-05-14 02:09:43,024 p=20648 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:09:43,026 p=20648 u=vu n=ansible | TASK [run image wordpress] **************************************************************************
+2021-05-14 02:10:24,036 p=20648 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:10:24,040 p=20648 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 02:10:24,040 p=20648 u=vu n=ansible | 192.168.31.150             : ok=3    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:10:24,041 p=20648 u=vu n=ansible | 192.168.31.169             : ok=3    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:14:40,250 p=20955 u=vu n=ansible | PLAY [Install MariaDb] ******************************************************************************
+2021-05-14 02:14:40,260 p=20955 u=vu n=ansible | TASK [create network] *******************************************************************************
+2021-05-14 02:14:41,216 p=20955 u=vu n=ansible | fatal: [192.168.31.169]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "changed": true, "cmd": ["docker", "network", "create", "wordpress-network"], "delta": "0:00:00.028641", "end": "2021-05-14 01:18:02.609454", "msg": "non-zero return code", "rc": 1, "start": "2021-05-14 01:18:02.580813", "stderr": "Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.24/networks/create: dial unix /var/run/docker.sock: connect: permission denied", "stderr_lines": ["Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.24/networks/create: dial unix /var/run/docker.sock: connect: permission denied"], "stdout": "", "stdout_lines": []}
+2021-05-14 02:14:41,217 p=20955 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 02:14:41,217 p=20955 u=vu n=ansible | 192.168.31.169             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:15:04,623 p=20989 u=vu n=ansible | PLAY [Install MariaDb] ******************************************************************************
+2021-05-14 02:15:04,630 p=20989 u=vu n=ansible | TASK [create network] *******************************************************************************
+2021-05-14 02:15:04,916 p=20989 u=vu n=ansible | fatal: [192.168.31.169]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "changed": true, "cmd": ["docker", "network", "create", "wordpress-network"], "delta": "0:00:00.027130", "end": "2021-05-14 01:18:26.310226", "msg": "non-zero return code", "rc": 1, "start": "2021-05-14 01:18:26.283096", "stderr": "Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.24/networks/create: dial unix /var/run/docker.sock: connect: permission denied", "stderr_lines": ["Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.24/networks/create: dial unix /var/run/docker.sock: connect: permission denied"], "stdout": "", "stdout_lines": []}
+2021-05-14 02:15:04,917 p=20989 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 02:15:04,917 p=20989 u=vu n=ansible | 192.168.31.169             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:15:40,084 p=21021 u=vu n=ansible | PLAY [Install WP, DB] ***************************************************************************************
+2021-05-14 02:15:40,091 p=21021 u=vu n=ansible | TASK [create network] ***************************************************************************************
+2021-05-14 02:15:40,498 p=21021 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:15:40,501 p=21021 u=vu n=ansible | TASK [create volume for db] *********************************************************************************
+2021-05-14 02:15:40,709 p=21021 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:15:40,711 p=21021 u=vu n=ansible | TASK [run image mariadb] ************************************************************************************
+2021-05-14 02:16:02,525 p=21021 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:16:02,527 p=21021 u=vu n=ansible | TASK [create volume for web] ********************************************************************************
+2021-05-14 02:16:02,805 p=21021 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:16:02,807 p=21021 u=vu n=ansible | TASK [run image wordpress] **********************************************************************************
+2021-05-14 02:16:37,530 p=21021 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:16:37,536 p=21021 u=vu n=ansible | PLAY RECAP **************************************************************************************************
+2021-05-14 02:16:37,536 p=21021 u=vu n=ansible | 192.168.31.169             : ok=5    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:20:27,417 p=21180 u=vu n=ansible | PLAY [Install WP, DB] ***************************************************************************************
+2021-05-14 02:20:27,424 p=21180 u=vu n=ansible | TASK [create network] ***************************************************************************************
+2021-05-14 02:20:27,974 p=21180 u=vu n=ansible | fatal: [192.168.31.169]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "changed": true, "cmd": ["docker", "network", "create", "wordpress-network"], "delta": "0:00:00.030917", "end": "2021-05-14 01:23:49.369467", "msg": "non-zero return code", "rc": 1, "start": "2021-05-14 01:23:49.338550", "stderr": "Error response from daemon: network with name wordpress-network already exists", "stderr_lines": ["Error response from daemon: network with name wordpress-network already exists"], "stdout": "", "stdout_lines": []}
+2021-05-14 02:20:27,974 p=21180 u=vu n=ansible | PLAY RECAP **************************************************************************************************
+2021-05-14 02:20:27,975 p=21180 u=vu n=ansible | 192.168.31.169             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:20:47,139 p=21222 u=vu n=ansible | PLAY [Install MariaDb] **************************************************************************************
+2021-05-14 02:20:47,146 p=21222 u=vu n=ansible | TASK [create network] ***************************************************************************************
+2021-05-14 02:20:47,681 p=21222 u=vu n=ansible | fatal: [192.168.31.150]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "changed": true, "cmd": ["docker", "network", "create", "wordpress-network"], "delta": "0:00:00.027762", "end": "2021-05-14 01:31:31.404362", "msg": "non-zero return code", "rc": 1, "start": "2021-05-14 01:31:31.376600", "stderr": "Error response from daemon: network with name wordpress-network already exists", "stderr_lines": ["Error response from daemon: network with name wordpress-network already exists"], "stdout": "", "stdout_lines": []}
+2021-05-14 02:20:47,681 p=21222 u=vu n=ansible | PLAY RECAP **************************************************************************************************
+2021-05-14 02:20:47,682 p=21222 u=vu n=ansible | 192.168.31.150             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:21:02,662 p=21252 u=vu n=ansible | PLAY [Install MariaDb] **************************************************************************************
+2021-05-14 02:21:02,669 p=21252 u=vu n=ansible | TASK [create network] ***************************************************************************************
+2021-05-14 02:21:03,088 p=21252 u=vu n=ansible | fatal: [192.168.31.150]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "changed": true, "cmd": ["docker", "network", "create", "wordpress-network"], "delta": "0:00:00.039223", "end": "2021-05-14 01:31:46.815971", "msg": "non-zero return code", "rc": 1, "start": "2021-05-14 01:31:46.776748", "stderr": "Error response from daemon: network with name wordpress-network already exists", "stderr_lines": ["Error response from daemon: network with name wordpress-network already exists"], "stdout": "", "stdout_lines": []}
+2021-05-14 02:21:03,089 p=21252 u=vu n=ansible | PLAY RECAP **************************************************************************************************
+2021-05-14 02:21:03,089 p=21252 u=vu n=ansible | 192.168.31.150             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:21:16,137 p=21283 u=vu n=ansible | PLAY [Install MariaDb] **************************************************************************************
+2021-05-14 02:21:16,145 p=21283 u=vu n=ansible | TASK [create network] ***************************************************************************************
+2021-05-14 02:21:16,529 p=21283 u=vu n=ansible | fatal: [192.168.31.150]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "changed": true, "cmd": ["docker", "network", "create", "wordpress-network"], "delta": "0:00:00.037641", "end": "2021-05-14 01:32:00.250380", "msg": "non-zero return code", "rc": 1, "start": "2021-05-14 01:32:00.212739", "stderr": "Error response from daemon: network with name wordpress-network already exists", "stderr_lines": ["Error response from daemon: network with name wordpress-network already exists"], "stdout": "", "stdout_lines": []}
+2021-05-14 02:21:16,530 p=21283 u=vu n=ansible | PLAY RECAP **************************************************************************************************
+2021-05-14 02:21:16,530 p=21283 u=vu n=ansible | 192.168.31.150             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:22:28,826 p=21395 u=vu n=ansible | PLAY [Install WP, DB] ***************************************************************************************
+2021-05-14 02:22:28,833 p=21395 u=vu n=ansible | TASK [create network] ***************************************************************************************
+2021-05-14 02:22:29,615 p=21395 u=vu n=ansible | fatal: [192.168.31.169]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "changed": true, "cmd": ["docker", "network", "create", "wordpress-network"], "delta": "0:00:00.030862", "end": "2021-05-14 01:17:50.787938", "msg": "non-zero return code", "rc": 1, "start": "2021-05-14 01:17:50.757076", "stderr": "Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.24/networks/create: dial unix /var/run/docker.sock: connect: permission denied", "stderr_lines": ["Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.24/networks/create: dial unix /var/run/docker.sock: connect: permission denied"], "stdout": "", "stdout_lines": []}
+2021-05-14 02:22:29,616 p=21395 u=vu n=ansible | PLAY RECAP **************************************************************************************************
+2021-05-14 02:22:29,616 p=21395 u=vu n=ansible | 192.168.31.169             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:22:43,404 p=21426 u=vu n=ansible | PLAY [Install WP, DB] ***************************************************************************************
+2021-05-14 02:22:43,411 p=21426 u=vu n=ansible | TASK [create network] ***************************************************************************************
+2021-05-14 02:22:43,922 p=21426 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:22:43,924 p=21426 u=vu n=ansible | TASK [create volume for db] *********************************************************************************
+2021-05-14 02:22:44,134 p=21426 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:22:44,136 p=21426 u=vu n=ansible | TASK [run image mariadb] ************************************************************************************
+2021-05-14 02:23:06,040 p=21426 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:23:06,042 p=21426 u=vu n=ansible | TASK [create volume for web] ********************************************************************************
+2021-05-14 02:23:06,322 p=21426 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:23:06,324 p=21426 u=vu n=ansible | TASK [run image wordpress] **********************************************************************************
+2021-05-14 02:23:41,204 p=21426 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:23:41,209 p=21426 u=vu n=ansible | PLAY RECAP **************************************************************************************************
+2021-05-14 02:23:41,209 p=21426 u=vu n=ansible | 192.168.31.169             : ok=5    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:32:10,536 p=21878 u=vu n=ansible | PLAY [Install WP, DB] ***************************************************************************************
+2021-05-14 02:32:10,545 p=21878 u=vu n=ansible | TASK [create network] ***************************************************************************************
+2021-05-14 02:32:11,242 p=21878 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:32:11,244 p=21878 u=vu n=ansible | TASK [create volume for db] *********************************************************************************
+2021-05-14 02:32:11,450 p=21878 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:32:11,452 p=21878 u=vu n=ansible | TASK [run image mariadb] ************************************************************************************
+2021-05-14 02:32:33,497 p=21878 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:32:33,499 p=21878 u=vu n=ansible | TASK [create volume for web] ********************************************************************************
+2021-05-14 02:32:33,773 p=21878 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:32:33,775 p=21878 u=vu n=ansible | TASK [run image wordpress] **********************************************************************************
+2021-05-14 02:33:08,583 p=21878 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:33:08,587 p=21878 u=vu n=ansible | PLAY RECAP **************************************************************************************************
+2021-05-14 02:33:08,587 p=21878 u=vu n=ansible | 192.168.31.169             : ok=5    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:41:57,058 p=22422 u=vu n=ansible | PLAY [Install MariaDb] ******************************************************************************
+2021-05-14 02:41:57,066 p=22422 u=vu n=ansible | TASK [create network] *******************************************************************************
+2021-05-14 02:41:57,807 p=22422 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 02:41:57,809 p=22422 u=vu n=ansible | TASK [create volume for db] *************************************************************************
+2021-05-14 02:41:58,012 p=22422 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 02:41:58,014 p=22422 u=vu n=ansible | TASK [run image mariadb] ****************************************************************************
+2021-05-14 02:42:20,249 p=22422 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 02:42:20,255 p=22422 u=vu n=ansible | PLAY [Install WordPress] ****************************************************************************
+2021-05-14 02:42:20,259 p=22422 u=vu n=ansible | TASK [create network] *******************************************************************************
+2021-05-14 02:42:20,958 p=22422 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:42:20,960 p=22422 u=vu n=ansible | TASK [create volume for wp] *************************************************************************
+2021-05-14 02:42:21,179 p=22422 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:42:21,181 p=22422 u=vu n=ansible | TASK [run image wordpress] **************************************************************************
+2021-05-14 02:42:59,087 p=22422 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:42:59,091 p=22422 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 02:42:59,091 p=22422 u=vu n=ansible | 192.168.31.150             : ok=3    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:42:59,091 p=22422 u=vu n=ansible | 192.168.31.169             : ok=3    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:45:34,014 p=22581 u=vu n=ansible | PLAY [Install MariaDb] ******************************************************************************
+2021-05-14 02:45:34,021 p=22581 u=vu n=ansible | TASK [create network] *******************************************************************************
+2021-05-14 02:45:34,544 p=22581 u=vu n=ansible | fatal: [192.168.31.150]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "changed": true, "cmd": ["docker", "network", "create", "wordpress-network"], "delta": "0:00:00.026783", "end": "2021-05-14 01:22:22.533167", "msg": "non-zero return code", "rc": 1, "start": "2021-05-14 01:22:22.506384", "stderr": "Error response from daemon: network with name wordpress-network already exists", "stderr_lines": ["Error response from daemon: network with name wordpress-network already exists"], "stdout": "", "stdout_lines": []}
+2021-05-14 02:45:34,545 p=22581 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 02:45:34,545 p=22581 u=vu n=ansible | 192.168.31.150             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:52:26,036 p=22814 u=vu n=ansible | PLAY [Install MariaDb] ******************************************************************************
+2021-05-14 02:52:26,043 p=22814 u=vu n=ansible | TASK [create network] *******************************************************************************
+2021-05-14 02:52:27,057 p=22814 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 02:52:27,059 p=22814 u=vu n=ansible | TASK [create volume for db] *************************************************************************
+2021-05-14 02:52:27,268 p=22814 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 02:52:27,270 p=22814 u=vu n=ansible | TASK [run image mariadb] ****************************************************************************
+2021-05-14 02:52:49,866 p=22814 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 02:52:49,870 p=22814 u=vu n=ansible | PLAY [Install WordPress] ****************************************************************************
+2021-05-14 02:52:49,874 p=22814 u=vu n=ansible | TASK [create network] *******************************************************************************
+2021-05-14 02:52:50,759 p=22814 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:52:50,761 p=22814 u=vu n=ansible | TASK [create volume for wp] *************************************************************************
+2021-05-14 02:52:50,982 p=22814 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:52:50,984 p=22814 u=vu n=ansible | TASK [run image wordpress] **************************************************************************
+2021-05-14 02:53:38,291 p=22814 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:53:38,296 p=22814 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 02:53:38,296 p=22814 u=vu n=ansible | 192.168.31.150             : ok=3    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:53:38,297 p=22814 u=vu n=ansible | 192.168.31.169             : ok=3    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:55:43,629 p=23089 u=vu n=ansible | PLAY [Install MariaDb] ******************************************************************************
+2021-05-14 02:55:43,637 p=23089 u=vu n=ansible | TASK [create network] *******************************************************************************
+2021-05-14 02:55:44,589 p=23089 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 02:55:44,591 p=23089 u=vu n=ansible | TASK [create volume for db] *************************************************************************
+2021-05-14 02:55:44,802 p=23089 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 02:55:44,804 p=23089 u=vu n=ansible | TASK [run image mariadb] ****************************************************************************
+2021-05-14 02:56:07,774 p=23089 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 02:56:07,780 p=23089 u=vu n=ansible | PLAY [Install WordPress] ****************************************************************************
+2021-05-14 02:56:07,787 p=23089 u=vu n=ansible | TASK [create network] *******************************************************************************
+2021-05-14 02:56:08,486 p=23089 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:56:08,489 p=23089 u=vu n=ansible | TASK [create volume for wp] *************************************************************************
+2021-05-14 02:56:08,718 p=23089 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:56:08,720 p=23089 u=vu n=ansible | TASK [run image wordpress] **************************************************************************
+2021-05-14 02:56:49,682 p=23089 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 02:56:49,686 p=23089 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 02:56:49,686 p=23089 u=vu n=ansible | 192.168.31.150             : ok=3    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 02:56:49,686 p=23089 u=vu n=ansible | 192.168.31.169             : ok=3    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:05:04,524 p=23515 u=vu n=ansible | PLAY [Install MariaDb] ******************************************************************************
+2021-05-14 03:05:04,533 p=23515 u=vu n=ansible | TASK [create volume for db] *************************************************************************
+2021-05-14 03:05:05,179 p=23515 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:05:05,181 p=23515 u=vu n=ansible | TASK [run image mariadb] ****************************************************************************
+2021-05-14 03:05:27,711 p=23515 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:05:27,716 p=23515 u=vu n=ansible | PLAY [Install WordPress] ****************************************************************************
+2021-05-14 03:05:27,720 p=23515 u=vu n=ansible | TASK [create volume for wp] *************************************************************************
+2021-05-14 03:05:28,315 p=23515 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 03:05:28,317 p=23515 u=vu n=ansible | TASK [run image wordpress] **************************************************************************
+2021-05-14 03:06:07,658 p=23515 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 03:06:07,664 p=23515 u=vu n=ansible | PLAY RECAP ******************************************************************************************
+2021-05-14 03:06:07,664 p=23515 u=vu n=ansible | 192.168.31.150             : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:06:07,664 p=23515 u=vu n=ansible | 192.168.31.169             : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:18:39,639 p=3197 u=vu n=ansible | PLAY [Install MariaDb] *********************************************************
+2021-05-14 03:18:39,650 p=3197 u=vu n=ansible | TASK [create volume for db] ****************************************************
+2021-05-14 03:18:42,747 p=3197 u=vu n=ansible | fatal: [192.168.31.150]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.31.150 port 22: No route to host", "unreachable": true}
+2021-05-14 03:18:42,748 p=3197 u=vu n=ansible | PLAY RECAP *********************************************************************
+2021-05-14 03:18:42,748 p=3197 u=vu n=ansible | 192.168.31.150             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:19:51,867 p=3271 u=vu n=ansible | PLAY [Install MariaDb] *********************************************************
+2021-05-14 03:19:51,874 p=3271 u=vu n=ansible | TASK [create volume for db] ****************************************************
+2021-05-14 03:19:52,836 p=3271 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:19:52,839 p=3271 u=vu n=ansible | TASK [print log run mariadb] ***************************************************
+2021-05-14 03:19:52,859 p=3271 u=vu n=ansible | ok: [192.168.31.150] => {
+    "debugCreateVolume": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "volume",
+            "create",
+            "--name",
+            "mariadb_data"
+        ],
+        "delta": "0:00:00.041425",
+        "end": "2021-05-14 01:18:13.066461",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:18:13.025036",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "mariadb_data",
+        "stdout_lines": [
+            "mariadb_data"
+        ]
+    }
+}
+2021-05-14 03:19:52,861 p=3271 u=vu n=ansible | TASK [run image mariadb] *******************************************************
+2021-05-14 03:20:19,758 p=3271 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:20:19,760 p=3271 u=vu n=ansible | TASK [print log run mariadb] ***************************************************
+2021-05-14 03:20:19,779 p=3271 u=vu n=ansible | ok: [192.168.31.150] => {
+    "debugRunMariadb": {
+        "changed": true,
+        "cmd": [
+            "docker",
+            "run",
+            "-d",
+            "--name",
+            "mariadb",
+            "--env",
+            "ALLOW_EMPTY_PASSWORD=yes",
+            "--env",
+            "MARIADB_USER=bn_wordpress",
+            "--env",
+            "MARIADB_PASSWORD=bitnami",
+            "--env",
+            "MARIADB_DATABASE=bitnami_wordpress",
+            "--network",
+            "host",
+            "--volume",
+            "mariadb_data:/bitnami/mariadb",
+            "bitnami/mariadb:latest"
+        ],
+        "delta": "0:00:26.708121",
+        "end": "2021-05-14 01:18:39.970704",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:18:13.262583",
+        "stderr": "Unable to find image 'bitnami/mariadb:latest' locally\nlatest: Pulling from bitnami/mariadb\n4fb7b694fe70: Pulling fs layer\na361d61d4eac: Pulling fs layer\necc764157d05: Pulling fs layer\nf35338d70c1a: Pulling fs layer\n1938fd8a901f: Pulling fs layer\nb82c3c1cd5e4: Pulling fs layer\nb9837c36318e: Pulling fs layer\n98b193ff70b8: Pulling fs layer\n7082a1fe52e5: Pulling fs layer\ncfa94fe0b472: Pulling fs layer\nf35338d70c1a: Waiting\n1938fd8a901f: Waiting\nb82c3c1cd5e4: Waiting\nb9837c36318e: Waiting\n98b193ff70b8: Waiting\n7082a1fe52e5: Waiting\ncfa94fe0b472: Waiting\na361d61d4eac: Verifying Checksum\na361d61d4eac: Download complete\nf35338d70c1a: Verifying Checksum\nf35338d70c1a: Download complete\necc764157d05: Verifying Checksum\necc764157d05: Download complete\n4fb7b694fe70: Verifying Checksum\n4fb7b694fe70: Download complete\nb82c3c1cd5e4: Verifying Checksum\nb82c3c1cd5e4: Download complete\nb9837c36318e: Verifying Checksum\nb9837c36318e: Download complete\n98b193ff70b8: Verifying Checksum\n98b193ff70b8: Download complete\n4fb7b694fe70: Pull complete\na361d61d4eac: Pull complete\n7082a1fe52e5: Verifying Checksum\n7082a1fe52e5: Download complete\ncfa94fe0b472: Verifying Checksum\ncfa94fe0b472: Download complete\necc764157d05: Pull complete\nf35338d70c1a: Pull complete\n1938fd8a901f: Verifying Checksum\n1938fd8a901f: Download complete\n1938fd8a901f: Pull complete\nb82c3c1cd5e4: Pull complete\nb9837c36318e: Pull complete\n98b193ff70b8: Pull complete\n7082a1fe52e5: Pull complete\ncfa94fe0b472: Pull complete\nDigest: sha256:d95e47d759e2ea207a03c7a131686abb9919c92afcfffe7dde2c6d97a4a14c55\nStatus: Downloaded newer image for bitnami/mariadb:latest",
+        "stderr_lines": [
+            "Unable to find image 'bitnami/mariadb:latest' locally",
+            "latest: Pulling from bitnami/mariadb",
+            "4fb7b694fe70: Pulling fs layer",
+            "a361d61d4eac: Pulling fs layer",
+            "ecc764157d05: Pulling fs layer",
+            "f35338d70c1a: Pulling fs layer",
+            "1938fd8a901f: Pulling fs layer",
+            "b82c3c1cd5e4: Pulling fs layer",
+            "b9837c36318e: Pulling fs layer",
+            "98b193ff70b8: Pulling fs layer",
+            "7082a1fe52e5: Pulling fs layer",
+            "cfa94fe0b472: Pulling fs layer",
+            "f35338d70c1a: Waiting",
+            "1938fd8a901f: Waiting",
+            "b82c3c1cd5e4: Waiting",
+            "b9837c36318e: Waiting",
+            "98b193ff70b8: Waiting",
+            "7082a1fe52e5: Waiting",
+            "cfa94fe0b472: Waiting",
+            "a361d61d4eac: Verifying Checksum",
+            "a361d61d4eac: Download complete",
+            "f35338d70c1a: Verifying Checksum",
+            "f35338d70c1a: Download complete",
+            "ecc764157d05: Verifying Checksum",
+            "ecc764157d05: Download complete",
+            "4fb7b694fe70: Verifying Checksum",
+            "4fb7b694fe70: Download complete",
+            "b82c3c1cd5e4: Verifying Checksum",
+            "b82c3c1cd5e4: Download complete",
+            "b9837c36318e: Verifying Checksum",
+            "b9837c36318e: Download complete",
+            "98b193ff70b8: Verifying Checksum",
+            "98b193ff70b8: Download complete",
+            "4fb7b694fe70: Pull complete",
+            "a361d61d4eac: Pull complete",
+            "7082a1fe52e5: Verifying Checksum",
+            "7082a1fe52e5: Download complete",
+            "cfa94fe0b472: Verifying Checksum",
+            "cfa94fe0b472: Download complete",
+            "ecc764157d05: Pull complete",
+            "f35338d70c1a: Pull complete",
+            "1938fd8a901f: Verifying Checksum",
+            "1938fd8a901f: Download complete",
+            "1938fd8a901f: Pull complete",
+            "b82c3c1cd5e4: Pull complete",
+            "b9837c36318e: Pull complete",
+            "98b193ff70b8: Pull complete",
+            "7082a1fe52e5: Pull complete",
+            "cfa94fe0b472: Pull complete",
+            "Digest: sha256:d95e47d759e2ea207a03c7a131686abb9919c92afcfffe7dde2c6d97a4a14c55",
+            "Status: Downloaded newer image for bitnami/mariadb:latest"
+        ],
+        "stdout": "51715b89fe98deac7d73884ef9260e8902696dad9559dbc857bec89e6e1ecb72",
+        "stdout_lines": [
+            "51715b89fe98deac7d73884ef9260e8902696dad9559dbc857bec89e6e1ecb72"
+        ]
+    }
+}
+2021-05-14 03:20:19,784 p=3271 u=vu n=ansible | PLAY [Install WordPress] *******************************************************
+2021-05-14 03:20:19,788 p=3271 u=vu n=ansible | TASK [create volume for web] ***************************************************
+2021-05-14 03:20:20,365 p=3271 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 03:20:20,367 p=3271 u=vu n=ansible | TASK [print log create volume web] *********************************************
+2021-05-14 03:20:20,383 p=3271 u=vu n=ansible | ok: [192.168.31.169] => {
+    "debugCreateVolume": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "volume",
+            "create",
+            "--name",
+            "wordpress_data"
+        ],
+        "delta": "0:00:00.056460",
+        "end": "2021-05-14 01:21:01.939894",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:21:01.883434",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "wordpress_data",
+        "stdout_lines": [
+            "wordpress_data"
+        ]
+    }
+}
+2021-05-14 03:20:20,385 p=3271 u=vu n=ansible | TASK [run image wordpress] *****************************************************
+2021-05-14 03:20:56,723 p=3271 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 03:20:56,726 p=3271 u=vu n=ansible | TASK [print log run web] *******************************************************
+2021-05-14 03:20:56,744 p=3271 u=vu n=ansible | ok: [192.168.31.169] => {
+    "debugRunWp": {
+        "changed": true,
+        "cmd": [
+            "docker",
+            "run",
+            "-d",
+            "--name",
+            "wordpress",
+            "--env",
+            "WORDPRESS_DATABASE_HOST=192.168.31.150",
+            "--env",
+            "ALLOW_EMPTY_PASSWORD=yes",
+            "--env",
+            "WORDPRESS_DATABASE_USER=bn_wordpress",
+            "--env",
+            "WORDPRESS_DATABASE_PASSWORD=bitnami",
+            "--env",
+            "WORDPRESS_DATABASE_NAME=bitnami_wordpress",
+            "--network",
+            "host",
+            "--volume",
+            "wordpress_data:/bitnami/wordpress",
+            "bitnami/wordpress:latest"
+        ],
+        "delta": "0:00:36.148697",
+        "end": "2021-05-14 01:21:38.288699",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:21:02.140002",
+        "stderr": "Unable to find image 'bitnami/wordpress:latest' locally\nlatest: Pulling from bitnami/wordpress\n4fb7b694fe70: Pulling fs layer\n25060123f335: Pulling fs layer\n5d67ac09806f: Pulling fs layer\n6623692a9601: Pulling fs layer\n0b67bf210e12: Pulling fs layer\nf9f97d78f8c5: Pulling fs layer\n77f0bc062e6c: Pulling fs layer\n7c277e5496cd: Pulling fs layer\n26c6937241fd: Pulling fs layer\n44636d3b8631: Pulling fs layer\n383693733582: Pulling fs layer\nd82fc97b0f45: Pulling fs layer\n7dca4c06feae: Pulling fs layer\nb72d3a0f6206: Pulling fs layer\ne5374833629f: Pulling fs layer\n2018be66a467: Pulling fs layer\n2c0d99be6645: Pulling fs layer\n358b4750f53b: Pulling fs layer\n6623692a9601: Waiting\n0b67bf210e12: Waiting\nf9f97d78f8c5: Waiting\n77f0bc062e6c: Waiting\n7c277e5496cd: Waiting\n26c6937241fd: Waiting\n44636d3b8631: Waiting\n383693733582: Waiting\nd82fc97b0f45: Waiting\n7dca4c06feae: Waiting\nb72d3a0f6206: Waiting\ne5374833629f: Waiting\n2018be66a467: Waiting\n2c0d99be6645: Waiting\n358b4750f53b: Waiting\n25060123f335: Verifying Checksum\n25060123f335: Download complete\n6623692a9601: Verifying Checksum\n6623692a9601: Download complete\n4fb7b694fe70: Verifying Checksum\n4fb7b694fe70: Download complete\n5d67ac09806f: Verifying Checksum\n5d67ac09806f: Download complete\nf9f97d78f8c5: Verifying Checksum\nf9f97d78f8c5: Download complete\n0b67bf210e12: Verifying Checksum\n0b67bf210e12: Download complete\n4fb7b694fe70: Pull complete\n25060123f335: Pull complete\n77f0bc062e6c: Verifying Checksum\n77f0bc062e6c: Download complete\n7c277e5496cd: Verifying Checksum\n7c277e5496cd: Download complete\n5d67ac09806f: Pull complete\n383693733582: Verifying Checksum\n383693733582: Download complete\n44636d3b8631: Verifying Checksum\n44636d3b8631: Download complete\nd82fc97b0f45: Verifying Checksum\nd82fc97b0f45: Download complete\n6623692a9601: Pull complete\n7dca4c06feae: Verifying Checksum\n7dca4c06feae: Download complete\n26c6937241fd: Verifying Checksum\n26c6937241fd: Download complete\nb72d3a0f6206: Verifying Checksum\nb72d3a0f6206: Download complete\n0b67bf210e12: Pull complete\nf9f97d78f8c5: Pull complete\ne5374833629f: Verifying Checksum\ne5374833629f: Download complete\n77f0bc062e6c: Pull complete\n2018be66a467: Verifying Checksum\n2018be66a467: Download complete\n7c277e5496cd: Pull complete\n2c0d99be6645: Verifying Checksum\n2c0d99be6645: Download complete\n358b4750f53b: Verifying Checksum\n358b4750f53b: Download complete\n26c6937241fd: Pull complete\n44636d3b8631: Pull complete\n383693733582: Pull complete\nd82fc97b0f45: Pull complete\n7dca4c06feae: Pull complete\nb72d3a0f6206: Pull complete\ne5374833629f: Pull complete\n2018be66a467: Pull complete\n2c0d99be6645: Pull complete\n358b4750f53b: Pull complete\nDigest: sha256:0a8168532ef9ef4cd99270913c253c7bfcc7f98fd3377165ad491baef63d7c3c\nStatus: Downloaded newer image for bitnami/wordpress:latest",
+        "stderr_lines": [
+            "Unable to find image 'bitnami/wordpress:latest' locally",
+            "latest: Pulling from bitnami/wordpress",
+            "4fb7b694fe70: Pulling fs layer",
+            "25060123f335: Pulling fs layer",
+            "5d67ac09806f: Pulling fs layer",
+            "6623692a9601: Pulling fs layer",
+            "0b67bf210e12: Pulling fs layer",
+            "f9f97d78f8c5: Pulling fs layer",
+            "77f0bc062e6c: Pulling fs layer",
+            "7c277e5496cd: Pulling fs layer",
+            "26c6937241fd: Pulling fs layer",
+            "44636d3b8631: Pulling fs layer",
+            "383693733582: Pulling fs layer",
+            "d82fc97b0f45: Pulling fs layer",
+            "7dca4c06feae: Pulling fs layer",
+            "b72d3a0f6206: Pulling fs layer",
+            "e5374833629f: Pulling fs layer",
+            "2018be66a467: Pulling fs layer",
+            "2c0d99be6645: Pulling fs layer",
+            "358b4750f53b: Pulling fs layer",
+            "6623692a9601: Waiting",
+            "0b67bf210e12: Waiting",
+            "f9f97d78f8c5: Waiting",
+            "77f0bc062e6c: Waiting",
+            "7c277e5496cd: Waiting",
+            "26c6937241fd: Waiting",
+            "44636d3b8631: Waiting",
+            "383693733582: Waiting",
+            "d82fc97b0f45: Waiting",
+            "7dca4c06feae: Waiting",
+            "b72d3a0f6206: Waiting",
+            "e5374833629f: Waiting",
+            "2018be66a467: Waiting",
+            "2c0d99be6645: Waiting",
+            "358b4750f53b: Waiting",
+            "25060123f335: Verifying Checksum",
+            "25060123f335: Download complete",
+            "6623692a9601: Verifying Checksum",
+            "6623692a9601: Download complete",
+            "4fb7b694fe70: Verifying Checksum",
+            "4fb7b694fe70: Download complete",
+            "5d67ac09806f: Verifying Checksum",
+            "5d67ac09806f: Download complete",
+            "f9f97d78f8c5: Verifying Checksum",
+            "f9f97d78f8c5: Download complete",
+            "0b67bf210e12: Verifying Checksum",
+            "0b67bf210e12: Download complete",
+            "4fb7b694fe70: Pull complete",
+            "25060123f335: Pull complete",
+            "77f0bc062e6c: Verifying Checksum",
+            "77f0bc062e6c: Download complete",
+            "7c277e5496cd: Verifying Checksum",
+            "7c277e5496cd: Download complete",
+            "5d67ac09806f: Pull complete",
+            "383693733582: Verifying Checksum",
+            "383693733582: Download complete",
+            "44636d3b8631: Verifying Checksum",
+            "44636d3b8631: Download complete",
+            "d82fc97b0f45: Verifying Checksum",
+            "d82fc97b0f45: Download complete",
+            "6623692a9601: Pull complete",
+            "7dca4c06feae: Verifying Checksum",
+            "7dca4c06feae: Download complete",
+            "26c6937241fd: Verifying Checksum",
+            "26c6937241fd: Download complete",
+            "b72d3a0f6206: Verifying Checksum",
+            "b72d3a0f6206: Download complete",
+            "0b67bf210e12: Pull complete",
+            "f9f97d78f8c5: Pull complete",
+            "e5374833629f: Verifying Checksum",
+            "e5374833629f: Download complete",
+            "77f0bc062e6c: Pull complete",
+            "2018be66a467: Verifying Checksum",
+            "2018be66a467: Download complete",
+            "7c277e5496cd: Pull complete",
+            "2c0d99be6645: Verifying Checksum",
+            "2c0d99be6645: Download complete",
+            "358b4750f53b: Verifying Checksum",
+            "358b4750f53b: Download complete",
+            "26c6937241fd: Pull complete",
+            "44636d3b8631: Pull complete",
+            "383693733582: Pull complete",
+            "d82fc97b0f45: Pull complete",
+            "7dca4c06feae: Pull complete",
+            "b72d3a0f6206: Pull complete",
+            "e5374833629f: Pull complete",
+            "2018be66a467: Pull complete",
+            "2c0d99be6645: Pull complete",
+            "358b4750f53b: Pull complete",
+            "Digest: sha256:0a8168532ef9ef4cd99270913c253c7bfcc7f98fd3377165ad491baef63d7c3c",
+            "Status: Downloaded newer image for bitnami/wordpress:latest"
+        ],
+        "stdout": "87f2c39bca3a9cc1978f5135f150fabae2fb45e011af05d30d6ec0ec7d52e160",
+        "stdout_lines": [
+            "87f2c39bca3a9cc1978f5135f150fabae2fb45e011af05d30d6ec0ec7d52e160"
+        ]
+    }
+}
+2021-05-14 03:20:56,748 p=3271 u=vu n=ansible | PLAY RECAP *********************************************************************
+2021-05-14 03:20:56,748 p=3271 u=vu n=ansible | 192.168.31.150             : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:20:56,748 p=3271 u=vu n=ansible | 192.168.31.169             : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:35:55,473 p=4632 u=vu n=ansible | PLAY [Install MariaDb] *********************************************************
+2021-05-14 03:35:55,479 p=4632 u=vu n=ansible | TASK [create volume for db] ****************************************************
+2021-05-14 03:35:56,309 p=4632 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:35:56,312 p=4632 u=vu n=ansible | TASK [print log run mariadb] ***************************************************
+2021-05-14 03:35:56,328 p=4632 u=vu n=ansible | ok: [192.168.31.150] => {
+    "debugCreateVolume": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "volume",
+            "create",
+            "--name",
+            "mariadb_data"
+        ],
+        "delta": "0:00:00.039861",
+        "end": "2021-05-14 01:18:23.648364",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:18:23.608503",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "mariadb_data",
+        "stdout_lines": [
+            "mariadb_data"
+        ]
+    }
+}
+2021-05-14 03:35:56,330 p=4632 u=vu n=ansible | TASK [allow port] **************************************************************
+2021-05-14 03:35:56,604 p=4632 u=vu n=ansible | [WARNING]: The value "3306" (type int) was converted to "'3306'" (type string).
+If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2021-05-14 03:35:56,604 p=4632 u=vu n=ansible | fatal: [192.168.31.150]: FAILED! => {"changed": false, "commands": ["/usr/sbin/ufw status verbose"], "msg": "ERROR: You need to be root to run this script\n"}
+2021-05-14 03:35:56,605 p=4632 u=vu n=ansible | PLAY RECAP *********************************************************************
+2021-05-14 03:35:56,605 p=4632 u=vu n=ansible | 192.168.31.150             : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:36:25,841 p=4681 u=vu n=ansible | PLAY [Install MariaDb] *********************************************************
+2021-05-14 03:36:25,848 p=4681 u=vu n=ansible | TASK [create volume for db] ****************************************************
+2021-05-14 03:36:26,144 p=4681 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:36:26,146 p=4681 u=vu n=ansible | TASK [print log run mariadb] ***************************************************
+2021-05-14 03:36:26,163 p=4681 u=vu n=ansible | ok: [192.168.31.150] => {
+    "debugCreateVolume": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "volume",
+            "create",
+            "--name",
+            "mariadb_data"
+        ],
+        "delta": "0:00:00.026210",
+        "end": "2021-05-14 01:18:53.483531",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:18:53.457321",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "mariadb_data",
+        "stdout_lines": [
+            "mariadb_data"
+        ]
+    }
+}
+2021-05-14 03:36:26,165 p=4681 u=vu n=ansible | TASK [allow port] **************************************************************
+2021-05-14 03:36:26,631 p=4681 u=vu n=ansible | [WARNING]: The value "3306" (type int) was converted to "'3306'" (type string).
+If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2021-05-14 03:36:26,631 p=4681 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:36:26,633 p=4681 u=vu n=ansible | TASK [run image mariadb] *******************************************************
+2021-05-14 03:36:48,191 p=4681 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:36:48,193 p=4681 u=vu n=ansible | TASK [print log run mariadb] ***************************************************
+2021-05-14 03:36:48,211 p=4681 u=vu n=ansible | ok: [192.168.31.150] => {
+    "debugRunMariadb": {
+        "changed": true,
+        "cmd": [
+            "docker",
+            "run",
+            "-d",
+            "--name",
+            "mariadb",
+            "--env",
+            "ALLOW_EMPTY_PASSWORD=yes",
+            "--env",
+            "MARIADB_USER=bn_wordpress",
+            "--env",
+            "MARIADB_PASSWORD=bitnami",
+            "--env",
+            "MARIADB_DATABASE=bitnami_wordpress",
+            "--network",
+            "host",
+            "--volume",
+            "mariadb_data:/bitnami/mariadb",
+            "bitnami/mariadb:latest"
+        ],
+        "delta": "0:00:21.366993",
+        "end": "2021-05-14 01:19:15.509481",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:18:54.142488",
+        "stderr": "Unable to find image 'bitnami/mariadb:latest' locally\nlatest: Pulling from bitnami/mariadb\n4fb7b694fe70: Pulling fs layer\na361d61d4eac: Pulling fs layer\necc764157d05: Pulling fs layer\nf35338d70c1a: Pulling fs layer\n1938fd8a901f: Pulling fs layer\nb82c3c1cd5e4: Pulling fs layer\nb9837c36318e: Pulling fs layer\n98b193ff70b8: Pulling fs layer\n7082a1fe52e5: Pulling fs layer\ncfa94fe0b472: Pulling fs layer\nf35338d70c1a: Waiting\n1938fd8a901f: Waiting\nb82c3c1cd5e4: Waiting\nb9837c36318e: Waiting\n98b193ff70b8: Waiting\n7082a1fe52e5: Waiting\ncfa94fe0b472: Waiting\na361d61d4eac: Verifying Checksum\na361d61d4eac: Download complete\nf35338d70c1a: Verifying Checksum\nf35338d70c1a: Download complete\n4fb7b694fe70: Verifying Checksum\n4fb7b694fe70: Download complete\necc764157d05: Verifying Checksum\necc764157d05: Download complete\n4fb7b694fe70: Pull complete\na361d61d4eac: Pull complete\nb82c3c1cd5e4: Verifying Checksum\nb82c3c1cd5e4: Download complete\nb9837c36318e: Verifying Checksum\nb9837c36318e: Download complete\necc764157d05: Pull complete\nf35338d70c1a: Pull complete\n98b193ff70b8: Verifying Checksum\n98b193ff70b8: Download complete\n7082a1fe52e5: Verifying Checksum\n7082a1fe52e5: Download complete\ncfa94fe0b472: Verifying Checksum\ncfa94fe0b472: Download complete\n1938fd8a901f: Verifying Checksum\n1938fd8a901f: Download complete\n1938fd8a901f: Pull complete\nb82c3c1cd5e4: Pull complete\nb9837c36318e: Pull complete\n98b193ff70b8: Pull complete\n7082a1fe52e5: Pull complete\ncfa94fe0b472: Pull complete\nDigest: sha256:d95e47d759e2ea207a03c7a131686abb9919c92afcfffe7dde2c6d97a4a14c55\nStatus: Downloaded newer image for bitnami/mariadb:latest",
+        "stderr_lines": [
+            "Unable to find image 'bitnami/mariadb:latest' locally",
+            "latest: Pulling from bitnami/mariadb",
+            "4fb7b694fe70: Pulling fs layer",
+            "a361d61d4eac: Pulling fs layer",
+            "ecc764157d05: Pulling fs layer",
+            "f35338d70c1a: Pulling fs layer",
+            "1938fd8a901f: Pulling fs layer",
+            "b82c3c1cd5e4: Pulling fs layer",
+            "b9837c36318e: Pulling fs layer",
+            "98b193ff70b8: Pulling fs layer",
+            "7082a1fe52e5: Pulling fs layer",
+            "cfa94fe0b472: Pulling fs layer",
+            "f35338d70c1a: Waiting",
+            "1938fd8a901f: Waiting",
+            "b82c3c1cd5e4: Waiting",
+            "b9837c36318e: Waiting",
+            "98b193ff70b8: Waiting",
+            "7082a1fe52e5: Waiting",
+            "cfa94fe0b472: Waiting",
+            "a361d61d4eac: Verifying Checksum",
+            "a361d61d4eac: Download complete",
+            "f35338d70c1a: Verifying Checksum",
+            "f35338d70c1a: Download complete",
+            "4fb7b694fe70: Verifying Checksum",
+            "4fb7b694fe70: Download complete",
+            "ecc764157d05: Verifying Checksum",
+            "ecc764157d05: Download complete",
+            "4fb7b694fe70: Pull complete",
+            "a361d61d4eac: Pull complete",
+            "b82c3c1cd5e4: Verifying Checksum",
+            "b82c3c1cd5e4: Download complete",
+            "b9837c36318e: Verifying Checksum",
+            "b9837c36318e: Download complete",
+            "ecc764157d05: Pull complete",
+            "f35338d70c1a: Pull complete",
+            "98b193ff70b8: Verifying Checksum",
+            "98b193ff70b8: Download complete",
+            "7082a1fe52e5: Verifying Checksum",
+            "7082a1fe52e5: Download complete",
+            "cfa94fe0b472: Verifying Checksum",
+            "cfa94fe0b472: Download complete",
+            "1938fd8a901f: Verifying Checksum",
+            "1938fd8a901f: Download complete",
+            "1938fd8a901f: Pull complete",
+            "b82c3c1cd5e4: Pull complete",
+            "b9837c36318e: Pull complete",
+            "98b193ff70b8: Pull complete",
+            "7082a1fe52e5: Pull complete",
+            "cfa94fe0b472: Pull complete",
+            "Digest: sha256:d95e47d759e2ea207a03c7a131686abb9919c92afcfffe7dde2c6d97a4a14c55",
+            "Status: Downloaded newer image for bitnami/mariadb:latest"
+        ],
+        "stdout": "a1000a15267af9bf2fbdd84cc21a7920508bddad3b86f5893efe3e4bd63f3cdd",
+        "stdout_lines": [
+            "a1000a15267af9bf2fbdd84cc21a7920508bddad3b86f5893efe3e4bd63f3cdd"
+        ]
+    }
+}
+2021-05-14 03:36:48,219 p=4681 u=vu n=ansible | PLAY [Install WordPress] *******************************************************
+2021-05-14 03:36:48,224 p=4681 u=vu n=ansible | TASK [create volume for web] ***************************************************
+2021-05-14 03:36:48,821 p=4681 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 03:36:48,823 p=4681 u=vu n=ansible | TASK [print log create volume web] *********************************************
+2021-05-14 03:36:48,840 p=4681 u=vu n=ansible | ok: [192.168.31.169] => {
+    "debugCreateVolume": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "volume",
+            "create",
+            "--name",
+            "wordpress_data"
+        ],
+        "delta": "0:00:00.051643",
+        "end": "2021-05-14 01:19:25.796010",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:19:25.744367",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "wordpress_data",
+        "stdout_lines": [
+            "wordpress_data"
+        ]
+    }
+}
+2021-05-14 03:36:48,843 p=4681 u=vu n=ansible | TASK [allow ufw] ***************************************************************
+2021-05-14 03:36:49,075 p=4681 u=vu n=ansible | failed: [192.168.31.169] (item={'rule': 'allow', 'port': '8080'}) => {"ansible_loop_var": "item", "changed": false, "commands": ["/usr/sbin/ufw status verbose"], "item": {"port": "8080", "rule": "allow"}, "msg": "ERROR: You need to be root to run this script\n"}
+2021-05-14 03:36:49,283 p=4681 u=vu n=ansible | failed: [192.168.31.169] (item={'rule': 'allow', 'port': '8443'}) => {"ansible_loop_var": "item", "changed": false, "commands": ["/usr/sbin/ufw status verbose"], "item": {"port": "8443", "rule": "allow"}, "msg": "ERROR: You need to be root to run this script\n"}
+2021-05-14 03:36:49,284 p=4681 u=vu n=ansible | PLAY RECAP *********************************************************************
+2021-05-14 03:36:49,285 p=4681 u=vu n=ansible | 192.168.31.150             : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:36:49,285 p=4681 u=vu n=ansible | 192.168.31.169             : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:37:15,254 p=4819 u=vu n=ansible | PLAY [Install MariaDb] *********************************************************
+2021-05-14 03:37:15,261 p=4819 u=vu n=ansible | TASK [create volume for db] ****************************************************
+2021-05-14 03:37:15,563 p=4819 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:37:15,565 p=4819 u=vu n=ansible | TASK [print log run mariadb] ***************************************************
+2021-05-14 03:37:15,582 p=4819 u=vu n=ansible | ok: [192.168.31.150] => {
+    "debugCreateVolume": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "volume",
+            "create",
+            "--name",
+            "mariadb_data"
+        ],
+        "delta": "0:00:00.025697",
+        "end": "2021-05-14 01:19:42.902599",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:19:42.876902",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "mariadb_data",
+        "stdout_lines": [
+            "mariadb_data"
+        ]
+    }
+}
+2021-05-14 03:37:15,584 p=4819 u=vu n=ansible | TASK [allow port] **************************************************************
+2021-05-14 03:37:16,014 p=4819 u=vu n=ansible | [WARNING]: The value "3306" (type int) was converted to "'3306'" (type string).
+If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2021-05-14 03:37:16,014 p=4819 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 03:37:16,016 p=4819 u=vu n=ansible | TASK [run image mariadb] *******************************************************
+2021-05-14 03:37:16,222 p=4819 u=vu n=ansible | fatal: [192.168.31.150]: FAILED! => {"changed": true, "cmd": ["docker", "run", "-d", "--name", "mariadb", "--env", "ALLOW_EMPTY_PASSWORD=yes", "--env", "MARIADB_USER=bn_wordpress", "--env", "MARIADB_PASSWORD=bitnami", "--env", "MARIADB_DATABASE=bitnami_wordpress", "--network", "host", "--volume", "mariadb_data:/bitnami/mariadb", "bitnami/mariadb:latest"], "delta": "0:00:00.030226", "end": "2021-05-14 01:19:43.561505", "msg": "non-zero return code", "rc": 125, "start": "2021-05-14 01:19:43.531279", "stderr": "docker: Error response from daemon: Conflict. The container name \"/mariadb\" is already in use by container \"a1000a15267af9bf2fbdd84cc21a7920508bddad3b86f5893efe3e4bd63f3cdd\". You have to remove (or rename) that container to be able to reuse that name.\nSee 'docker run --help'.", "stderr_lines": ["docker: Error response from daemon: Conflict. The container name \"/mariadb\" is already in use by container \"a1000a15267af9bf2fbdd84cc21a7920508bddad3b86f5893efe3e4bd63f3cdd\". You have to remove (or rename) that container to be able to reuse that name.", "See 'docker run --help'."], "stdout": "", "stdout_lines": []}
+2021-05-14 03:37:16,223 p=4819 u=vu n=ansible | PLAY RECAP *********************************************************************
+2021-05-14 03:37:16,223 p=4819 u=vu n=ansible | 192.168.31.150             : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:37:30,267 p=4879 u=vu n=ansible | PLAY [Install MariaDb] *********************************************************
+2021-05-14 03:37:30,274 p=4879 u=vu n=ansible | TASK [create volume for db] ****************************************************
+2021-05-14 03:37:30,569 p=4879 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:37:30,571 p=4879 u=vu n=ansible | TASK [print log run mariadb] ***************************************************
+2021-05-14 03:37:30,588 p=4879 u=vu n=ansible | ok: [192.168.31.150] => {
+    "debugCreateVolume": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "volume",
+            "create",
+            "--name",
+            "mariadb_data"
+        ],
+        "delta": "0:00:00.025803",
+        "end": "2021-05-14 01:19:57.909271",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:19:57.883468",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "mariadb_data",
+        "stdout_lines": [
+            "mariadb_data"
+        ]
+    }
+}
+2021-05-14 03:37:30,590 p=4879 u=vu n=ansible | TASK [allow port] **************************************************************
+2021-05-14 03:37:31,024 p=4879 u=vu n=ansible | [WARNING]: The value "3306" (type int) was converted to "'3306'" (type string).
+If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2021-05-14 03:37:31,024 p=4879 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-14 03:37:31,028 p=4879 u=vu n=ansible | PLAY [Install WordPress] *******************************************************
+2021-05-14 03:37:31,032 p=4879 u=vu n=ansible | TASK [create volume for web] ***************************************************
+2021-05-14 03:37:31,265 p=4879 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 03:37:31,267 p=4879 u=vu n=ansible | TASK [print log create volume web] *********************************************
+2021-05-14 03:37:31,283 p=4879 u=vu n=ansible | ok: [192.168.31.169] => {
+    "debugCreateVolume": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python3"
+        },
+        "changed": true,
+        "cmd": [
+            "docker",
+            "volume",
+            "create",
+            "--name",
+            "wordpress_data"
+        ],
+        "delta": "0:00:00.027205",
+        "end": "2021-05-14 01:20:08.242914",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:20:08.215709",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "wordpress_data",
+        "stdout_lines": [
+            "wordpress_data"
+        ]
+    }
+}
+2021-05-14 03:37:31,285 p=4879 u=vu n=ansible | TASK [allow ufw] ***************************************************************
+2021-05-14 03:37:31,664 p=4879 u=vu n=ansible | changed: [192.168.31.169] => (item={'rule': 'allow', 'port': '8080'})
+2021-05-14 03:37:32,003 p=4879 u=vu n=ansible | changed: [192.168.31.169] => (item={'rule': 'allow', 'port': '8443'})
+2021-05-14 03:37:32,005 p=4879 u=vu n=ansible | TASK [run image wordpress] *****************************************************
+2021-05-14 03:38:08,586 p=4879 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 03:38:08,588 p=4879 u=vu n=ansible | TASK [print log run web] *******************************************************
+2021-05-14 03:38:08,606 p=4879 u=vu n=ansible | ok: [192.168.31.169] => {
+    "debugRunWp": {
+        "changed": true,
+        "cmd": [
+            "docker",
+            "run",
+            "-d",
+            "--name",
+            "wordpress",
+            "--env",
+            "WORDPRESS_DATABASE_HOST=192.168.31.150",
+            "--env",
+            "ALLOW_EMPTY_PASSWORD=yes",
+            "--env",
+            "WORDPRESS_DATABASE_USER=bn_wordpress",
+            "--env",
+            "WORDPRESS_DATABASE_PASSWORD=bitnami",
+            "--env",
+            "WORDPRESS_DATABASE_NAME=bitnami_wordpress",
+            "--network",
+            "host",
+            "--volume",
+            "wordpress_data:/bitnami/wordpress",
+            "bitnami/wordpress:latest"
+        ],
+        "delta": "0:00:36.388003",
+        "end": "2021-05-14 01:20:45.543420",
+        "failed": false,
+        "rc": 0,
+        "start": "2021-05-14 01:20:09.155417",
+        "stderr": "Unable to find image 'bitnami/wordpress:latest' locally\nlatest: Pulling from bitnami/wordpress\n4fb7b694fe70: Pulling fs layer\n25060123f335: Pulling fs layer\n5d67ac09806f: Pulling fs layer\n6623692a9601: Pulling fs layer\n0b67bf210e12: Pulling fs layer\nf9f97d78f8c5: Pulling fs layer\n77f0bc062e6c: Pulling fs layer\n7c277e5496cd: Pulling fs layer\n26c6937241fd: Pulling fs layer\n44636d3b8631: Pulling fs layer\n383693733582: Pulling fs layer\nd82fc97b0f45: Pulling fs layer\n7dca4c06feae: Pulling fs layer\nb72d3a0f6206: Pulling fs layer\ne5374833629f: Pulling fs layer\n2018be66a467: Pulling fs layer\n2c0d99be6645: Pulling fs layer\n358b4750f53b: Pulling fs layer\n6623692a9601: Waiting\n0b67bf210e12: Waiting\nf9f97d78f8c5: Waiting\n77f0bc062e6c: Waiting\n7c277e5496cd: Waiting\n26c6937241fd: Waiting\n44636d3b8631: Waiting\n383693733582: Waiting\nd82fc97b0f45: Waiting\n7dca4c06feae: Waiting\nb72d3a0f6206: Waiting\ne5374833629f: Waiting\n2018be66a467: Waiting\n2c0d99be6645: Waiting\n358b4750f53b: Waiting\n25060123f335: Verifying Checksum\n25060123f335: Download complete\n4fb7b694fe70: Verifying Checksum\n4fb7b694fe70: Download complete\n6623692a9601: Verifying Checksum\n6623692a9601: Download complete\n5d67ac09806f: Verifying Checksum\n5d67ac09806f: Download complete\nf9f97d78f8c5: Verifying Checksum\nf9f97d78f8c5: Download complete\n4fb7b694fe70: Pull complete\n25060123f335: Pull complete\n0b67bf210e12: Verifying Checksum\n0b67bf210e12: Download complete\n77f0bc062e6c: Verifying Checksum\n77f0bc062e6c: Download complete\n7c277e5496cd: Verifying Checksum\n7c277e5496cd: Download complete\n5d67ac09806f: Pull complete\n44636d3b8631: Verifying Checksum\n44636d3b8631: Download complete\n6623692a9601: Pull complete\n383693733582: Verifying Checksum\n383693733582: Download complete\nd82fc97b0f45: Verifying Checksum\nd82fc97b0f45: Download complete\n0b67bf210e12: Pull complete\nf9f97d78f8c5: Pull complete\n7dca4c06feae: Verifying Checksum\n7dca4c06feae: Download complete\n77f0bc062e6c: Pull complete\n26c6937241fd: Verifying Checksum\n26c6937241fd: Download complete\nb72d3a0f6206: Verifying Checksum\nb72d3a0f6206: Download complete\n7c277e5496cd: Pull complete\ne5374833629f: Verifying Checksum\ne5374833629f: Download complete\n2018be66a467: Verifying Checksum\n2018be66a467: Download complete\n2c0d99be6645: Verifying Checksum\n2c0d99be6645: Download complete\n26c6937241fd: Pull complete\n44636d3b8631: Pull complete\n383693733582: Pull complete\nd82fc97b0f45: Pull complete\n7dca4c06feae: Pull complete\nb72d3a0f6206: Pull complete\ne5374833629f: Pull complete\n2018be66a467: Pull complete\n2c0d99be6645: Pull complete\n358b4750f53b: Verifying Checksum\n358b4750f53b: Download complete\n358b4750f53b: Pull complete\nDigest: sha256:0a8168532ef9ef4cd99270913c253c7bfcc7f98fd3377165ad491baef63d7c3c\nStatus: Downloaded newer image for bitnami/wordpress:latest",
+        "stderr_lines": [
+            "Unable to find image 'bitnami/wordpress:latest' locally",
+            "latest: Pulling from bitnami/wordpress",
+            "4fb7b694fe70: Pulling fs layer",
+            "25060123f335: Pulling fs layer",
+            "5d67ac09806f: Pulling fs layer",
+            "6623692a9601: Pulling fs layer",
+            "0b67bf210e12: Pulling fs layer",
+            "f9f97d78f8c5: Pulling fs layer",
+            "77f0bc062e6c: Pulling fs layer",
+            "7c277e5496cd: Pulling fs layer",
+            "26c6937241fd: Pulling fs layer",
+            "44636d3b8631: Pulling fs layer",
+            "383693733582: Pulling fs layer",
+            "d82fc97b0f45: Pulling fs layer",
+            "7dca4c06feae: Pulling fs layer",
+            "b72d3a0f6206: Pulling fs layer",
+            "e5374833629f: Pulling fs layer",
+            "2018be66a467: Pulling fs layer",
+            "2c0d99be6645: Pulling fs layer",
+            "358b4750f53b: Pulling fs layer",
+            "6623692a9601: Waiting",
+            "0b67bf210e12: Waiting",
+            "f9f97d78f8c5: Waiting",
+            "77f0bc062e6c: Waiting",
+            "7c277e5496cd: Waiting",
+            "26c6937241fd: Waiting",
+            "44636d3b8631: Waiting",
+            "383693733582: Waiting",
+            "d82fc97b0f45: Waiting",
+            "7dca4c06feae: Waiting",
+            "b72d3a0f6206: Waiting",
+            "e5374833629f: Waiting",
+            "2018be66a467: Waiting",
+            "2c0d99be6645: Waiting",
+            "358b4750f53b: Waiting",
+            "25060123f335: Verifying Checksum",
+            "25060123f335: Download complete",
+            "4fb7b694fe70: Verifying Checksum",
+            "4fb7b694fe70: Download complete",
+            "6623692a9601: Verifying Checksum",
+            "6623692a9601: Download complete",
+            "5d67ac09806f: Verifying Checksum",
+            "5d67ac09806f: Download complete",
+            "f9f97d78f8c5: Verifying Checksum",
+            "f9f97d78f8c5: Download complete",
+            "4fb7b694fe70: Pull complete",
+            "25060123f335: Pull complete",
+            "0b67bf210e12: Verifying Checksum",
+            "0b67bf210e12: Download complete",
+            "77f0bc062e6c: Verifying Checksum",
+            "77f0bc062e6c: Download complete",
+            "7c277e5496cd: Verifying Checksum",
+            "7c277e5496cd: Download complete",
+            "5d67ac09806f: Pull complete",
+            "44636d3b8631: Verifying Checksum",
+            "44636d3b8631: Download complete",
+            "6623692a9601: Pull complete",
+            "383693733582: Verifying Checksum",
+            "383693733582: Download complete",
+            "d82fc97b0f45: Verifying Checksum",
+            "d82fc97b0f45: Download complete",
+            "0b67bf210e12: Pull complete",
+            "f9f97d78f8c5: Pull complete",
+            "7dca4c06feae: Verifying Checksum",
+            "7dca4c06feae: Download complete",
+            "77f0bc062e6c: Pull complete",
+            "26c6937241fd: Verifying Checksum",
+            "26c6937241fd: Download complete",
+            "b72d3a0f6206: Verifying Checksum",
+            "b72d3a0f6206: Download complete",
+            "7c277e5496cd: Pull complete",
+            "e5374833629f: Verifying Checksum",
+            "e5374833629f: Download complete",
+            "2018be66a467: Verifying Checksum",
+            "2018be66a467: Download complete",
+            "2c0d99be6645: Verifying Checksum",
+            "2c0d99be6645: Download complete",
+            "26c6937241fd: Pull complete",
+            "44636d3b8631: Pull complete",
+            "383693733582: Pull complete",
+            "d82fc97b0f45: Pull complete",
+            "7dca4c06feae: Pull complete",
+            "b72d3a0f6206: Pull complete",
+            "e5374833629f: Pull complete",
+            "2018be66a467: Pull complete",
+            "2c0d99be6645: Pull complete",
+            "358b4750f53b: Verifying Checksum",
+            "358b4750f53b: Download complete",
+            "358b4750f53b: Pull complete",
+            "Digest: sha256:0a8168532ef9ef4cd99270913c253c7bfcc7f98fd3377165ad491baef63d7c3c",
+            "Status: Downloaded newer image for bitnami/wordpress:latest"
+        ],
+        "stdout": "3c8709170cb7f474076a06b4c88aa1c22b2f12af66bd47d31c919333a87bd834",
+        "stdout_lines": [
+            "3c8709170cb7f474076a06b4c88aa1c22b2f12af66bd47d31c919333a87bd834"
+        ]
+    }
+}
+2021-05-14 03:38:08,610 p=4879 u=vu n=ansible | PLAY RECAP *********************************************************************
+2021-05-14 03:38:08,610 p=4879 u=vu n=ansible | 192.168.31.150             : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:38:08,610 p=4879 u=vu n=ansible | 192.168.31.169             : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:44:49,751 p=5460 u=vu n=ansible | PLAY [Install MariaDb] *********************************************************
+2021-05-14 03:44:49,758 p=5460 u=vu n=ansible | TASK [allow port] **************************************************************
+2021-05-14 03:44:50,758 p=5460 u=vu n=ansible | [WARNING]: The value "3306" (type int) was converted to "'3306'" (type string).
+If this does not look like what you expect, quote the entire value to ensure it
+does not change.
+
+2021-05-14 03:44:50,758 p=5460 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:44:50,760 p=5460 u=vu n=ansible | TASK [create volume for db] ****************************************************
+2021-05-14 03:44:51,045 p=5460 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:44:51,047 p=5460 u=vu n=ansible | TASK [run image mariadb] *******************************************************
+2021-05-14 03:45:19,165 p=5460 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:45:19,170 p=5460 u=vu n=ansible | PLAY [Install WordPress] *******************************************************
+2021-05-14 03:45:19,174 p=5460 u=vu n=ansible | TASK [allow port] **************************************************************
+2021-05-14 03:45:19,941 p=5460 u=vu n=ansible | changed: [192.168.31.169] => (item={'rule': 'allow', 'port': '8080'})
+2021-05-14 03:45:20,293 p=5460 u=vu n=ansible | changed: [192.168.31.169] => (item={'rule': 'allow', 'port': '8443'})
+2021-05-14 03:45:20,295 p=5460 u=vu n=ansible | TASK [create volume for wp] ****************************************************
+2021-05-14 03:45:20,524 p=5460 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 03:45:20,526 p=5460 u=vu n=ansible | TASK [run image wordpress] *****************************************************
+2021-05-14 03:45:59,020 p=5460 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 03:45:59,023 p=5460 u=vu n=ansible | PLAY RECAP *********************************************************************
+2021-05-14 03:45:59,024 p=5460 u=vu n=ansible | 192.168.31.150             : ok=3    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:45:59,024 p=5460 u=vu n=ansible | 192.168.31.169             : ok=3    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:50:00,919 p=5908 u=vu n=ansible | PLAY [Install MariaDb] *********************************************************************************
+2021-05-14 03:50:00,926 p=5908 u=vu n=ansible | TASK [create volume for db] ****************************************************************************
+2021-05-14 03:50:01,745 p=5908 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:50:01,747 p=5908 u=vu n=ansible | TASK [run image mariadb] *******************************************************************************
+2021-05-14 03:50:30,830 p=5908 u=vu n=ansible | changed: [192.168.31.150]
+2021-05-14 03:50:30,835 p=5908 u=vu n=ansible | PLAY [Install WordPress] *******************************************************************************
+2021-05-14 03:50:30,839 p=5908 u=vu n=ansible | TASK [create volume for wp] ****************************************************************************
+2021-05-14 03:50:31,491 p=5908 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 03:50:31,493 p=5908 u=vu n=ansible | TASK [run image wordpress] *****************************************************************************
+2021-05-14 03:51:10,442 p=5908 u=vu n=ansible | changed: [192.168.31.169]
+2021-05-14 03:51:10,446 p=5908 u=vu n=ansible | PLAY RECAP *********************************************************************************************
+2021-05-14 03:51:10,446 p=5908 u=vu n=ansible | 192.168.31.150             : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-14 03:51:10,446 p=5908 u=vu n=ansible | 192.168.31.169             : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-20 20:31:12,987 p=5440 u=vu n=ansible | PLAY [Openvswitch] *************************************************************
+2021-05-20 20:31:12,997 p=5440 u=vu n=ansible | TASK [Ping] ********************************************************************
+2021-05-20 20:31:16,078 p=5440 u=vu n=ansible | fatal: [192.168.31.150]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.31.150 port 22: No route to host", "unreachable": true}
+2021-05-20 20:31:16,078 p=5440 u=vu n=ansible | fatal: [192.168.31.169]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.31.169 port 22: No route to host", "unreachable": true}
+2021-05-20 20:31:16,079 p=5440 u=vu n=ansible | PLAY RECAP *********************************************************************
+2021-05-20 20:31:16,079 p=5440 u=vu n=ansible | 192.168.31.150             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-20 20:31:16,080 p=5440 u=vu n=ansible | 192.168.31.169             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-20 20:46:15,740 p=5941 u=vu n=ansible | PLAY [Openvswitch] *************************************************************
+2021-05-20 20:46:15,747 p=5941 u=vu n=ansible | TASK [Ping] ********************************************************************
+2021-05-20 20:46:16,318 p=5941 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-20 20:46:16,318 p=5941 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-20 20:46:16,322 p=5941 u=vu n=ansible | PLAY RECAP *********************************************************************
+2021-05-20 20:46:16,322 p=5941 u=vu n=ansible | 192.168.31.150             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-20 20:46:16,322 p=5941 u=vu n=ansible | 192.168.31.169             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-20 20:50:04,131 p=6103 u=vu n=ansible | PLAY [Openvswitch] *************************************************************
+2021-05-20 20:50:04,138 p=6103 u=vu n=ansible | TASK [Ping] ********************************************************************
+2021-05-20 20:50:04,663 p=6103 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-20 20:50:05,103 p=6103 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-20 20:50:05,104 p=6103 u=vu n=ansible | TASK [Install docker.io] *******************************************************
+2021-05-20 20:50:05,904 p=6103 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-20 20:50:05,906 p=6103 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-20 20:50:05,908 p=6103 u=vu n=ansible | TASK [Install docker-compose] **************************************************
+2021-05-20 20:50:06,626 p=6103 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-20 20:50:07,073 p=6103 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-20 20:50:07,076 p=6103 u=vu n=ansible | TASK [Ensure docker service is running] ****************************************
+2021-05-20 20:50:08,007 p=6103 u=vu n=ansible | ok: [192.168.31.169]
+2021-05-20 20:50:08,007 p=6103 u=vu n=ansible | ok: [192.168.31.150]
+2021-05-20 20:50:08,011 p=6103 u=vu n=ansible | PLAY RECAP *********************************************************************
+2021-05-20 20:50:08,012 p=6103 u=vu n=ansible | 192.168.31.150             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-05-20 20:50:08,012 p=6103 u=vu n=ansible | 192.168.31.169             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

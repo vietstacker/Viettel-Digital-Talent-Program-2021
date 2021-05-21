@@ -1,0 +1,27 @@
+- name: Install MariaDb
+  hosts: db
+  gather_facts: false
+  become: yes
+  tasks:
+  - name: allow port
+    ufw:
+      rule: allow
+      port: 3306
+  - name: create volume for db
+    command: docker volume create --name mariadb_data
+  - name:  run image mariadb
+    command: docker run -d --name mariadb --env ALLOW_EMPTY_PASSWORD=yes --env MARIADB_USER=bn_wordpress --env MARIADB_PASSWORD=bitnami --env MARIADB_DATABASE=bitnami_wordpress --network host --volume mariadb_data:/bitnami/mariadb bitnami/mariadb:latest    
+- name: Install WordPress
+  hosts: wp
+  gather_facts: false
+  become: yes
+  tasks:
+  - name: allow port
+    ufw: rule={{ item.rule }} port={{ item.port }}
+    with_items:
+      - {rule: 'allow' ,port: '8080'}
+      - {rule: 'allow' ,port: '8443'}
+  - name: create volume for wp
+    command: docker volume create --name wordpress_data
+  - name:  run image wordpress
+    command: docker run -d --name wordpress   --env WORDPRESS_DATABASE_HOST=192.168.31.150 --env ALLOW_EMPTY_PASSWORD=yes   --env WORDPRESS_DATABASE_USER=bn_wordpress   --env WORDPRESS_DATABASE_PASSWORD=bitnami   --env WORDPRESS_DATABASE_NAME=bitnami_wordpress   --network host   --volume wordpress_data:/bitnami/wordpress   bitnami/wordpress:latest

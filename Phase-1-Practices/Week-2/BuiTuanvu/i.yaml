@@ -1,0 +1,13 @@
+---
+- name: test playbook
+  hosts: wp,db
+  gather_facts: false
+
+  tasks:
+  - name: ping
+    become: yes
+    command: docker ps 
+    register: result
+  - name: print docker ps  data
+    debug:
+     var: result

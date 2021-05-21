@@ -1,0 +1,20 @@
+- name: set up docker
+  hosts: all
+  gather_facts: false
+  become: yes
+  tasks:
+    - name: Ping
+      ping:
+      register: result
+    - name: Install docker.io
+      apt:
+        name: docker.io
+        state: present
+    - name: Install docker-compose
+      apt:
+        name: docker-compose
+        state: present
+    - name: Ensure docker service is running
+      service:
+        name: docker
+        state: started
