@@ -1,4 +1,5 @@
-
+Các nguồn tham khảo: 
++ Github : [hocchudong](https://github.com/hocchudong/ghichep-openvswitch)
 #  Bài tập tuần 3: Openvswitch
 
 ##  Những thứ cần chuẩn bị trước : 
