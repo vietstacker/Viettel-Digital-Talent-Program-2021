@@ -354,6 +354,13 @@ $ openstack token issue
 
 ## F. **ACESSING `HORIZON` DASHBOARD**:
 
+- Use following login account:
+	- **username**: `admin`
+	- **password**: *Run below command to retrieve*
+	```
+	$ cat /etc/kolla/passwords.yml | grep -i keystone_admin_password
+	```
+
 > Openstack Login page
 
 <img src="./imgs/success-openstack.png">
