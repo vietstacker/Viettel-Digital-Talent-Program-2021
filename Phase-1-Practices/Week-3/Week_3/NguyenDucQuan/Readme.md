@@ -1,5 +1,3 @@
-Các nguồn tham khảo: 
-+ Github : [hocchudong](https://github.com/hocchudong/ghichep-openvswitch)
 #  Bài tập tuần 3: Openvswitch
 
 ##  Những thứ cần chuẩn bị trước : 
@@ -83,3 +81,7 @@ Kết quả nhận được như sau:
 <img src="./img/resultWS.png">
 
 ## Mô hình đã sử dụng : 
+
+
+Các nguồn tham khảo: 
++ Github : [hocchudong](https://github.com/hocchudong/ghichep-openvswitch)
