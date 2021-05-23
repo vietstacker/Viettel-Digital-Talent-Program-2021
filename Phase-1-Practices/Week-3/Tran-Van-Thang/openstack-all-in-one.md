@@ -192,9 +192,18 @@ cat /etc/kolla/passwords.yml | grep keystone_admin
 ```
 
 > Sau đó bạn có thể dùng tên đăng nhập là `admin`, mật khẩu vừa lấy được vào trang web `http://10.0.2.15/auth/login/?next=/` Hoặc bạn có thể sử dụng port-forwarding sang máy vật lý bạn đang chạy. Bạn có thể làm theo hình dưới, sau đó truy cập `http://localhost:48080/auth/login/?next=/`
+
 ![portforwing](https://user-images.githubusercontent.com/43313369/119268129-bca4fc00-bc1b-11eb-99e2-ebebbe7c63d0.PNG)
+
+
 > Đăng nhập thành công!
+
 ![dashboard](https://user-images.githubusercontent.com/43313369/119268135-c0d11980-bc1b-11eb-8c3d-a91a32e31ec3.PNG)
+
+> Tạo một instance sau khi tải image lên và tạo network, tạo flavor public
+
+![image](https://user-images.githubusercontent.com/43313369/119270648-eb28d400-bc27-11eb-91f9-a1016d525820.png)
+
 
 
 ## III. Các lỗi gặp phải
