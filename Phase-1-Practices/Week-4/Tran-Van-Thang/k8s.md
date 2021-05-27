@@ -277,9 +277,11 @@ kubectl apply -f wordpress.yaml
 minikube service wordpress --url
 ```
 
-> Do wordpress có sử dụng kiểu LoadBalancer
+> Kết quả sẽ ra một địa chỉ giống như sau: http://192.168.49.2:31662
 > 
 > Sử dụng địa chỉ trên để kiểm tra kết quả.
+![image](https://user-images.githubusercontent.com/43313369/119906512-8c8d8e00-bf78-11eb-8813-baa1b7df88db.png)
+
 
 ## 5. Tài liệu tham khảo
 
