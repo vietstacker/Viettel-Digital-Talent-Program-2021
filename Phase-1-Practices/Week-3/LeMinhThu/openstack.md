@@ -162,4 +162,5 @@ kolla-ansible -i all-in-one deploy
 
 ![image](https://user-images.githubusercontent.com/83031380/120012693-091c7d00-c00a-11eb-9575-16b9297ea1f0.png)
 
+
 **Deployment failed here!!!**
