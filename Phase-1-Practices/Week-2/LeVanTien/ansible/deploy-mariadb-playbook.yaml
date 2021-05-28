@@ -1,0 +1,15 @@
+- name: deploy mariadb
+  hosts: db
+  gather_facts: false
+  tasks:
+    - name: Ensure docker service is running
+      become: yes
+      service:
+        name: docker
+        state: started
+    - name: Create a volume for MariaDB
+      become: yes
+      command: docker volume create --name mariadb_data
+    - name: Create a MariaDB container
+      become: yes
+      command: docker run -d --name mariadb --env ALLOW_EMPTY_PASSWORD=yes --env MARIADB_USER=bn_wordpress --env MARIADB_PASSWORD=bitnami --env MARIADB_DATABASE=bitnami_wordpress --network host --volume mariadb_data:/bitnami/mariadb bitnami/mariadb:latest
