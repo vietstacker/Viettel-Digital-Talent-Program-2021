@@ -114,7 +114,7 @@ OpenStack clouds.
 | ----------- | ----------- | ----------- |
 |  CPU | 4 cores | 2 cores |
 | RAM | 8 GB | 4 GB |
-|  HDD | 2 Disks | 2 Disks |
+|  Disks | 2 | 2 |
 | Network | 2 NICs | 2 NICs |
 
 - **Disks**:
@@ -269,6 +269,7 @@ kolla_install_type: "source"
 
 network_interface: ens33
 neutron_external_interface: ens38
+kolla_internal_vip_address: 192.168.80.137
 
 nova_compute_virt_type: "qemu"
 
