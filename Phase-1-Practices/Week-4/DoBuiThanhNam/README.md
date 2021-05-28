@@ -35,6 +35,10 @@ $ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 #### Result
 
+<img src="./pic/Screenshot_2.png">
+
+<img src="./pic/Screenshot_3.png">
+
 ### Step 2: Deploy MariaDB
 
 - Create directory
@@ -169,6 +173,8 @@ $ kubectl apply -f deploy-mariadb.yaml
 
 #### Result
 
+<img src="./pic/Screenshot_4.png">
+
 ### Step 3: Deploy Wordpress
 
 - Create files
@@ -286,21 +292,23 @@ $ kubectl apply -f deploy-wordpress.yaml
 
 #### Result
 
+<img src="./pic/Screenshot_10.png">
+
 ### Step 4: Run Minikube & Deploy
 
 - Run Minikube
 
 > $ minikube dashboard
 
-<img src="">
+<img src="./pic/Screenshot_7.png">
 
 - Get link
 
 > $ minikube service wordpress --url
 
-<img src="">
+<img src="./pic/Screenshot_9.png">
 
 - Deploy
 
-<img src="">
+<img src="./pic/Screenshot_8.png">
 
