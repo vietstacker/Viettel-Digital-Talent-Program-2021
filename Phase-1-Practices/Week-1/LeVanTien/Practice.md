@@ -8,7 +8,6 @@
 **Update the apt package index and install packages to allow apt to use a repository over HTTPS:**
 
 ```shell
-
 $ sudo apt-get update
 $ sudo apt-get install \
     apt-transport-https \
@@ -47,8 +46,6 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 $ sudo docker network create wordpress-network
 ```
 
-_Success output:_
-
 ![Create network](./img/img1.png)
 
 ### Step 2: Create a volume for MariaDB persistence and create a MariaDB container
@@ -63,7 +60,6 @@ $ docker run -d --name mariadb \
   --volume mariadb_data:/bitnami/mariadb \
   bitnami/mariadb:latest
 ```
-_Success output:_
 
 ![Create volume for MariaDB](./img/img2.png)
 
@@ -81,13 +77,11 @@ $ docker run -d --name wordpress \
   bitnami/wordpress:latest
 ```
 
-_Success output:_
 
 ![Create volume for WordPress](./img/img3.png)
 
 #### Step 4: Open browser and see application in IP:8080 (my ip = 191.168.88.129)
 
-_Success output:_
 
 ![Application](./img/img4.png)
 
