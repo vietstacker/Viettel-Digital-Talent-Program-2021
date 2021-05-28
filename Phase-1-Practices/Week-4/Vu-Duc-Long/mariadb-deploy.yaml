@@ -1,0 +1,68 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress-mariadb
+  labels:
+    app: wordpress-kube
+spec:
+  selector:
+    app: wordpress-kube
+    tier: mariadb
+  ports:
+    - port: 3306
+  clusterIP: None
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mariadb-pv-claim
+  labels:
+    app: wordpress-kube
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress-mariadb
+  labels:
+    app: wordpress-kube
+spec:
+  selector:
+    matchLabels:
+      app: wordpress-kube
+      tier: mariadb
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: wordpress-kube
+        tier: mariadb
+    spec:
+      containers:
+      - name: mariadb
+        image: bitnami/mariadb:latest
+        env:
+        - name: ALLOW_EMPTY_PASSWORD
+          value: "yes"
+        - name: MARIADB_USER
+          value: bn_wordpress
+        - name: MARIADB_DATABASE
+          value: bitnami_wordpress
+        - name: MARIADB_PASSWORD
+          value: bitnami
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: mariadb-persistent-storage
+          mountPath: /var/lib/mariadb
+      volumes:
+      - name: mariadb-persistent-storage
+        persistentVolumeClaim:
+          claimName: mariadb-pv-claim
