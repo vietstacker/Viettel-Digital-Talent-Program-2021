@@ -151,9 +151,7 @@ kolla-ansible -i ./all-in-one pull
 kolla-ansible -i ./all-in-one deploy
 ```
 
-![OpenStack (6) deploy-error](https://user-images.githubusercontent.com/48465162/120033430-bc469f80-c025-11eb-9ca7-3d7cb7793716.png)
-
-Updating...
+![OpenStack (6) deploy-success](https://user-images.githubusercontent.com/48465162/120077148-249f8a80-c0d3-11eb-890d-1f41a47fcdd1.png)
 
 ### Using OpenStack
 
@@ -170,5 +168,14 @@ kolla-ansible post-deploy
 . /etc/kolla/admin-openrc.sh
 ```
 
----
-Updating...
+- Get keystone_admin_password
+
+```console
+cat /etc/kolla/passwords.yml | grep keystone_admin
+```
+
+- Access: http://10.0.2.15
+
+![OpenStack (7) web](https://user-images.githubusercontent.com/48465162/120077268-c6bf7280-c0d3-11eb-9f0a-67214294ede6.png)
+
+![OpenStack (7) web-2](https://user-images.githubusercontent.com/48465162/120077271-ccb55380-c0d3-11eb-95c2-5fd2ed9dae77.png)
