@@ -1,6 +1,7 @@
 
 
 
+
 #  Bài tập tuần 4: Kubernets
 
 ##  Những thứ cần chuẩn bị : 
@@ -303,3 +304,16 @@ Kiếm tra kết quả :
 <img src="img/wp_deploy_success.png">
 
 # Chào mừng bạn đến với Minikube
+
+# Phần 3 : Một số lỗi có thể gặp :
+
+> The connection to the server localhost:8080 was refused - did you
+> specify the right host or port ?
+
+Để fix lỗi trên, chúng ta sử dụng các câu lệnh sau:
+```
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+Nguồn tham khảo : [Github](https://github.com/kubernetes/kubernetes/issues/50295)
