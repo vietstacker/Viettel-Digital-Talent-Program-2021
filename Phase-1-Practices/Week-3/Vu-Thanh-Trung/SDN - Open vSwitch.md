@@ -139,8 +139,6 @@ ping -I br1 10.1.1.10
 
   - Expanding the ability to divide the network, `VxLAN` using 24bit for `VxLAN ID` (with `VLAN` 12 bits) --> We have more than 16 million `VxLAN ID`.
 
-  - Reduce packet transmission latency in the `VxLAN`.
-
   - Have no use of `STP` and allow `enable` ECMP (Equal-Cost MultiPath) -> Allow packet transmission on multiple `path`.
 
   - Increased network flexibility meets Cloud Platform flexibility.
