@@ -1,4 +1,4 @@
-# HOMEWORK/ PRACTICE
+# HOMEWORK/ PRACTICE Kubernetes - (platform as a service) 
 ### 1) Cập nhật apt và thực hiện các cài đặt sau:
 `sudo apt-get install curl apt-transport-https docker.io`
 
@@ -266,7 +266,11 @@ spec:
           claimName: wordpress-volume
 ```
    #### để chạy service, hãy run       
-` kubectl apply -f wordpress.yaml
+` kubectl apply -f wordpress.yaml`
 
-minikube service wordpress --url` 
+`kubectl apply -f mariadb.yaml`
+
+`minikube service wordpress --url` 
+
+` kubectl get pods`
  ##### Đoạn này em có deploy nhưng vẫn bị báo lỗi không kết nối được đến Localhost; em đang fix ạ 
