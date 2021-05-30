@@ -1,5 +1,18 @@
 # OpenStack
 
+## Prepare
+
+1. Disks
+    * sda: 100GB
+    * sdb: 50GB
+    > Need add sdb in storage of vm to use lvm 
+    ![image](https://user-images.githubusercontent.com/83031380/120114799-06a55900-c1ab-11eb-8011-ddfbb8b22b15.png)
+
+2. Network
+    * NAT: enps3
+    * Bridgr Adapter: enps8 : 192.168.0. 116
+    * Host-only Adapter: enp0s9: 192.168.56.116
+
 ## Install dependencies
 
 1. Update **apt**
@@ -59,35 +72,45 @@ sudo chown $USER:$USER /etc/kolla
 3. Copy globals.yml and passwords.yml to /etc/kolla directory.
 
 ```
-cp -r /path/to/venv/share/kolla-ansible/etc_examples/kolla/* /etc/kolla
+cp -r path/to/venv/share/kolla-ansible/etc_examples/kolla/* /etc/kolla
 ```
 
 4. Copy all-in-one and multinode inventory files to the current directory.
 
 ```
-cp /path/to/venv/share/kolla-ansible/ansible/inventory/* .
+cp path/to/venv/share/kolla-ansible/ansible/inventory/* .
+```
+
+5. Install Openstack CLI (recommend)
+
+> there's a high chance it's you can not install Openstack CLI after deploying Openstack 
+
+```
+pip install python-openstackclient python-glanceclient python-neutronclient
 ```
 
 ## Configure Ansible
 
 ```
-mkdir -p /etc/ansible
+mkdir -p etc/ansible
 
 config="[defaults]\nhost_key_checking=False\npipelining=True\nforks=100"
 
-echo -e $config >> /etc/ansible/ansible.cfg
+echo -e $config >> etc/ansible/ansible.cfg
 ```
 
 ## Prepare initial configuration
 
 ### Inventory
+
 Check whether the configuration of inventory is correct or not
 
 ```
 ansible -i multinode all -m ping
 ```
 
-![image](https://user-images.githubusercontent.com/83031380/120012142-54825b80-c009-11eb-99ca-1b29edea3d99.png)
+![image](https://user-images.githubusercontent.com/83031380/120115050-2db05a80-c1ac-11eb-818b-26753d537872.png)
+
 
 
 ### Kolla passwords
@@ -109,16 +132,21 @@ vgcreate cinder-volumes /dev/sdb
 ```
 kolla_base_distro: "ubuntu"
 kolla_install_type: "source"
-kolla_internal_vip_address: "10.10.10.254
 
-network_interface: enp0s3
-neutron_external_interface: enp0s8
+network_interface: enp0s8
+neutron_external_interface: enp0s3
+kolla_internal_vip_address: 192.168.0.116
 
 nova_compute_virt_type: "qemu"
 
+enable_haproxy: "no"
+
 enable_cinder: "yes"
+enable_cinder_backup: "no"
 enable_cinder_backend_lvm: "yes"
+
 ```
+>If you want to run an All-In-One without haproxy and keepalived, you can set enable_haproxy to no in "OpenStack options" section, and set this value to the IP of your 'network_interface' as set in the Networking section below.
 
 ## Deployment
 
@@ -128,29 +156,28 @@ enable_cinder_backend_lvm: "yes"
 kolla-ansible -i all-in-one bootstrap-servers
 ```
 
-![image](https://user-images.githubusercontent.com/83031380/120012221-6c59df80-c009-11eb-93d0-152ab6c6ebeb.png)
+![image](https://user-images.githubusercontent.com/83031380/120115204-ce9f1580-c1ac-11eb-82cd-f5f8971dbaf0.png)
 
-![image](https://user-images.githubusercontent.com/83031380/120012240-724fc080-c009-11eb-810a-c0922d310c40.png)
-
+![image](https://user-images.githubusercontent.com/83031380/120115210-d3fc6000-c1ac-11eb-9539-8829ede30fb2.png)
 
 2. Do pre-deployment checks for hosts:
 
 ```
 kolla-ansible -i all-in-one prechecks
 ```
-![image](https://user-images.githubusercontent.com/83031380/120012352-957a7000-c009-11eb-8787-4f9e8dbd13ec.png)
+![image](https://user-images.githubusercontent.com/83031380/120115264-1aea5580-c1ad-11eb-92b4-407570a9d8b9.png)
 
-![image](https://user-images.githubusercontent.com/83031380/120012399-a6c37c80-c009-11eb-833d-88e3356bf3ff.png)
+![image](https://user-images.githubusercontent.com/83031380/120115271-2178cd00-c1ad-11eb-9e17-cf1484bce7a9.png)
+
 
 3. Pull Images to VM
 
 ```
 kolla-ansible -i all-in-one pull
 ```
+![image](https://user-images.githubusercontent.com/83031380/120115305-59801000-c1ad-11eb-966a-de1badeaa3b5.png)
 
-![image](https://user-images.githubusercontent.com/83031380/120012559-da060b80-c009-11eb-8706-c5b3dbd5740b.png)
-
-![image](https://user-images.githubusercontent.com/83031380/120012598-e5f1cd80-c009-11eb-9241-24590510fb3d.png)
+![image](https://user-images.githubusercontent.com/83031380/120115320-67359580-c1ad-11eb-93d7-96900b30e5cc.png)
 
 4. Finally proceed to actual OpenStack deployment:
 
@@ -158,9 +185,47 @@ kolla-ansible -i all-in-one pull
 kolla-ansible -i all-in-one deploy
 ```
 
-![image](https://user-images.githubusercontent.com/83031380/120012655-face6100-c009-11eb-93fa-2230576c93de.png)
+![image](https://user-images.githubusercontent.com/83031380/120115402-aa900400-c1ad-11eb-88ce-11ef691a1a58.png)
 
-![image](https://user-images.githubusercontent.com/83031380/120012693-091c7d00-c00a-11eb-9575-16b9297ea1f0.png)
+![image](https://user-images.githubusercontent.com/83031380/120115406-af54b800-c1ad-11eb-9045-691dc2d4f963.png)
 
+5. Post-deploy
 
-**Deployment failed here!!!**
+```
+kolla-ansible -i all-in-one deploy
+```
+![image](https://user-images.githubusercontent.com/83031380/120115486-11152200-c1ae-11eb-9567-81fb923d1939.png)
+
+## Dashboard
+
+*  Account:
+    * User: admin 
+    * Password: 
+    > Run:
+    ```
+    cat /etc/kolla/passwords.yml | grep -i keystone_admin_password
+    ```
+    
+![image](https://user-images.githubusercontent.com/83031380/120115672-f7280f00-c1ae-11eb-94f3-b1670220552f.png)
+
+![image](https://user-images.githubusercontent.com/83031380/120115689-145cdd80-c1af-11eb-8270-5f30747caa6d.png)
+
+## Error
+
+![image](https://user-images.githubusercontent.com/83031380/120115998-33a83a80-c1b0-11eb-80e8-ebb3ec9e06ef.png)
+
+=> need add hard disk sdb
+
+![image](https://user-images.githubusercontent.com/83031380/120115851-d7ddb180-c1af-11eb-817a-b5f383d3d4a3.png)
+=> in ansible.cfg: ask_sudo_password=False
+
+![image](https://user-images.githubusercontent.com/83031380/120115967-09567d00-c1b0-11eb-9523-352ef4ddd8b1.png)
+=> in globals.yml: Enable_cinder_backend_lvm=true
+
+## References
+
+<https://docs.openstack.org/kolla-ansible/latest/user/quickstart.html>
+
+<https://bugs.launchpad.net/kolla/+bugs>
+
+github repo
