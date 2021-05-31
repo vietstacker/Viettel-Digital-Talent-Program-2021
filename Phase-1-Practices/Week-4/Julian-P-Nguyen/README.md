@@ -156,11 +156,11 @@
 
 <img src="./imgs/minikube-architecture-diagram.png">
 
-An model `Minikube` Deployment with:
+- An model `Minikube` Deployment with:
 	- **1 Master Node (Control plane)**
 	- **1 Worker Nodes**: `2 running Pods`
-		- `MariaDB Pod`
-		- `WordPress Pod`
+		- `MariaDB`
+		- `WordPress`
 		
 - Showing components of `K8S cluster`
 
