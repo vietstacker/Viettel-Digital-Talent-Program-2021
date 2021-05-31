@@ -700,12 +700,12 @@ $ kubectl logs <pod-name>
 
 ## 1. `Deployment in version "v1" cannot be handled as a Deployment...`
 
-:x: Bug detected:
+:x: Incorrect type formatting:
 
 ```bash
  env:
         - name: ALLOW_EMPTY_PASSWORD
-          value: yes
+          value: yes			#parsed as `Boolean`
 ```
 
 :heavy_check_mark: Adding quotation marks: 
@@ -713,7 +713,7 @@ $ kubectl logs <pod-name>
 ```bash
  env:
         - name: ALLOW_EMPTY_PASSWORD
-          value: "yes"
+          value: "yes"			#parsed as `string`
 ```
 
 # **VI. :newspaper: REFERENCES**
