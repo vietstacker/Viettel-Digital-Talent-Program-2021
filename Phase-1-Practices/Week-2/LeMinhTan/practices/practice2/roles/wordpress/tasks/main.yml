@@ -1,0 +1,6 @@
+---
+- name: Install wordpress inside docker
+  import_tasks: install.yml
+
+- name: Allow port wordpress
+  import_tasks: ufw.yml

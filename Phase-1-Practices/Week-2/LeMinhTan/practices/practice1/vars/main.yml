@@ -1,0 +1,16 @@
+# ansible_become: True 
+# ansible_become_user: moly7x
+# ansible_become_password: M@ly7x
+# ansible_python_interpreter: /bin/python3
+
+# mariadb var
+# volume_maria_name: mariadb_data
+# mariadb_allow_empty_password: "yes"
+# mariadb_user: "bn_wordpress"
+# mariadb_password: "bitnami"
+# mariadb_database: "bitnami_wordpress"
+
+# wordpress var
+# volume_wp_name: wordpress_data
+# wp_allow_empty_password: "yes"
+# wp_database_host: "local"

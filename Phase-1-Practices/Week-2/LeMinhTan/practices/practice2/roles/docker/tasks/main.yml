@@ -1,0 +1,6 @@
+---
+- name: Check connect to managed node
+  import_tasks: ping.yml
+
+- name: Install docker
+  import_tasks: install.yml
