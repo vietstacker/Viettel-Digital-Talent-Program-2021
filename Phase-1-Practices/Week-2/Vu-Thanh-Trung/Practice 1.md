@@ -1,7 +1,7 @@
 # Practice 1: Using Ansible to setup Docker and deploy Wordpress (docker) on Ubuntu VM
 
 ## Prerequisite: 
-- [Bridged Adapter] (Instruction: https://github.com/trungvuthanh/cloud-intern-vtnet/blob/main/Week1/Practice%203.md)
+- [Bridged Adapter](Instruction: https://github.com/trungvuthanh/cloud-intern-vtnet/blob/main/Week1/Practice%203.md)
 - Install `openssh-server` and `sshpass` on both VMs
 ```console
 $ sudo apt install openssh-server
