@@ -1,0 +1,41 @@
+---
+- name: Ping Deployment Node
+  ping:
+  register: ping_result
+
+- name: Show ping result
+  debug:
+    var: ping_result
+
+- name: Update apt
+  apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+
+- name: Install essentials packages
+  apt:
+    name: net-tools, vim, git
+    state: present
+
+- name: Set vim as default editor
+  alternatives:
+    name: editor
+    path: /usr/bin/vim.basic  
+
+- name: Install Docker & Docker SDK
+  apt: 
+    name: docker.io, python3-docker
+    state: present
+
+- name: Ensure Docker is running
+  service:
+    name: docker
+    state: started
+
+- name: Allow access to specific ports
+  ufw:
+    rule: allow
+    port: "{{ item | int }}"
+    proto: tcp
+  loop:
+    - 3400
+

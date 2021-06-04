@@ -1,0 +1,15 @@
+[deploy-node]
+192.168.80.164
+
+[deploy-node:vars]
+ansible_become_pass=12345678
+ansible_ssh_user=pnguyen
+ansible_ssh_pass=12345678
+ansible_sudo_pass=12345678
+network_app=to-do-app-net
+to_do_nodejs_app_img=pnguyen01/simple-to-do-nodejs-app
+node_env=development 
+app_port=3400
+database=<omitted>
+jwt_string=AhiHidongOk                 
+jwt_expiration=1d
