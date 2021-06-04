@@ -209,7 +209,7 @@
   - **Features**: persisting collection of data from application.
 
 
-<img src="./imgs/backend.png">
+<img src="./imgs/Backend.png">
 
 ## :bulb: [CI/CD Workflow](#CI/CD-WORK-FLOW)
 
