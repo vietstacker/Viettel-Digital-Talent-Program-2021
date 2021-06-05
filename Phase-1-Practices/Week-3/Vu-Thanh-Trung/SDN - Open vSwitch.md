@@ -133,6 +133,24 @@ ping -I br1 10.1.1.10
 
 ![SDN (5)](https://user-images.githubusercontent.com/48465162/119224663-b171a380-bb29-11eb-94bc-427741b05cd8.png)
 
+- Use Wireshark to capture traffic
+
+**Note:** [Tcpdump Cheat Sheet](https://gist.github.com/jforge/27962c52223ea9b8003b22b8189d93fb)
+
+- Capture traffic and write data to `vxlan.pcap`
+
+```console
+sudo tcpdump -i any -c 10 -nn -s 0 -w vxlan.pcap
+```
+
+- Wireshark will automatically open after command, open file `vxlan.pcap` to view data
+
+```console
+wireshark
+```
+
+![SDN (6)](https://user-images.githubusercontent.com/48465162/120905378-d0208000-c67b-11eb-86d9-d9142276d253.png)
+
 ### Part 4: Point out the advantages and disadvantages of using Vxlan network in datacenter
 
 - Advantages
