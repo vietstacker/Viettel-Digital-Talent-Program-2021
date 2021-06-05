@@ -49,7 +49,7 @@
 
 ## Continuous Integration - Continuous Delivery (CI/CD)
 
-*Let's imagine that you are building a software from the beginning for customer. Well at the first few days, your code base is just few hundred lines. Gradually, it builds up. From hundreds to thousands and the number is not likely to stop there :cold_sweat:. Finally, the beta release day it here! You hand over the code to Ops team. They try to build it for Production but... **Build FAILED** :scream:!! You start to look at the stacktraces, doing your best to firgure out where are the :bug:. The logs bring you to code from **ancient time** - a few weeks ago, when :t-rex: and :dragon_face: were still dominating Earth. At this point, to catch up with release date, you nightmare begins....*    
+*Let's imagine that you are building a software from the beginning for customer. Well at the first few days, your code base is just few hundred lines. Gradually, it builds up. From hundreds to thousands and the number is not likely to stop there :cold_sweat:. Finally, the beta release day it here! You hand over the code to Ops team. They try to build it for Production but... **Build FAILED** :scream:!! You start to look at the stacktraces, doing your best to firgure out where are the :bug: :bug:. The logs bring you to code from **ancient time** - a few weeks ago, when :t-rex: and :dragon_face: were still dominating Earth. At this point, to catch up with release date, you nightmare begins....*    
 
 <img src="./imgs/meme-old-code.jpg">
 
