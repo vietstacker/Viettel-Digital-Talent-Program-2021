@@ -263,7 +263,7 @@ This project can be divided into 2 main sections:
 │   │       │   └── tasks
 │   │       └── docker
 │   │           └── tasks
-│   ├── controllerscd:q;cd
+│   ├── controllers
 │   │   └── response-models
 │   ├── docs
 │   ├── jenkins                 ------> Storing `jenkins` related files, including `Jenkinsfile` & scripts for CI/CD
