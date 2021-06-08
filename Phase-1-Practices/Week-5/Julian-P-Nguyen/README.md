@@ -634,9 +634,8 @@ $ docker logs jenkins-third
   - Navigate to `Global Credentials`:
     <img src="./imgs/nav-credentials.png">
     
-  - Enter `username` & `passwords` of personal `DockerHub` account:
+  - Press `Add Credentials` & enter `username` & `passwords` of personal `DockerHub` account:
     - `Credential ID` can be any string, it is named `docker_hub_cred` in this deployment.
-    <img src="./imgs/credentials-added.png">
 
   - Credential added successfully:
   <img src="./imgs/credentials-added.png">
