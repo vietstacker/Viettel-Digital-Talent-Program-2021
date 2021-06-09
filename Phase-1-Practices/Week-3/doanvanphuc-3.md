@@ -1,7 +1,7 @@
 # VTnet-Training-Week-3
 
 
-## install OVS 
+## Install OVS 
 
 
 Installing OpenVswitch (virtual switch) via apt:
@@ -119,7 +119,12 @@ Run a command
 `$ wireshark`
 
 
-![182933774_520524535624657_1014321076595903712_n](https://user-images.githubusercontent.com/83824403/119150784-f4c00980-ba78-11eb-8c60-7f630cc0f785.gif)
+![194190768_551226359593587_1000465759930126226_n](https://user-images.githubusercontent.com/83824403/121389683-de6de500-c976-11eb-90e1-e59a6b6e6011.jpg)
+
+
+
+![195814017_174140674721101_8986612221412074170_n](https://user-images.githubusercontent.com/83824403/121389693-df9f1200-c976-11eb-890f-2bd603ad5ecc.jpg)
+
 
 
 
