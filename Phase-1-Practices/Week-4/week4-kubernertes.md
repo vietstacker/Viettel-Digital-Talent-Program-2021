@@ -269,4 +269,4 @@ spec:
 ` kubectl apply -f wordpress.yaml
 
 minikube service wordpress --url` 
- ##### Đoạn này em có deploy nhưng vẫn bị báo lỗi không kết nối được đến Localhost; em đang fix ạ 
+ 
