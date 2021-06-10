@@ -1,0 +1,19 @@
+- name: Install MariaDb
+  hosts: fil
+  gather_facts: false
+
+  tasks:
+  - name: create volume for mariadb
+    become: yes
+    command: docker volume create --name mariadb_data
+    register: debugCreateVolume
+  - name: log run mariadb
+    debug:
+     var: debugCreateVolume
+  - name:  run image mariadb
+    become: yes
+    command: docker run -d --name mariadb --env ALLOW_EMPTY_PASSWORD=yes --env MARIADB_USER=bn_wordpress --env MARIADB_PASSWORD=bitnami --env MARIADB_DATABASE=bitnami_wordpress --network host --volume mariadb_data:/bitnami/mariadb bitnami/mariadb:latest    
+    register: debugRunMariadb
+  - name: log run mariadb
+    debug:
+     var: debugRunMariadb

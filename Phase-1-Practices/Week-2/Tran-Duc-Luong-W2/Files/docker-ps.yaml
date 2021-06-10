@@ -1,0 +1,12 @@
+- name: docker ps
+  hosts: fil,fil_cl
+  gather_facts: false
+
+  tasks:
+  - name: ping
+    become: yes
+    command: docker ps 
+    register: result
+  - name: print docker ps
+    debug:
+     var: result
