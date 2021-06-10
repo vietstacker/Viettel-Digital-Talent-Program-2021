@@ -189,6 +189,7 @@
 *A simple Web Server built with `Express` framework.*
 
 **Architecture**: `Monolithic` - *traditional unified model. The whole codebase remains in a single directory hierarchy*
+
 **Documentation & Usage**: Please refer to these documentation for more details
   - [To-do-app Repository](https://github.com/meobilivang/super-ultra-simple-to-do-app) (**Path**: `./docs`)
   - [API Testing Documentation](https://documenter.getpostman.com/view/11913865/TzCMdnyq)
