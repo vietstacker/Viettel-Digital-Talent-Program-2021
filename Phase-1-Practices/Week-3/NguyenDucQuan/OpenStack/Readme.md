@@ -1,5 +1,6 @@
 
 
+
 #  Bài tập tuần 3: OpenStack
 
 ##  Những thứ cần chuẩn bị : 
@@ -127,5 +128,17 @@ kolla-ansible -i all-in-one post-deploy
 ```
 
 <img src="img/result_post_deploy.png">
+
+### Bước 17:  Open Dashboard
+
+Account : 
+	user : admin 
+	password :  
+
+    Run: cat /etc/kolla/passwords.yml | grep -i keystone_admin_password
+
+<img src="img/openStack_dashboard_login.png">
+
+<img src="img/openStack_dashboard.png">
 
 # Chào mừng bạn đến với OpenStack
