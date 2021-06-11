@@ -1,0 +1,15 @@
+- name: deploy wordpress
+  hosts: fil
+  gather_facts: false
+
+  tasks:
+  
+  - name: pull docker compose yml
+    become: yes
+    get_url:
+      url: https://raw.githubusercontent.com/bitnami/bitnami-docker-wordpress/master/docker-compose.yml
+      dest: /home/docker-compose.yml
+  
+  - name: docker compose up
+    become: yes
+    command: docker-compose up -d
