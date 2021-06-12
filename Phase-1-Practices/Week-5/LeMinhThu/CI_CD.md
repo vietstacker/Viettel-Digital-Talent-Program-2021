@@ -72,7 +72,7 @@
 
 4. Đẩy code lên GitHub
 
-<https://github.com/LMThumeo/Simple-Java-We
+<https://github.com/LMThumeo/Simple-Java-We>
 
 5. Viết Jenkinsfile-CI để tiến hành quá trình CI
 
@@ -116,7 +116,7 @@ pipeline {
 }
 ```
 
-> Console output lưu trong CI_pipeline_console_output.md
+> Console output lưu trong CI_console_output.txt
 
 6. Thêm Dockerfile và Docker-compose.yml vào repository
 
@@ -227,7 +227,7 @@ Manage Jenkins > Plugin Manager > Available > filter: ansible
     }
 ```
 
-> Console output lưu trong CD_pipeline_console_output.md
+> Console output lưu trong CD_console_output.txt
 
 ![image](https://user-images.githubusercontent.com/83031380/121774234-ad2a2a80-cbab-11eb-8144-5b2edc3512fb.png)
 
