@@ -1,4 +1,4 @@
-# WEEK-4 PRACTICE DOCUMENTATION
+# WEEK-5 PRACTICE DOCUMENTATION
 
 ## Microservices & CI/CD
 ---
@@ -49,7 +49,7 @@
 
 ## Continuous Integration - Continuous Delivery (CI/CD)
 
-*Let's imagine that you are building a software from the beginning for customer. Well at the first few days, your code base is just few hundred lines. Gradually, it builds up. From hundreds to thousands and the number is not likely to stop there :cold_sweat:. Finally, the beta release day it here! You hand over the code to Ops team. They try to build it for Production but... **Build FAILED** :scream:!! You start to look at the stacktraces, doing your best to firgure out where are the :bug:. The logs bring you to code from **ancient time** - a few weeks ago, when :t-rex: and :dragon_face: were still dominating Earth. At this point, to catch up with release date, you nightmare begins....*    
+*Let's imagine that you are building a software from the beginning for customer. Well at the first few days, your code base is just few hundred lines. Gradually, it builds up. From hundreds to thousands and the number is not likely to stop there :cold_sweat:. Finally, the beta release day it here! You hand over the code to Ops team. They try to build it for Production but... **Build FAILED** :scream:!! You start to look at the stacktraces, doing your best to firgure out where are the :bug: :bug:. The logs bring you to code from **ancient time** - a few weeks ago, when :t-rex: and :dragon_face: were still dominating Earth. At this point, to catch up with release date, you nightmare begins....*    
 
 <img src="./imgs/meme-old-code.jpg">
 
@@ -189,6 +189,7 @@
 *A simple Web Server built with `Express` framework.*
 
 **Architecture**: `Monolithic` - *traditional unified model. The whole codebase remains in a single directory hierarchy*
+
 **Documentation & Usage**: Please refer to these documentation for more details
   - [To-do-app Repository](https://github.com/meobilivang/super-ultra-simple-to-do-app) (**Path**: `./docs`)
   - [API Testing Documentation](https://documenter.getpostman.com/view/11913865/TzCMdnyq)
@@ -209,7 +210,7 @@
   - **Features**: persisting collection of data from application.
 
 
-<img src="./imgs/backend.png">
+<img src="./imgs/Backend.png">
 
 ## :bulb: [CI/CD Workflow](#CI/CD-WORK-FLOW)
 
@@ -263,7 +264,7 @@ This project can be divided into 2 main sections:
 │   │       │   └── tasks
 │   │       └── docker
 │   │           └── tasks
-│   ├── controllerscd:q;cd
+│   ├── controllers
 │   │   └── response-models
 │   ├── docs
 │   ├── jenkins                 ------> Storing `jenkins` related files, including `Jenkinsfile` & scripts for CI/CD
@@ -634,9 +635,8 @@ $ docker logs jenkins-third
   - Navigate to `Global Credentials`:
     <img src="./imgs/nav-credentials.png">
     
-  - Enter `username` & `passwords` of personal `DockerHub` account:
-    - TODO: `Credential ID` can be any string, it is named `docker_hub_cred` in this deployment.
-    <img src="./imgs/credentials-added.png">
+  - Press `Add Credentials` & enter `username` & `passwords` of personal `DockerHub` account:
+    - `Credential ID` can be any string, it is named `docker_hub_cred` in this deployment.
 
   - Credential added successfully:
   <img src="./imgs/credentials-added.png">
