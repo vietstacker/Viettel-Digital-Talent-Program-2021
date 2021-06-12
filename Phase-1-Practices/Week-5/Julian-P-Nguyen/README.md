@@ -49,7 +49,7 @@
 
 ## Continuous Integration - Continuous Delivery (CI/CD)
 
-*Let's imagine that you are building a software from the beginning for customer. Well at the first few days, your code base is just few hundred lines. Gradually, it builds up. From hundreds to thousands and the number is not likely to stop there :cold_sweat:. Finally, the beta release day it here! You hand over the code to Ops team. They try to build it for Production but... **Build FAILED** :scream:!! You start to look at the stacktraces, doing your best to firgure out where are the :bug: :bug:. The logs bring you to code from **ancient time** - a few weeks ago, when :t-rex: and :dragon_face: were still dominating Earth. At this point, to catch up with release date, you nightmare begins....*    
+*Let's imagine that you are building a software from the beginning for customer. Well at the first few days, your code base is just few hundred lines. Gradually, it builds up. From hundreds to thousands and the number is not likely to stop there :cold_sweat:. Finally, the beta release day it here! You hand over the code to Ops team. They try to build it for Production but... **Build FAILED** :scream:!! You start to look at the stacktraces, doing your best to firgure out where are the :bug:. The logs bring you to code from **ancient time** - a few weeks ago, when :t-rex: and :dragon_face: were still dominating Earth. At this point, to catch up with release date, you nightmare begins....*    
 
 <img src="./imgs/meme-old-code.jpg">
 
@@ -420,10 +420,7 @@ services:
 
 ```
   1. Build Project ----->  
-                  2. Unit Test -----> 
-                              3. Build Image -----> 
-                                            4. Publish Image ----->
-                                                            5. Clean Image from Local machine 
+                      2. Unit Test
 ```
 
 #### **Enviroment Setup & `Jenkins` Installation**: 
@@ -629,18 +626,6 @@ $ docker logs jenkins-third
 
   - **Source Code for NodeJS Application**: RESTful API with NodeJS be ready. The source code should be published to `GitHub`.
 
-  - **DockerHub Account**: Register for an account on [**DockerHub**](https://hub.docker.com/)
-
-- Adding `DockerHub Credentials` to `Jenkins`'s Dashboard:
-  - Navigate to `Global Credentials`:
-    <img src="./imgs/nav-credentials.png">
-    
-  - Press `Add Credentials` & enter `username` & `passwords` of personal `DockerHub` account:
-    - `Credential ID` can be any string, it is named `docker_hub_cred` in this deployment.
-
-  - Credential added successfully:
-  <img src="./imgs/credentials-added.png">
-
 - Configure `Jenkinsfile`:
   - Navigate to the Repository of application 
   - Create (if not done before)/configure `Jenkinsfile`: *Below is a not-that-optimized pipeline that written in `declarative` format. With advanced implementations, `scripted pipeline` is highly recommended.*
@@ -694,53 +679,6 @@ $ docker logs jenkins-third
                 }
             }
 
-          /** Build Docker Image  **/
-          stage('Building Image') {
-                agent {
-                    docker {
-                        reuseNode true
-                        image 'pnguyen01/node-docker:1.1'            // Docker image for testing environment
-                        args '-p 3400:3400 --privileged -v /var/run/docker.sock:/var/run/docker.sock'
-                    }
-                }
-            steps {
-              script {
-                dockerImage = docker.build registry + ":latest"           //Build image with tag `latest`
-              }
-            }
-          }
-
-          /** Publish Image to DockerHub  **/
-          stage('Push Image to DockerHub') {
-              agent {
-                    docker {
-                      reuseNode true
-                      image 'pnguyen01/node-docker:1.1'            // Docker image for testing environment
-                      args '-p 3400:3400 --privileged -v /var/run/docker.sock:/var/run/docker.sock'
-                    }
-              }
-              steps {
-                script {
-                  docker.withRegistry('', registryCredential) {         //Authencate with DockerHub
-                    dockerImage.push()                                  //Push Image to DockerHub
-                  }
-                }
-              }
-          }
-
-          /** Remove Built Image From Local Machine  **/
-          stage('Remove built image from local machine') {
-            agent {
-                  docker {
-                    reuseNode true
-                    image 'pnguyen01/node-docker:1.1'            // Docker image for testing environment
-                    args '-p 3400:3400 --privileged -v /var/run/docker.sock:/var/run/docker.sock'
-                  }
-            }
-            steps {
-              sh './jenkins/scripts/remove-img.sh'            //Remove Image from local machine
-            }
-          }
           ....
     }
 
@@ -851,6 +789,201 @@ Application is running on port 3400
 [Pipeline] }
 ....
 ```
+
+**:joy: Congratulations, it runs. CI down, 1 more to go.**
+
+## Continuous Delivery:
+
+**Deployment Ideas**: *Let's take it easy. Slow down & do some plannings.*
+  
+  **1. Enviroment Setup on `Agent Machine`**.
+
+  **2. Connect `Agent Machine` to `Jenkins`**.
+  
+  **3. Register `DockerHub` credentials to `Jenkins`**.
+  
+  **4. `Continuous Delivery`**: Following steps will be carried out in order.
+
+```
+  1. Build Image ----->  
+                  2. Publish Image -----> 
+                                      3. Deploy
+```
+
+**Requirements**: *To proceed, please ensure the following items are satisfied*
+  - **DockerHub Account**: Register for an account on [**DockerHub**](https://hub.docker.com/)
+
+### Environment Setup
+
+- Configure host `host-vm` (*jenkins-slave*):
+  - Install `Ansible` & `sshpass`: 
+      - **sshpass**: *SSH password-based login. User can specify ssh password in inventory file(s).*
+  
+  ```bash
+  $ sudo apt install ansible sshpass
+  ```
+
+  - Install packages for `jenkins`: ***Java JDK 1.8** is required for a host to be used as a Jenkins's `agent`*
+  
+  ```bash
+  $ sudo apt-get install -y openjdk-8-jdk
+  ```
+  
+#### Connect `Agent Machine` to `Jenkins`
+
+- Working with SSH Keys on `host-vm`
+  - Generate SSH key:
+  ```bash
+  $ ssh-keygen
+  ```
+  
+  **Notes**: Please notice that there are **2 SSH keys** 
+  
+  ```bash
+    Public key: /home/<-user->/.ssh/id_rsa.pub 
+    Private key: /home/<-user->/.ssh/id_rsa
+  ```
+
+  - Move `Public key` to `<path>/.ssh/authorized_keys`:
+  ```bash
+  $ sudo mkdir -p /var/lib/pnguyen/.ssh 
+  $ sudo cp /home/pnguyen/.ssh/id_rsa.pub /var/lib/pnguyen/.ssh/authorized_keys
+  ```
+  
+  - Retrieve `private key`:
+  
+  ```bash
+  $ cat /home/pnguyen/.ssh/id_rsa
+  ```
+
+- Add `host-vm`'s `Private Key` to `Jenkins` Dashboard:
+  - Navigate to `Credentials`:
+  <img src="./imgs/nav-credentials.png">
+
+  - Add `Private key` to `Credentials` on `Jenkins` Dashboard:
+    - `Private Key` successfully added:
+    <img src="./imgs/add-ssh.png">
+
+- Add new `host-vm` agent to `Jenkins`:
+  - Navigate to `New Node`:
+  <img src="./imgs/nav-new-node.png">
+
+  - Add `host-vm` Agent on `Jenkins` Dashboard
+    - Selected the recently added `SSH Key` as `Credentials`
+  <img src="./imgs/configure-host.png">
+  
+    - `host-vm` added successfully:
+  <img src="./imgs/agent-success-added.png">
+
+#### Register `DockerHub` credentials to `Jenkins`
+
+- Adding `DockerHub Credentials` to `Jenkins`'s Dashboard:
+  - Navigate to `Global Credentials`:
+    <img src="./imgs/nav-credentials.png">
+    
+  - Press `Add Credentials` & enter `username` & `passwords` of personal `DockerHub` account:
+    - `Credential ID` can be any string, it is named `docker_hub_cred` in this deployment.
+
+  - Credential added successfully:
+  <img src="./imgs/credentials-added.png">
+
+#### :truck: `Continuous Delivery`
+
+*Your package all set! Contact your delivery service :wink:*
+
+- **Requirements**: *To proceed, please ensure the following items are satisfied*
+
+  - **Delivery Agent**: Jenkins's agent performing app distribution stage should be **ready** at this point (`host-vm` in this deployment).  
+
+  - **Continuous Integration**: better runs smoothly at this point. Otherwise, nothing available to deliver :disappointed_relieved:
+
+- Build `Ansible` Playbook to deploy application to a remote host:
+  **Note**: detailed implementation of this `Ansbile` playbook will not be discussed here. View `./application/ansible` directory for a closer view.
+
+  - **Workflow of `Ansible` playbook**: *tasks be carried out on remote host*
+    1. Check connection to remote host
+    2. Update `apt` & Install essential packages 
+    3. Set `vim` as default text editor (*for debugging*)
+    4. Install `Docker` & Ensure `Docker` active status
+    5. Allow access on port `3400`
+    6. Create network for application on `Docker`
+    7. Pull & Start `To-do-app` as Container
+
+- Configure `Jenkinsfile`:
+  - Adding `Build Image`, `Push Image`, `Deployment` stage to `Jenkinsfile`:
+  
+  ```groovy
+  $ vi <path-to-app-dir>/jenkins/Jenkinsfile
+  
+  -----
+    
+    ....
+    
+    /** Build Docker Image  **/
+    stage('Building Image') {
+          agent {
+              docker {
+                  reuseNode true
+                  image 'pnguyen01/node-docker:1.1'            // Docker image for testing environment
+                  args '-p 3400:3400 --privileged -v /var/run/docker.sock:/var/run/docker.sock'
+              }
+          }
+          steps {
+            script {
+              dockerImage = docker.build registry + ":latest"           //Build image with tag `latest`
+            }
+          }
+    }
+
+    /** Publish Image to DockerHub  **/
+    stage('Push Image to DockerHub') {
+          agent {
+                docker {
+                  reuseNode true
+                  image 'pnguyen01/node-docker:1.1'            // Docker image for testing environment
+                  args '-p 3400:3400 --privileged -v /var/run/docker.sock:/var/run/docker.sock'
+                }
+          }
+          steps {
+            script {
+              docker.withRegistry('', registryCredential) {         //Authencate with DockerHub
+                dockerImage.push()                                  //Push Image to DockerHub
+              }
+            }
+          }
+    }
+
+    /** Remove Built Image From Local Machine  **/
+    stage('Remove built image from local machine') {
+          agent {
+                docker {
+                  reuseNode true
+                  image 'pnguyen01/node-docker:1.1'            // Docker image for testing environment
+                  args '-p 3400:3400 --privileged -v /var/run/docker.sock:/var/run/docker.sock'
+                }
+          }
+          steps {
+            sh './jenkins/scripts/remove-img.sh'            //Remove Image from local machine
+          }
+    }
+
+    /** Deploy application to Remote machine  **/
+    stage('Deploy') {
+
+        /** Perform this stage on `host-vm` agent **/
+        agent { node 'host-vm' }
+
+        steps {
+          sh './jenkins/scripts/deploy.sh'        //Run ansible playbook: $ansible-playbook -i $(pwd)/ansible/hosts $(pwd)/ansible/site.yml
+        }
+    }
+  ...
+
+  ```
+
+- *Moment of truth*. Let's `Build Now` to start `CD Pipeline`!
+
+:heavy_check_mark: **Expected Terminal Output**:
 
 - `Build Image`: execute commands to `containerize` the NodeJS Application:
 
@@ -966,133 +1099,9 @@ $ docker rm -f 2bdcd92e8c4d541ea918e80c41b19544c66f28ba88d170d0bc19390496a9de3f
 Finished: SUCCESS
 ```
 
-:heavy_check_mark: **Expected Dashboard Output**:
-
-<img src="./imgs/success-image-build-push-dockerhub.png">
-
 View Image on DockerHub: [Sample NodeJS DockerHub](https://hub.docker.com/repository/docker/pnguyen01/simple-to-do-nodejs-app)
 
-**:joy: Congratulations, it runs. CI down, 1 more to go.**
-
-## Continuous Delivery:
-
-##### **Deployment Ideas**: *Let's take it easy. Slow down & do some plannings.*
-  
-  **1. Enviroment Setup on `Agent Machine`**.
-  
-  **2. Connect `Agent Machine` to `Jenkins`**
-  
-  **3. `Continuous Delivery`**.
-
-#### Environment Setup
-
-- Configure host `host-vm` (*jenkins-slave*):
-  - Install `Ansible` & `sshpass`: 
-      - **sshpass**: *SSH password-based login. User can specify ssh password in inventory file(s).*
-  
-  ```bash
-  $ sudo apt install ansible sshpass
-  ```
-
-  - Install packages for `jenkins`: ***Java JDK 1.8** is required for a host to be used as a Jenkins's `agent`*
-  
-  ```bash
-  $ sudo apt-get install -y openjdk-8-jdk
-  ```
-  
-#### Connect `Agent Machine` to `Jenkins`
-
-- Working with SSH Keys on `host-vm`
-  - Generate SSH key:
-  ```bash
-  $ ssh-keygen
-  ```
-  
-  **Notes**: Please notice that there are **2 SSH keys** 
-  
-  ```bash
-    Public key: /home/<-user->/.ssh/id_rsa.pub 
-    Private key: /home/<-user->/.ssh/id_rsa
-  ```
-
-  - Move `Public key` to `<path>/.ssh/authorized_keys`:
-  ```bash
-  $ sudo mkdir -p /var/lib/pnguyen/.ssh 
-  $ sudo cp /home/pnguyen/.ssh/id_rsa.pub /var/lib/pnguyen/.ssh/authorized_keys
-  ```
-  
-  - Retrieve `private key`:
-  
-  ```bash
-  $ cat /home/pnguyen/.ssh/id_rsa
-  ```
-
-- Add `host-vm`'s `Private Key` to `Jenkins` Dashboard:
-  - Navigate to `Credentials`:
-  <img src="./imgs/nav-credentials.png">
-
-  - Add `Private key` to `Credentials` on `Jenkins` Dashboard:
-    - `Private Key` successfully added:
-    <img src="./imgs/add-ssh.png">
-
-- Add new `host-vm` agent to `Jenkins`:
-  - Navigate to `New Node`:
-  <img src="./imgs/nav-new-node.png">
-
-  - Add `host-vm` Agent on `Jenkins` Dashboard
-    - Selected the recently added `SSH Key` as `Credentials`
-  <img src="./imgs/configure-host.png">
-  
-    - `host-vm` added successfully:
-  <img src="./imgs/agent-success-added.png">
-
-
-#### :truck: `Continuous Delivery`
-
-*Your package all set! Contact your delivery service :wink:*
-
-- **Requirements**: *To proceed, please ensure the following items are satisfied*
-
-  - **Delivery Agent**: Jenkins's agent performing app distribution stage should be **ready** at this point (`host-vm` in this deployment).  
-
-  - **Continuous Integration**: better runs smoothly at this point. Otherwise, nothing available to deliver :disappointed_relieved:
-
-- Build `Ansible` Playbook to deploy application to a remote host:
-  **Note**: detailed implementation of this `Ansbile` playbook will not be discussed here. View `./application/ansible` directory for a closer view.
-
-  - **Workflow of `Ansible` playbook**: *tasks be carried out on remote host*
-    1. Check connection to remote host
-    2. Update `apt` & Install essential packages 
-    3. Set `vim` as default text editor (*for debugging*)
-    4. Install `Docker` & Ensure `Docker` active status
-    5. Allow access on port `3400`
-    6. Create network for application on `Docker`
-    7. Pull & Start `To-do-app` as Container
-
-- Configure `Jenkinsfile`:
-  - Adding `Deployment` stage to `Jenkinsfile`:
-  ```groovy
-  $ vi <path-to-app-dir>/jenkins/Jenkinsfile
-  
-  -----
-
-    /** Deploy application to Remote machine  **/
-    stage('Deploy') {
-
-        /** Perform this stage on `host-vm` agent **/
-        agent { node 'host-vm' }
-
-        steps {
-          sh './jenkins/scripts/deploy.sh'        //Run ansible playbook: $ansible-playbook -i $(pwd)/ansible/hosts $(pwd)/ansible/site.yml
-        }
-    }
-  ...
-
-  ```
-
-- *Moment of truth*. Let's `Build Now` to start `CD Pipeline`!
-
-:heavy_check_mark: **Expected Terminal Output**:
+- `Deploy` the application to `remote-host`
 
 ```bash
 --------------------
