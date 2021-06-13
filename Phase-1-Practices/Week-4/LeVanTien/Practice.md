@@ -79,6 +79,14 @@ $ reboot
 ```
 ![](./image/start.png)
 
+**Run command to view namespaces and components of k8s**
+
+```shell
+$ kubectl get namespace 
+$ kubectl get pods -n kube-system
+```
+![](./image/components.png)
+
 ## 2. Deploy Wordpress and MySQL using Minikube
 
 #### Create a Kubernetes secret.
