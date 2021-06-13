@@ -1,0 +1,26 @@
+image : mcr.microsoft.com/dotnet/sdk:5.0
+
+stages:
+  - build
+  - test
+  - release
+
+build:
+  stage: build
+  script:
+    - dotnet build
+
+test:
+  stage: test
+  script:
+    - dotnet test
+
+release:
+  stage: release
+  only:
+    - master
+  artifacts:
+    paths:
+      - publish/
+  script:
+    - dotnet publish -c Release -o ../publish TestCICD/TestCICD.csproj
