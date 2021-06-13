@@ -42,6 +42,8 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 minikube start --driver=docker
 ```
 
+![image](https://user-images.githubusercontent.com/83031380/121802402-4a499980-cc66-11eb-8426-e7eb3792707d.png)
+
 5. Check kubectl version
 
 ```
