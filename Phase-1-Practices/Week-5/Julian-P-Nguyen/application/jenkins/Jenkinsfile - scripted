@@ -1,0 +1,44 @@
+node('master') {
+    
+    /* Pulling Code */
+    checkout scm
+
+    docker.image('pnguyen01/node-docker:1.1').withRun('-p 3400:3400 --privileged -v /var/run/docker.sock:/var/run/docker.sock') { c ->
+        
+        stage('Build') {
+             sh './jenkins/scripts/build.sh'
+        }
+
+        stage('Unit Test') {
+             sh './jenkins/scripts/test.sh'
+        }
+
+        stage('Build Image') {
+            dockerImage = docker.build registry + ":1.$BUILD_NUMBER"
+        }
+
+        stage('Publish to DockerHub') {
+            docker.withRegistry('', registryCredential) {
+                dockerImage.push()
+            }
+        }
+
+        stage('Remove Docker Image') {
+            sh './jenkins/scripts/remove-img.sh'
+        }
+    }
+
+}
+
+//node('host-vm') {
+    
+    /*
+    * Deploy w/ Ansible
+    */
+ //   checkout scm
+
+ //   step('Deploy') {
+ //       sh ('')
+ //       sh ('')
+ //   }
+//}

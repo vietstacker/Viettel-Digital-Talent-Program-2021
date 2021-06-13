@@ -1,0 +1,21 @@
+---
+- name: Create "{{ network_app }}" network
+  docker_network:
+    name: "{{ network_app }}"
+
+- name: Start To-Do-App container
+  register: run_to_do_app
+  docker_container:
+    name: to-do-app
+    image: "{{ to_do_nodejs_app_img }}:latest"
+    state: started
+    pull: yes
+    networks:
+      - name: "{{ network_app }}"
+    ports:
+      - "3400:3400"
+    env:
+        PORT: "{{ app_port | quote }}"
+        DATABASE: "{{ database }}"
+        JWT_STRING: "{{ jwt_string | quote }}"                 
+        JWT_EXPIRES_IN: "{{ jwt_expiration | quote }}"

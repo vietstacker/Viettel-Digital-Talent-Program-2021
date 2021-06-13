@@ -1,0 +1,2777 @@
+{
+	"info": {
+		"_postman_id": "4b7f6ee0-4e19-4300-a0a5-54f9defa5aec",
+		"name": "To-do-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GET User By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNjNkOTgxMjA2OWQ5Mjc2ODAxZmU3OSIsImlhdCI6MTYxNzE2MTAzNiwiZXhwIjoxNjE3MjQ3NDM2fQ.tfy9nqwid8_buP2Q18uhzUBfP-YtBaLcLsDp7zJOzvQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{URL}}:{{Port}}/api/users/6063d9812069d9276801fe79",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "{{Port}}",
+							"path": [
+								"api",
+								"users",
+								"6063d9812069d9276801fe79"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET User By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNjNkOTgxMjA2OWQ5Mjc2ODAxZmU3OSIsImlhdCI6MTYxNzE2MTAzNiwiZXhwIjoxNjE3MjQ3NDM2fQ.tfy9nqwid8_buP2Q18uhzUBfP-YtBaLcLsDp7zJOzvQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://{{URL}}:{{Port}}/api/users/6063d9812069d9276801fe79",
+									"protocol": "http",
+									"host": [
+										"{{URL}}"
+									],
+									"port": "{{Port}}",
+									"path": [
+										"api",
+										"users",
+										"6063d9812069d9276801fe79"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "149"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 03:24:46 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617164685"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "310"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"136-amWHXBlfumGZTeCPPZvHURUOaQ8\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Found User!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"6063d9812069d9276801fe79\",\n        \"userName\": \"pnguyen\",\n        \"fullName\": \"Phong D. Nguyen\",\n        \"email\": \"phongdnguyen01@gmail.com\",\n        \"description\": \"This is my account\",\n        \"gender\": \"M\",\n        \"created_at\": \"2021-03-31T02:08:01.912Z\",\n        \"updated_at\": \"2021-03-31T02:08:01.912Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE User by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNjNkOTgxMjA2OWQ5Mjc2ODAxZmU3OSIsImlhdCI6MTYxNzE2MTAzNiwiZXhwIjoxNjE3MjQ3NDM2fQ.tfy9nqwid8_buP2Q18uhzUBfP-YtBaLcLsDp7zJOzvQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"dnam1\",\r\n    \"fullName\": \"Duc T. Nam\",\r\n    \"email\": \"ducnam123@gmail.com\",\r\n    \"gender\": \"M\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/delete/6063f35dcf33b6357c8328cd",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"delete",
+								"6063f35dcf33b6357c8328cd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update User By ID",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNjNkOTgxMjA2OWQ5Mjc2ODAxZmU3OSIsImlhdCI6MTYxNzE2MTAzNiwiZXhwIjoxNjE3MjQ3NDM2fQ.tfy9nqwid8_buP2Q18uhzUBfP-YtBaLcLsDp7zJOzvQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"dnam1\",\r\n    \"fullName\": \"Duc T. Nam\",\r\n    \"email\": \"ducnam123@gmail.com\",\r\n    \"gender\": \"M\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/users/update/6063f35dcf33b6357c8328cd",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"update",
+										"6063f35dcf33b6357c8328cd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "149"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 04:12:53 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617167568"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "108"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6c-eqZvUbPIOmDAJw09/u1EsicUxVs\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User has been updated!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"6063f35dcf33b6357c8328cd\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User By Id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNjNkOTgxMjA2OWQ5Mjc2ODAxZmU3OSIsImlhdCI6MTYxNzE2MTAzNiwiZXhwIjoxNjE3MjQ3NDM2fQ.tfy9nqwid8_buP2Q18uhzUBfP-YtBaLcLsDp7zJOzvQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"dnam1\",\r\n    \"fullName\": \"Duc T. Nam\",\r\n    \"email\": \"ducnam123@gmail.com\",\r\n    \"gender\": \"M\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/update/6063f7ceea440d673076ae0e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"update",
+								"6063f7ceea440d673076ae0e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Board",
+			"item": [
+				{
+					"name": "CREATE Board",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{phong's token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Monday Morning Routine\",\r\n    \"description\": \"What i do on monday morning\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/boards/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"boards",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CREATE Board",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Monday Morning Routine\",\r\n    \"description\": \"What i do on monday morning\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/boards/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"boards",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "147"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 06:15:24 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617174842"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "113"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"71-NshPVf5JuGkowYLHueBj6RwMN5o\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"New Board has been created!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"6064137c228d5d271c26ff4a\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE Board",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{phong's token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Monday Morning Routines\",\r\n    \"description\": \"What i normally do on monday morning\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/boards/update/6064137c228d5d271c26ff4a",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"boards",
+								"update",
+								"6064137c228d5d271c26ff4a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UPDATE Board",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Monday Morning Routines\",\r\n    \"description\": \"What i normally do on monday morning\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/boards/update/6064137c228d5d271c26ff4a",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"boards",
+										"update",
+										"6064137c228d5d271c26ff4a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "146"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 06:41:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617174842"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "118"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"76-N5uTEnQBKrV4s8PqmjvC8BdAV24\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Existing Board has been updated!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"6064137c228d5d271c26ff4a\"\n    }\n}"
+						},
+						{
+							"name": "CREATE Board",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Monday Morning Routine\",\r\n    \"description\": \"What i do on monday morning\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/boards/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"boards",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "147"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 06:15:24 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617174842"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "113"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"71-NshPVf5JuGkowYLHueBj6RwMN5o\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"New Board has been created!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"6064137c228d5d271c26ff4a\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE Board",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{phong's token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/boards/delete/60641adc228d5d271c26ff4f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"boards",
+								"delete",
+								"60641adc228d5d271c26ff4f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UPDATE Board",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Monday Morning Routines\",\r\n    \"description\": \"What i normally do on monday morning\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/boards/update/6064137c228d5d271c26ff4a",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"boards",
+										"update",
+										"6064137c228d5d271c26ff4a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "146"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 06:41:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617174842"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "118"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"76-N5uTEnQBKrV4s8PqmjvC8BdAV24\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Existing Board has been updated!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"6064137c228d5d271c26ff4a\"\n    }\n}"
+						},
+						{
+							"name": "CREATE Board",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Monday Morning Routine\",\r\n    \"description\": \"What i do on monday morning\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/boards/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"boards",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "147"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 06:15:24 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617174842"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "113"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"71-NshPVf5JuGkowYLHueBj6RwMN5o\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"New Board has been created!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"6064137c228d5d271c26ff4a\"\n    }\n}"
+						},
+						{
+							"name": "DELETE Board",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/boards/delete/60641adc228d5d271c26ff4f",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"boards",
+										"delete",
+										"60641adc228d5d271c26ff4f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "139"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 06:49:14 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617174842"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "114"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"72-PaIAWrChTg47d2m5VeK2ZY63RG8\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Your Board has been deleted!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"60641adc228d5d271c26ff4f\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GET LIST of Boards",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{phong's token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/boards/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"boards",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET LIST of Boards",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/api/boards/list",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"boards",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "149"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 07:18:01 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617178680"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1385"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"569-YomUYS4aAMJJlFmGSC8t/N7fg6Y\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully found your Board list\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"taskCollection\": [],\n            \"_id\": \"6064137c228d5d271c26ff4a\",\n            \"title\": \"Monday Morning Routines\",\n            \"description\": \"What i normally do on monday morning\",\n            \"ownerId\": \"6063d9812069d9276801fe79\",\n            \"createdAt\": \"2021-03-31T06:15:24.871Z\",\n            \"updatedAt\": \"2021-03-31T06:41:17.691Z\"\n        },\n        {\n            \"taskCollection\": [],\n            \"_id\": \"60641a76228d5d271c26ff4b\",\n            \"title\": \"Tuesday Morning Routines\",\n            \"description\": \"What i normally do on Tuesday morning\",\n            \"ownerId\": \"6063d9812069d9276801fe79\",\n            \"createdAt\": \"2021-03-31T06:45:10.018Z\",\n            \"updatedAt\": \"2021-03-31T06:45:10.018Z\"\n        },\n        {\n            \"taskCollection\": [],\n            \"_id\": \"60641a82228d5d271c26ff4c\",\n            \"title\": \"Wednesday Morning Routines\",\n            \"description\": \"What i normally do on Wednesday morning\",\n            \"ownerId\": \"6063d9812069d9276801fe79\",\n            \"createdAt\": \"2021-03-31T06:45:22.546Z\",\n            \"updatedAt\": \"2021-03-31T06:45:22.546Z\"\n        },\n        {\n            \"taskCollection\": [],\n            \"_id\": \"60641a91228d5d271c26ff4d\",\n            \"title\": \"Thursday Morning Routines\",\n            \"description\": \"What i normally do on Thursday morning\",\n            \"ownerId\": \"6063d9812069d9276801fe79\",\n            \"createdAt\": \"2021-03-31T06:45:37.456Z\",\n            \"updatedAt\": \"2021-03-31T06:45:37.456Z\"\n        },\n        {\n            \"taskCollection\": [],\n            \"_id\": \"60641acb228d5d271c26ff4e\",\n            \"title\": \"Friday Morning Routines\",\n            \"description\": \"What i normally do on Friday morning\",\n            \"ownerId\": \"6063d9812069d9276801fe79\",\n            \"createdAt\": \"2021-03-31T06:46:35.771Z\",\n            \"updatedAt\": \"2021-03-31T06:46:35.771Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GET  Board",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{phong's token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/boards/6064137c228d5d271c26ff4a",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"boards",
+								"6064137c228d5d271c26ff4a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET  Board",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/api/boards/6064137c228d5d271c26ff4a",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"boards",
+										"6064137c228d5d271c26ff4a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "149"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 07:20:59 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617178858"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "305"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"131-PZ/U9lGBeQPC1haozFb3m0A31Is\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully found your Board list\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"6064137c228d5d271c26ff4a\",\n        \"title\": \"Monday Morning Routines\",\n        \"description\": \"What i normally do on monday morning\",\n        \"taskCollection\": [],\n        \"createdAt\": \"2021-03-31T06:15:24.871Z\",\n        \"updatedAt\": \"2021-03-31T06:41:17.691Z\"\n    }\n}"
+						},
+						{
+							"name": "GET  Board",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/api/boards/6064137c228d5d271c26ff4a",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"boards",
+										"6064137c228d5d271c26ff4a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "149"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 07:20:59 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617178858"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "305"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"131-PZ/U9lGBeQPC1haozFb3m0A31Is\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully found your Board list\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"6064137c228d5d271c26ff4a\",\n        \"title\": \"Monday Morning Routines\",\n        \"description\": \"What i normally do on monday morning\",\n        \"taskCollection\": [],\n        \"createdAt\": \"2021-03-31T06:15:24.871Z\",\n        \"updatedAt\": \"2021-03-31T06:41:17.691Z\"\n    }\n}"
+						},
+						{
+							"name": "GET LIST of Boards",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/api/boards/list",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"boards",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "149"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 07:18:01 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617178680"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1385"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"569-YomUYS4aAMJJlFmGSC8t/N7fg6Y\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully found your Board list\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"taskCollection\": [],\n            \"_id\": \"6064137c228d5d271c26ff4a\",\n            \"title\": \"Monday Morning Routines\",\n            \"description\": \"What i normally do on monday morning\",\n            \"ownerId\": \"6063d9812069d9276801fe79\",\n            \"createdAt\": \"2021-03-31T06:15:24.871Z\",\n            \"updatedAt\": \"2021-03-31T06:41:17.691Z\"\n        },\n        {\n            \"taskCollection\": [],\n            \"_id\": \"60641a76228d5d271c26ff4b\",\n            \"title\": \"Tuesday Morning Routines\",\n            \"description\": \"What i normally do on Tuesday morning\",\n            \"ownerId\": \"6063d9812069d9276801fe79\",\n            \"createdAt\": \"2021-03-31T06:45:10.018Z\",\n            \"updatedAt\": \"2021-03-31T06:45:10.018Z\"\n        },\n        {\n            \"taskCollection\": [],\n            \"_id\": \"60641a82228d5d271c26ff4c\",\n            \"title\": \"Wednesday Morning Routines\",\n            \"description\": \"What i normally do on Wednesday morning\",\n            \"ownerId\": \"6063d9812069d9276801fe79\",\n            \"createdAt\": \"2021-03-31T06:45:22.546Z\",\n            \"updatedAt\": \"2021-03-31T06:45:22.546Z\"\n        },\n        {\n            \"taskCollection\": [],\n            \"_id\": \"60641a91228d5d271c26ff4d\",\n            \"title\": \"Thursday Morning Routines\",\n            \"description\": \"What i normally do on Thursday morning\",\n            \"ownerId\": \"6063d9812069d9276801fe79\",\n            \"createdAt\": \"2021-03-31T06:45:37.456Z\",\n            \"updatedAt\": \"2021-03-31T06:45:37.456Z\"\n        },\n        {\n            \"taskCollection\": [],\n            \"_id\": \"60641acb228d5d271c26ff4e\",\n            \"title\": \"Friday Morning Routines\",\n            \"description\": \"What i normally do on Friday morning\",\n            \"ownerId\": \"6063d9812069d9276801fe79\",\n            \"createdAt\": \"2021-03-31T06:46:35.771Z\",\n            \"updatedAt\": \"2021-03-31T06:46:35.771Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "CREATE Task ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{phong's token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Wake up before 7.\",\r\n    \"boardId\": \"6064137c228d5d271c26ff4a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/tasks/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tasks",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CREATE Task ",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"Wake up before 8.\",\r\n    \"boardId\": \"6063d9812069d9276801fe79\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tasks/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tasks",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "148"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 09:25:29 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617186321"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "113"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"71-m7w6J8t59SH26L9WfKXmZWY7fu4\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"New Board has been created!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"6064400a381096600817a6a1\"\n    }\n}"
+						},
+						{
+							"name": "CREATE Task ",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"Wake up before 7.\",\r\n    \"boardId\": \"6064137c228d5d271c26ff4a\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tasks/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tasks",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "149"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 09:53:25 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617188005"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "113"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"71-HwBJCLvt9ouOsz2RsLTxnUvV6xY\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"New Board has been created!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"606446959fc2e948a073b928\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GET Task By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{phong's token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/tasks/60644739da0f7256b047905e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tasks",
+								"60644739da0f7256b047905e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CREATE Task ",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"Wake up before 8.\",\r\n    \"boardId\": \"6063d9812069d9276801fe79\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tasks/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tasks",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "148"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 09:25:29 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617186321"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "113"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"71-m7w6J8t59SH26L9WfKXmZWY7fu4\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"New Board has been created!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"6064400a381096600817a6a1\"\n    }\n}"
+						},
+						{
+							"name": "GET Task By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tasks/60644739da0f7256b047905e",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tasks",
+										"60644739da0f7256b047905e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "149"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 09:59:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617188352"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "272"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"110-nppvII8P58lKY10OmI4UDDmqhPU\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully found your Board list\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"60644739da0f7256b047905e\",\n        \"description\": \"Go to school at 8.30\",\n        \"boardId\": \"6064137c228d5d271c26ff4a\",\n        \"createdAt\": \"2021-03-31T09:56:09.824Z\",\n        \"updatedAt\": \"2021-03-31T09:56:09.824Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE Task",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{phong's token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/tasks/delete/60644d376a815a6b7c2de4f1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tasks",
+								"delete",
+								"60644d376a815a6b7c2de4f1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE Task",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tasks/delete/60644d376a815a6b7c2de4f1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tasks",
+										"delete",
+										"60644d376a815a6b7c2de4f1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "148"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 10:51:15 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617191440"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "114"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"72-KezXo/lLQ0F2yDHZnWmxgket+7E\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Your Board has been deleted!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"60644d376a815a6b7c2de4f1\"\n    }\n}"
+						},
+						{
+							"name": "CREATE Task ",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"Wake up before 8.\",\r\n    \"boardId\": \"6063d9812069d9276801fe79\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tasks/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tasks",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "148"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 09:25:29 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617186321"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "113"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"71-m7w6J8t59SH26L9WfKXmZWY7fu4\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"New Board has been created!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"6064400a381096600817a6a1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE Task By Id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{phong's token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Go to school at 8.15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/tasks/update/60644739da0f7256b047905e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tasks",
+								"update",
+								"60644739da0f7256b047905e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CREATE Task ",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"Wake up before 8.\",\r\n    \"boardId\": \"6063d9812069d9276801fe79\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tasks/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tasks",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "148"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 09:25:29 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617186321"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "113"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"71-m7w6J8t59SH26L9WfKXmZWY7fu4\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"New Board has been created!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"6064400a381096600817a6a1\"\n    }\n}"
+						},
+						{
+							"name": "UPDATE Task By Id",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"Go to school at 8.15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tasks/update/60644739da0f7256b047905e",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tasks",
+										"update",
+										"60644739da0f7256b047905e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "144"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 10:53:35 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617191440"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "118"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"76-kFn0BsfZ5d01rNy9s/vtZRBuJJk\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Existing Board has been updated!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"60644739da0f7256b047905e\"\n    }\n}"
+						},
+						{
+							"name": "GET Task By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{phong's token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tasks/60644739da0f7256b047905e",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tasks",
+										"60644739da0f7256b047905e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "149"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 09:59:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617188352"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "272"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"110-nppvII8P58lKY10OmI4UDDmqhPU\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully found your Board list\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"60644739da0f7256b047905e\",\n        \"description\": \"Go to school at 8.30\",\n        \"boardId\": \"6064137c228d5d271c26ff4a\",\n        \"createdAt\": \"2021-03-31T09:56:09.824Z\",\n        \"updatedAt\": \"2021-03-31T09:56:09.824Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"pnguyen\",\r\n    \"fullName\": \"Phong D. Nguyen\",\r\n    \"email\": \"phongdnguyen01@gmail.com\",\r\n    \"description\": \"This is my account\",\r\n    \"gender\": \"M\",\r\n    \"password\": \"12345678\",\r\n    \"passwordConfirm\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:3000/api/auth/signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"pnguyen\",\r\n    \"fullName\": \"Phong D. Nguyen\",\r\n    \"email\": \"phongdnguyen01@gmail.com\",\r\n    \"description\": \"This is my account\",\r\n    \"gender\": \"M\",\r\n    \"password\": \"12345678\",\r\n    \"passwordConfirm\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/auth/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "149"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 02:08:01 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617160081"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "255"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ff-IQjWHWATkXUZOUb9VLW4Mezr28U\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully Signed Up!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDYzZDk4MTIwNjlkOTI3NjgwMWZlNzkiLCJpYXQiOjE2MTcxNTY0ODIsImV4cCI6MTYxNzI0Mjg4Mn0.Sv4Zjj5cPxt5CJC8tD3s_mrsA0p8Z9zHTaBM_S1grjQ\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Log In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"pnguyen\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Log in"
+					},
+					"response": [
+						{
+							"name": "Log In",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"pnguyen\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "150"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "147"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Mar 2021 02:41:51 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1617160081"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "259"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"103-j0ozdoi+YS9Ttk4WlRjPlCh2gUQ\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully Authenticated!\",\n    \"error\": null,\n    \"status_code\": 200,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDYzZDk4MTIwNjlkOTI3NjgwMWZlNzkiLCJpYXQiOjE2MTcxNTg1MTEsImV4cCI6MTYxNzI0NDkxMX0.Acem4WkcPGdkFHJsW2ej8UgHbcfNPmL8_eDFt_dPv-g\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

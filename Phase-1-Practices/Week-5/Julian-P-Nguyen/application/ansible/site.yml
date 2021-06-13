@@ -1,0 +1,9 @@
+---
+- name: Install To-Do App on a remote Host
+  hosts: deploy-node
+  gather_facts: no
+  remote_user: pnguyen
+  become: yes
+
+  roles:
+    - docker

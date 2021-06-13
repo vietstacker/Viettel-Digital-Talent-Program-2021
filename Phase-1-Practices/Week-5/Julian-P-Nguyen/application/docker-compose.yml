@@ -1,0 +1,13 @@
+version: '2'
+services:
+  to-do-app:
+    build: .
+    image: simple-to-do-nodejs-app:1.1 
+    ports:
+      - "3400:3400"
+    environment:
+      NODE_ENVIROMMENT: development
+      PORT: 3400
+      DATABASE: <omitted>
+      JWT_STRING: AhiHidongOk                 
+      JWT_EXPIRES_IN: 1d
