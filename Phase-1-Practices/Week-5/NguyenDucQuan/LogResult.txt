@@ -1,0 +1,131 @@
+Started by GitLab push by quanndhe130577
+Obtained Jenkinsfile from git https://gitlab.com/quanndhe130577/testcicd
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://gitlab.com/quanndhe130577/testcicd
+ > git.exe init C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD # timeout=10
+Fetching upstream changes from https://gitlab.com/quanndhe130577/testcicd
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.31.1.windows.1'
+ > git.exe fetch --tags --force --progress -- https://gitlab.com/quanndhe130577/testcicd +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://gitlab.com/quanndhe130577/testcicd # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+skipping resolution of commit 84d9ffa874d2a66b141ffeca74179d6778ecd97e, since it originates from another repository
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision 84d9ffa874d2a66b141ffeca74179d6778ecd97e (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 84d9ffa874d2a66b141ffeca74179d6778ecd97e # timeout=10
+Commit message: "Update Jenkinsfile"
+First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Restore Packages)
+[Pipeline] bat
+
+C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD>dotnet restore 
+  Determining projects to restore...
+  Restored C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\TestCICD\TestCICD.csproj (in 14.28 sec).
+  Restored C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTestv1.csproj (in 31.18 sec).
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Clean)
+[Pipeline] bat
+
+C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD>dotnet clean 
+Microsoft (R) Build Engine version 16.9.0+57a23d249 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 6/13/2021 1:41:03 PM.
+     1>Project "C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\TestCICD.sln" on node 1 (Clean target(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Any CPU".
+     1>Project "C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\TestCICD.sln" (1) is building "C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\TestCICD\TestCICD.csproj" (2) on node 2 (Clean target(s)).
+     2>CoreClean:
+         Creating directory "obj\Debug\net5.0\".
+     2>Done Building Project "C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\TestCICD\TestCICD.csproj" (Clean target(s)).
+     1>Project "C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\TestCICD.sln" (1) is building "C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTestv1.csproj" (3) on node 1 (Clean target(s)).
+     3>CoreClean:
+         Creating directory "obj\Debug\net5.0\".
+     3>Done Building Project "C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTestv1.csproj" (Clean target(s)).
+     1>Done Building Project "C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\TestCICD.sln" (Clean target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.78
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] bat
+
+C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD>dotnet build 
+Microsoft (R) Build Engine version 16.9.0+57a23d249 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  TestCICD -> C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\TestCICD\bin\Debug\net5.0\TestCICD.dll
+C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTest1.cs(18,13): warning xUnit2000: The literal or constant value "RL1" should be passed as the 'expected' argument in the call to 'Assert.Equal(expected, actual)' in method 'TestAdd' on type 'UnitTest1'. [C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTestv1.csproj]
+C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTest1.cs(11,13): warning xUnit2000: The literal or constant value 2 should be passed as the 'expected' argument in the call to 'Assert.Equal(expected, actual)' in method 'Test1' on type 'UnitTest1'. [C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTestv1.csproj]
+C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTest1.cs(25,13): warning xUnit2000: The literal or constant value "RL2" should be passed as the 'expected' argument in the call to 'Assert.Equal(expected, actual)' in method 'TestSkipAdd' on type 'UnitTest1'. [C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTestv1.csproj]
+  UnitTestv1 -> C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\bin\Debug\net5.0\UnitTestv1.dll
+
+Build succeeded.
+
+C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTest1.cs(18,13): warning xUnit2000: The literal or constant value "RL1" should be passed as the 'expected' argument in the call to 'Assert.Equal(expected, actual)' in method 'TestAdd' on type 'UnitTest1'. [C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTestv1.csproj]
+C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTest1.cs(11,13): warning xUnit2000: The literal or constant value 2 should be passed as the 'expected' argument in the call to 'Assert.Equal(expected, actual)' in method 'Test1' on type 'UnitTest1'. [C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTestv1.csproj]
+C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTest1.cs(25,13): warning xUnit2000: The literal or constant value "RL2" should be passed as the 'expected' argument in the call to 'Assert.Equal(expected, actual)' in method 'TestSkipAdd' on type 'UnitTest1'. [C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\UnitTestv1.csproj]
+    3 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:06.17
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] bat
+
+C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD>dotnet test 
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  TestCICD -> C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\TestCICD\bin\Debug\net5.0\TestCICD.dll
+  UnitTestv1 -> C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\bin\Debug\net5.0\UnitTestv1.dll
+Test run for C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\testCICD\UnitTestv1\bin\Debug\net5.0\UnitTestv1.dll (.NETCoreApp,Version=v5.0)
+Microsoft (R) Test Execution Command Line Tool Version 16.9.4
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:01.20]     UnitTestv1.UnitTest1.TestSkipAdd [SKIP]
+  Skipped UnitTestv1.UnitTest1.TestSkipAdd [1 ms]
+
+Passed!  - Failed:     0, Passed:     2, Skipped:     1, Total:     3, Duration: 5 ms - UnitTestv1.dll (net5.0)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

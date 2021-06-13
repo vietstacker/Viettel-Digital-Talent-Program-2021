@@ -109,3 +109,5 @@ Jenkinsfile :
 Kết quả :
 
 <img src="img/Cai dat gitlab plugin in Jenkins 10.png">
+
+Chi tiết log xem tại file `LogResult.txt`
