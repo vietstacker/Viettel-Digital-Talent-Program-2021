@@ -1,14 +1,57 @@
+- [I. Các thành phần chính của k8s](#i-các-thành-phần-chính-của-k8s)
+  - [1. Cluster](#1-cluster)
+  - [2. Node](#2-node)
+    - [a. Master Node](#a-master-node)
+    - [b. Worker Node](#b-worker-node)
+  - [3. Pods](#3-pods)
+- [II. Demo](#ii-demo)
+  - [1. Chuẩn bị môi trường](#1-chuẩn-bị-môi-trường)
+  - [2. Cài đặt Minikube và Kubectl](#2-cài-đặt-minikube-và-kubectl)
+    - [a. Cập nhật apt và cài đặt các package cần thiết](#a-cập-nhật-apt-và-cài-đặt-các-package-cần-thiết)
+    - [b. Cài đặt minikube](#b-cài-đặt-minikube)
+    - [c. Cài đặt kubectl](#c-cài-đặt-kubectl)
+  - [3. Cấu hình sử dụng minikube](#3-cấu-hình-sử-dụng-minikube)
+  - [4. Triển khai MariaDb và Wordpress](#4-triển-khai-mariadb-và-wordpress)
+    - [a. Tạo service MariaDb](#a-tạo-service-mariadb)
+    - [b. Tạo service Wordpress](#b-tạo-service-wordpress)
+  - [5. Tài liệu tham khảo](#5-tài-liệu-tham-khảo)
 
-- [1. Chuẩn bị môi trường](#1-chuẩn-bị-môi-trường)
-- [2. Cài đặt Minikube và Kubectl](#2-cài-đặt-minikube-và-kubectl)
-  - [a. Cập nhật apt và cài đặt các package cần thiết](#a-cập-nhật-apt-và-cài-đặt-các-package-cần-thiết)
-  - [b. Cài đặt minikube](#b-cài-đặt-minikube)
-  - [c. Cài đặt kubectl](#c-cài-đặt-kubectl)
-- [3. Cấu hình sử dụng minikube](#3-cấu-hình-sử-dụng-minikube)
-- [4. Triển khai MariaDb và Wordpress](#4-triển-khai-mariadb-và-wordpress)
-  - [a. Tạo service MariaDb](#a-tạo-service-mariadb)
-  - [b. Tạo service Wordpress](#b-tạo-service-wordpress)
-- [5. Tài liệu tham khảo](#5-tài-liệu-tham-khảo)
+# I. Các thành phần chính của k8s
+
+## 1. Cluster
+
+- Là một cụm các máy vật lý( hoặc máy ảo) có tác dụng quản lý vòng đời các container.
+- Một Kubernetes Cluster có khả năng lên lịch và chạy các Container trên một nhóm máy.
+- Gồm 2 thành phần chính: `Master Node` và `Worker Node`
+
+## 2. Node
+
+### a. Master Node
+
+- Là đầu não của Cluster, nó chịu trách nhiệm quản lý cụm. Nó quản lý các Worker Node, giám sát hệ thống và truyền nhiệm vụ xuống Worker Node.
+- Nó gồm một số thành phần chính sau đây:
+  - API Server: Nó giúp chúng ta tương tác với k8s cluster.
+  - Scheduler: Nó có trách nhiệm theo dõi tải của các nodes. Từ đó có thể phân phối các công việc cho các nodes.
+  - Controller-Manager: Nó là một components chạy nhiều controller khác như: `Node Controller` có tác dụng thoogn báo và phản hồi khi node gặp sự cố, `Replication Controller` chịu trách nhiệm duy trì đủ số lượng pods của mỗi object,...
+  - Cloud-Controller-Manager:: tương tự Controller-Manager nhưng nó tùy chỉnh để tương tác với các nhà cung cấp dịch vụ cloud.
+  - ETCD: Là nơi lưu trữ cấu hình mà các node trong cluster có thể sử dụng (thông qua Kubernetes API server)
+
+### b. Worker Node
+
+- Là một máy vật lý hoặc một máy ảo có tác dụng quản lý các pods và cung cấp `Kubernetes runtime environment`.
+- Các thành phần chính:
+  - Container Runtime: Là thành phần chịu trách nhiệm chạy containers. k8s hỗ trợ nhiều runtimes trong đó có Docker.
+  - Kubelet: Chịu trách nhiệm đảm bảo containers chạy đúng nodes. Tương tác với Master node để nhận lệnh. Bên cạnh đó cũng cập nhật trạng thái của node cho Master.
+  - Kube-Proxy: Có tác dụng quản lý môi trường mạng của node. Nó có khả năng `forward request` đến container mong muốn.
+
+## 3. Pods
+
+- Là đơn vị triển khai nhỏ nhất mà K8s có thể quản lý. Một pod gồm một hoặc nhiều container có cùng địa chỉ ip.
+- Các container trong một pod có thể giao tiếp và tương tác với nhau.
+- Nếu node chứa pod bị chết. Một pod mới sẽ được tạo ra với tên tương tự nhưng với UID mới.
+
+# II. Demo
+
 ## 1. Chuẩn bị môi trường
 
 Bài thực hành này được thực hiện trên máy ảo Ubuntu 16.04, ram 8Gb, disk 40gb
@@ -277,11 +320,12 @@ kubectl apply -f wordpress.yaml
 minikube service wordpress --url
 ```
 
-> Kết quả sẽ ra một địa chỉ giống như sau: http://192.168.49.2:31662
+> Do wordpress có sử dụng kiểu LoadBalancer
 > 
-> Sử dụng địa chỉ trên để kiểm tra kết quả.
-![image](https://user-images.githubusercontent.com/43313369/119906512-8c8d8e00-bf78-11eb-8813-baa1b7df88db.png)
+> Kết quả sẽ ra một địa chỉ giống như sau: http://192.168.49.2:31662
 
+> Sử dụng địa chỉ trên để kiểm tra kết quả.
+> ![image](https://user-images.githubusercontent.com/43313369/119906512-8c8d8e00-bf78-11eb-8813-baa1b7df88db.png)
 
 ## 5. Tài liệu tham khảo
 
