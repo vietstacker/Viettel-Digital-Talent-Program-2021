@@ -65,6 +65,8 @@ sudo cp minikube-linux-amd64 /usr/local/bin/minikube
 
     minikube start --driver=docker
 
+<img src="img/minikube_start.png">
+
 ## Phần 2 : Deploy MariaDB và Wordpress
 ### Bước 1: Tạo folder project : 
 
