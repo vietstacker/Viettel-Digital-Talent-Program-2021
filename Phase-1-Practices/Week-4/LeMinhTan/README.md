@@ -47,7 +47,7 @@ Kubernetes (còn gọi là k8s - tức là bắt đầu bằng chữ "k", giữa
 
 ##### **Container**
 
-Conainer là một run-time environment mà ở đó người dùng có thể chạy một ứng dụng độc lập. Những container này rất gọn nhẹ và cho phép bạn chạy ứng dụng trong đó rất nhanh chóng và dễ dàng. Mặc dù về lý thuyết, 1 container có thể có nhiều application nhưng để đảm bảo tính isolate (cô lập) thì 1 container nên chỉ có 1 application. Điều này giúp cho việc triển khai container và tìm ra lỗi sẽ dễ dàng hơn (chỉ cần sửa application trong container bị lỗi mà không cần động chạm tới application khác).
+Container là một run-time environment mà ở đó người dùng có thể chạy một ứng dụng độc lập. Những container này rất gọn nhẹ và cho phép bạn chạy ứng dụng trong đó rất nhanh chóng và dễ dàng. Mặc dù về lý thuyết, 1 container có thể có nhiều application nhưng để đảm bảo tính isolate (cô lập) thì 1 container nên chỉ có 1 application. Điều này giúp cho việc triển khai container và tìm ra lỗi sẽ dễ dàng hơn (chỉ cần sửa application trong container bị lỗi mà không cần động chạm tới application khác).
 
 ##### **Pods**
 
