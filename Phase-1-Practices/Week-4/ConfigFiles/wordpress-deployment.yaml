@@ -1,0 +1,75 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress
+  labels:
+    app: wordpress
+spec:
+  ports:
+    - port: 8080
+  selector:
+    app: wordpress
+    tier: frontend
+    author: bitnami
+  type: LoadBalancer
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wordpress-volume
+  labels:
+    app: wordpress
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+  labels:
+    app: wordpress
+spec:
+  selector:
+    matchLabels:
+      app: wordpress
+      tier: frontend
+      author: bitnami
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: wordpress
+        tier: frontend
+        author: bitnami
+    spec:
+      containers:
+      - name: wordpress
+        image: bitnami/wordpress:latest
+        env:
+          - name: ALLOW_EMPTY_PASSWORD
+            value: "yes"
+          - name: WORDPRESS_DATABASE_USER
+            value: fil_wordpress
+          - name: WORDPRESS_DATABASE_NAME
+            value: bitnami_wordpress
+          - name: WORDPRESS_DATABASE_PASSWORD
+            value: fil
+          - name: WORDPRESS_DATABASE_HOST
+            value: mariadb-server
+        ports:
+        - containerPort: 80
+          name: wordpress
+        volumeMounts:
+        - name: wordpress-storage
+          mountPath: /var/www/html
+      volumes:
+      - name: wordpress-storage
+        persistentVolumeClaim:
+          claimName: wordpress-volume
